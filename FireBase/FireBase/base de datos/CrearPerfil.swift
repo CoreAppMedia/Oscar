@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct CrearPerfil: View {
     @ObservedObject var LinkViewModel: LinkViewModel
     @Environment(\.dismiss) private var dismiss
+    
+    @ObservedObject var authenticationViewModel: AuthenticationViewModel
+    @State var textFieldEmail: String = ""
+    @State var textFieldPasseord: String = ""
     
     @State private var nombre = ""
     @State private var apellidoP = ""
@@ -23,6 +28,7 @@ struct CrearPerfil: View {
         NavigationStack {
             Form {
                 Section(header: Text("Personal Information")) {
+                    TextField("Correo Electronico ", text: $textFieldEmail)
                     TextField("Nombre ", text: $nombre)
                     HStack{
                         TextField("Apellido Paterno", text: $apellidoP)
@@ -36,14 +42,41 @@ struct CrearPerfil: View {
                         .keyboardType(.emailAddress)
                     
                     DatePicker("Birthdate", selection: $fecha, displayedComponents: .date)
+                    Divider()
+                    HStack{
+                        Text("Contraseña: ")
+                        TextField("Contraseña", text: $textFieldPasseord)
+                    }
                 }
             }
             .navigationBarTitle("Perfil")
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button("Guardar") {
-
-                        LinkViewModel.createNewUser(nombre: nombre, apellidoP: apellidoP, apellidoM: apellidoM, descripcion: descripcion, titulo: titulo, numeroTel: numeroTel,fecha: fecha)
+                        authenticationViewModel.login(email: textFieldEmail, password: textFieldPasseord)
+                        LinkViewModel.createNewUser(nombre: nombre, 
+                                                    apellidoP: apellidoP,
+                                                    apellidoM: apellidoM,
+                                                    descripcion: descripcion,
+                                                    titulo: titulo,
+                                                    numeroTel: numeroTel,
+                                                    fecha: fecha)
+                        
+                    
+                        
+                        Firestore.firestore().collection(textFieldEmail).addDocument(data: ["nombre": nombre ,
+                            "ApellidoP": apellidoP,
+                            "ApellidoM": apellidoM,
+                            "descripcion": descripcion,
+                            "titulo": titulo,
+                            "numeroTel": numeroTel]
+                            ){ error in
+                            if let error = error {
+                                print("Error al crear la colección: \(error)")
+                            } else {
+                                print("Colección creada exitosamente: \("Rules")")
+                            }
+                        }
                         
                         dismiss()
                     }
@@ -55,5 +88,5 @@ struct CrearPerfil: View {
 }
 
 #Preview {
-    CrearPerfil(LinkViewModel: LinkViewModel())
+    CrearPerfil(LinkViewModel: LinkViewModel(), authenticationViewModel: AuthenticationViewModel())
 }

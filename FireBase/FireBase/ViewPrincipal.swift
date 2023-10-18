@@ -10,7 +10,19 @@ import SwiftUI
 struct ViewPrincipal: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Text("Hola Master")
+                .font(.title)
+                .fontWeight(.semibold)
+            Button{
+                authenticationViewModel.logout()
+            }label: {
+                Image(systemName: "arrowshape.backward.circle.fill")
+                    .font(.title)
+                    .foregroundColor(.black)
+                    
+            }
+        }
     }
 }
 

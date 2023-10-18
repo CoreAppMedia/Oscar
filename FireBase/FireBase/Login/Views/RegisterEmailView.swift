@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
-
+import FirebaseFirestore
 struct RegisterEmailView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State var textFieldEmail: String = ""
     @State var textFieldPasseord: String = ""
+    
+    @State private var nombre = ""
+    @State private var apellidoP = ""
+    @State private var apellidoM = ""
+    @State private var descripcion = ""
+    @State private var titulo = ""
+    @State private var numeroTel = ""
+    @State private var fecha = Date()
+    
     
     var body: some View {
         VStack{
@@ -33,9 +42,38 @@ struct RegisterEmailView: View {
                     .padding(.top, 2)
                     .padding(.bottom, 2)
                 TextField("añade tu correo electrocino",text: $textFieldEmail )
+                TextField("Nombre ", text: $nombre)
+                HStack{
+                    TextField("Apellido Paterno", text: $apellidoP)
+                    TextField("Apellido materno", text: $apellidoM)
+                }
+                TextField("Telefono", text: $numeroTel)
+                    .keyboardType(.numberPad)
+                TextField("Descripcion de tu persona", text: $descripcion)
+                    .keyboardType(.emailAddress)
+                TextField("grupo al que pertenece", text: $titulo)
+                    .keyboardType(.emailAddress)
+                
+                DatePicker("Birthdate", selection: $fecha, displayedComponents: .date)
+                Divider()
                 TextField("añade tu contraseña",text: $textFieldPasseord )
                 Button("Aceptar") {
                     authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
+                    Firestore.firestore().collection(textFieldEmail).addDocument(data: ["nombre": nombre ,
+                        "ApellidoP": apellidoP,
+                        "ApellidoM": apellidoM,
+                        "descripcion": descripcion,
+                        "titulo": titulo,
+                        "numeroTel": numeroTel]
+                        ){ error in
+                        if let error = error {
+                            print("Error al crear la colección: \(error)")
+                        } else {
+                            print("Colección creada exitosamente: \("Rules")")
+                        }
+                    }
+                    
+                    
                 }
                 .padding(.top, 18)
                 .buttonStyle(.bordered)
