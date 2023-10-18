@@ -19,10 +19,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct FireBaseApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+    @StateObject var authenticationViewModel = AuthenticationViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if let _ = authenticationViewModel.user{
+                ViewPrincipal(authenticationViewModel: authenticationViewModel)
+            }else{
+                ContentView(authenticationViewModel: authenticationViewModel)
+            }
         }
     }
 }

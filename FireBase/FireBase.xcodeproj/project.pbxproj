@@ -20,6 +20,13 @@
 		ECABBF152AE05D790040F96F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ECABBF142AE05D790040F96F /* FirebaseAuth */; };
 		ECABBF172AE05D910040F96F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECABBF162AE05D910040F96F /* FirebaseFirestoreSwift */; };
 		ECABBF192AE05D9C0040F96F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ECABBF182AE05D9C0040F96F /* FirebaseFirestore */; };
+		ECABBF202AE063490040F96F /* AuthenticationFirebaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF1F2AE063490040F96F /* AuthenticationFirebaseDataSource.swift */; };
+		ECABBF222AE0635D0040F96F /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF212AE0635D0040F96F /* AuthenticationRepository.swift */; };
+		ECABBF242AE0636E0040F96F /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF232AE0636E0040F96F /* AuthenticationViewModel.swift */; };
+		ECABBF262AE063A20040F96F /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF252AE063A20040F96F /* RegisterEmailView.swift */; };
+		ECABBF282AE063B20040F96F /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF272AE063B20040F96F /* LoginEmailView.swift */; };
+		ECABBF2A2AE064480040F96F /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF292AE064480040F96F /* DismissView.swift */; };
+		ECABBF2C2AE064DA0040F96F /* ViewPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF2B2AE064DA0040F96F /* ViewPrincipal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,13 @@
 		ECABBEFC2AE05BEF0040F96F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECABBEFF2AE05BEF0040F96F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ECABBF062AE05D040040F96F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECABBF1F2AE063490040F96F /* AuthenticationFirebaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebaseDataSource.swift; sourceTree = "<group>"; };
+		ECABBF212AE0635D0040F96F /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		ECABBF232AE0636E0040F96F /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		ECABBF252AE063A20040F96F /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
+		ECABBF272AE063B20040F96F /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
+		ECABBF292AE064480040F96F /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
+		ECABBF2B2AE064DA0040F96F /* ViewPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPrincipal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,9 @@
 			children = (
 				ECABBEF82AE05BED0040F96F /* FireBaseApp.swift */,
 				ECABBEFA2AE05BED0040F96F /* ContentView.swift */,
+				ECABBF2B2AE064DA0040F96F /* ViewPrincipal.swift */,
+				ECABBF292AE064480040F96F /* DismissView.swift */,
+				ECABBF1C2AE062EE0040F96F /* Login */,
 				ECABBF062AE05D040040F96F /* GoogleService-Info.plist */,
 				ECABBEFC2AE05BEF0040F96F /* Assets.xcassets */,
 				ECABBEFE2AE05BEF0040F96F /* Preview Content */,
@@ -92,6 +109,34 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECABBF1C2AE062EE0040F96F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ECABBF1E2AE0630E0040F96F /* Repositorys */,
+				ECABBF1D2AE062FB0040F96F /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ECABBF1D2AE062FB0040F96F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECABBF252AE063A20040F96F /* RegisterEmailView.swift */,
+				ECABBF272AE063B20040F96F /* LoginEmailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECABBF1E2AE0630E0040F96F /* Repositorys */ = {
+			isa = PBXGroup;
+			children = (
+				ECABBF1F2AE063490040F96F /* AuthenticationFirebaseDataSource.swift */,
+				ECABBF212AE0635D0040F96F /* AuthenticationRepository.swift */,
+				ECABBF232AE0636E0040F96F /* AuthenticationViewModel.swift */,
+			);
+			path = Repositorys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +223,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECABBF262AE063A20040F96F /* RegisterEmailView.swift in Sources */,
 				ECABBEFB2AE05BED0040F96F /* ContentView.swift in Sources */,
+				ECABBF282AE063B20040F96F /* LoginEmailView.swift in Sources */,
+				ECABBF2C2AE064DA0040F96F /* ViewPrincipal.swift in Sources */,
+				ECABBF2A2AE064480040F96F /* DismissView.swift in Sources */,
+				ECABBF242AE0636E0040F96F /* AuthenticationViewModel.swift in Sources */,
+				ECABBF222AE0635D0040F96F /* AuthenticationRepository.swift in Sources */,
+				ECABBF202AE063490040F96F /* AuthenticationFirebaseDataSource.swift in Sources */,
 				ECABBEF92AE05BED0040F96F /* FireBaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
