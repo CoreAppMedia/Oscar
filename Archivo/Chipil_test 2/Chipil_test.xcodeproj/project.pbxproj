@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF719BA42ABA980800CDF823 /* Chipil_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF719BA32ABA980800CDF823 /* Chipil_testApp.swift */; };
+		DF719BA62ABA980800CDF823 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF719BA52ABA980800CDF823 /* ContentView.swift */; };
+		DF719BA82ABA980C00CDF823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF719BA72ABA980C00CDF823 /* Assets.xcassets */; };
+		DF719BAB2ABA980C00CDF823 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF719BAA2ABA980C00CDF823 /* Preview Assets.xcassets */; };
+		DF719BB52ABA980D00CDF823 /* Chipil_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF719BB42ABA980D00CDF823 /* Chipil_testTests.swift */; };
+		DF719BBF2ABA980D00CDF823 /* Chipil_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF719BBE2ABA980D00CDF823 /* Chipil_testUITests.swift */; };
+		DF719BC12ABA980D00CDF823 /* Chipil_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF719BC02ABA980D00CDF823 /* Chipil_testUITestsLaunchTests.swift */; };
+		DFDB216F2AD71DC000A46AC0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB216E2AD71DC000A46AC0 /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF719BB12ABA980D00CDF823 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF719B982ABA980800CDF823 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF719B9F2ABA980800CDF823;
+			remoteInfo = Chipil_test;
+		};
+		DF719BBB2ABA980D00CDF823 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF719B982ABA980800CDF823 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF719B9F2ABA980800CDF823;
+			remoteInfo = Chipil_test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF0130372ABA9D5C00376C3E /* Chipil-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Chipil-test-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DF719BA02ABA980800CDF823 /* Chipil_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chipil_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF719BA32ABA980800CDF823 /* Chipil_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chipil_testApp.swift; sourceTree = "<group>"; };
+		DF719BA52ABA980800CDF823 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF719BA72ABA980C00CDF823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF719BAA2ABA980C00CDF823 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF719BB02ABA980D00CDF823 /* Chipil_testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chipil_testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF719BB42ABA980D00CDF823 /* Chipil_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chipil_testTests.swift; sourceTree = "<group>"; };
+		DF719BBA2ABA980D00CDF823 /* Chipil_testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chipil_testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF719BBE2ABA980D00CDF823 /* Chipil_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chipil_testUITests.swift; sourceTree = "<group>"; };
+		DF719BC02ABA980D00CDF823 /* Chipil_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chipil_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DFDB216E2AD71DC000A46AC0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF719B9D2ABA980800CDF823 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF719BAD2ABA980D00CDF823 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF719BB72ABA980D00CDF823 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF719B972ABA980800CDF823 = {
+			isa = PBXGroup;
+			children = (
+				DF719BA22ABA980800CDF823 /* Chipil_test */,
+				DF719BB32ABA980D00CDF823 /* Chipil_testTests */,
+				DF719BBD2ABA980D00CDF823 /* Chipil_testUITests */,
+				DF719BA12ABA980800CDF823 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF719BA12ABA980800CDF823 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF719BA02ABA980800CDF823 /* Chipil_test.app */,
+				DF719BB02ABA980D00CDF823 /* Chipil_testTests.xctest */,
+				DF719BBA2ABA980D00CDF823 /* Chipil_testUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF719BA22ABA980800CDF823 /* Chipil_test */ = {
+			isa = PBXGroup;
+			children = (
+				DFDB216D2AD71D7300A46AC0 /* Helpers */,
+				DF0130372ABA9D5C00376C3E /* Chipil-test-Info.plist */,
+				DF719BA32ABA980800CDF823 /* Chipil_testApp.swift */,
+				DF719BA52ABA980800CDF823 /* ContentView.swift */,
+				DF719BA72ABA980C00CDF823 /* Assets.xcassets */,
+				DF719BA92ABA980C00CDF823 /* Preview Content */,
+			);
+			path = Chipil_test;
+			sourceTree = "<group>";
+		};
+		DF719BA92ABA980C00CDF823 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DF719BAA2ABA980C00CDF823 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF719BB32ABA980D00CDF823 /* Chipil_testTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF719BB42ABA980D00CDF823 /* Chipil_testTests.swift */,
+			);
+			path = Chipil_testTests;
+			sourceTree = "<group>";
+		};
+		DF719BBD2ABA980D00CDF823 /* Chipil_testUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF719BBE2ABA980D00CDF823 /* Chipil_testUITests.swift */,
+				DF719BC02ABA980D00CDF823 /* Chipil_testUITestsLaunchTests.swift */,
+			);
+			path = Chipil_testUITests;
+			sourceTree = "<group>";
+		};
+		DFDB216D2AD71D7300A46AC0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DFDB216E2AD71DC000A46AC0 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF719B9F2ABA980800CDF823 /* Chipil_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF719BC42ABA980D00CDF823 /* Build configuration list for PBXNativeTarget "Chipil_test" */;
+			buildPhases = (
+				DF719B9C2ABA980800CDF823 /* Sources */,
+				DF719B9D2ABA980800CDF823 /* Frameworks */,
+				DF719B9E2ABA980800CDF823 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chipil_test;
+			productName = Chipil_test;
+			productReference = DF719BA02ABA980800CDF823 /* Chipil_test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF719BAF2ABA980D00CDF823 /* Chipil_testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF719BC72ABA980D00CDF823 /* Build configuration list for PBXNativeTarget "Chipil_testTests" */;
+			buildPhases = (
+				DF719BAC2ABA980D00CDF823 /* Sources */,
+				DF719BAD2ABA980D00CDF823 /* Frameworks */,
+				DF719BAE2ABA980D00CDF823 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF719BB22ABA980D00CDF823 /* PBXTargetDependency */,
+			);
+			name = Chipil_testTests;
+			productName = Chipil_testTests;
+			productReference = DF719BB02ABA980D00CDF823 /* Chipil_testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF719BB92ABA980D00CDF823 /* Chipil_testUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF719BCA2ABA980D00CDF823 /* Build configuration list for PBXNativeTarget "Chipil_testUITests" */;
+			buildPhases = (
+				DF719BB62ABA980D00CDF823 /* Sources */,
+				DF719BB72ABA980D00CDF823 /* Frameworks */,
+				DF719BB82ABA980D00CDF823 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF719BBC2ABA980D00CDF823 /* PBXTargetDependency */,
+			);
+			name = Chipil_testUITests;
+			productName = Chipil_testUITests;
+			productReference = DF719BBA2ABA980D00CDF823 /* Chipil_testUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF719B982ABA980800CDF823 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DF719B9F2ABA980800CDF823 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					DF719BAF2ABA980D00CDF823 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = DF719B9F2ABA980800CDF823;
+					};
+					DF719BB92ABA980D00CDF823 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = DF719B9F2ABA980800CDF823;
+					};
+				};
+			};
+			buildConfigurationList = DF719B9B2ABA980800CDF823 /* Build configuration list for PBXProject "Chipil_test" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF719B972ABA980800CDF823;
+			productRefGroup = DF719BA12ABA980800CDF823 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF719B9F2ABA980800CDF823 /* Chipil_test */,
+				DF719BAF2ABA980D00CDF823 /* Chipil_testTests */,
+				DF719BB92ABA980D00CDF823 /* Chipil_testUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF719B9E2ABA980800CDF823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF719BAB2ABA980C00CDF823 /* Preview Assets.xcassets in Resources */,
+				DF719BA82ABA980C00CDF823 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF719BAE2ABA980D00CDF823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF719BB82ABA980D00CDF823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF719B9C2ABA980800CDF823 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF719BA62ABA980800CDF823 /* ContentView.swift in Sources */,
+				DFDB216F2AD71DC000A46AC0 /* Extensions.swift in Sources */,
+				DF719BA42ABA980800CDF823 /* Chipil_testApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF719BAC2ABA980D00CDF823 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF719BB52ABA980D00CDF823 /* Chipil_testTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF719BB62ABA980D00CDF823 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF719BBF2ABA980D00CDF823 /* Chipil_testUITests.swift in Sources */,
+				DF719BC12ABA980D00CDF823 /* Chipil_testUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF719BB22ABA980D00CDF823 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF719B9F2ABA980800CDF823 /* Chipil_test */;
+			targetProxy = DF719BB12ABA980D00CDF823 /* PBXContainerItemProxy */;
+		};
+		DF719BBC2ABA980D00CDF823 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF719B9F2ABA980800CDF823 /* Chipil_test */;
+			targetProxy = DF719BBB2ABA980D00CDF823 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DF719BC22ABA980D00CDF823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF719BC32ABA980D00CDF823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF719BC52ABA980D00CDF823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Chipil_test/Preview Content\"";
+				DEVELOPMENT_TEAM = W7BYX69QC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Chipil-test-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = appxime;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ximena.Chipil-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF719BC62ABA980D00CDF823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Chipil_test/Preview Content\"";
+				DEVELOPMENT_TEAM = W7BYX69QC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Chipil-test-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = appxime;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ximena.Chipil-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF719BC82ABA980D00CDF823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ximena.Chipil-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chipil_test.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Chipil_test";
+			};
+			name = Debug;
+		};
+		DF719BC92ABA980D00CDF823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ximena.Chipil-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chipil_test.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Chipil_test";
+			};
+			name = Release;
+		};
+		DF719BCB2ABA980D00CDF823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ximena.Chipil-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chipil_test;
+			};
+			name = Debug;
+		};
+		DF719BCC2ABA980D00CDF823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ximena.Chipil-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chipil_test;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF719B9B2ABA980800CDF823 /* Build configuration list for PBXProject "Chipil_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF719BC22ABA980D00CDF823 /* Debug */,
+				DF719BC32ABA980D00CDF823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF719BC42ABA980D00CDF823 /* Build configuration list for PBXNativeTarget "Chipil_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF719BC52ABA980D00CDF823 /* Debug */,
+				DF719BC62ABA980D00CDF823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF719BC72ABA980D00CDF823 /* Build configuration list for PBXNativeTarget "Chipil_testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF719BC82ABA980D00CDF823 /* Debug */,
+				DF719BC92ABA980D00CDF823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF719BCA2ABA980D00CDF823 /* Build configuration list for PBXNativeTarget "Chipil_testUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF719BCB2ABA980D00CDF823 /* Debug */,
+				DF719BCC2ABA980D00CDF823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF719B982ABA980800CDF823 /* Project object */;
+}
