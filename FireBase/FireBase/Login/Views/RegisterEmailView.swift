@@ -27,7 +27,7 @@ struct RegisterEmailView: View {
                 .padding(.top, 8)
             Group{
                 Text("Bienvenido a")
-                Text("Liga de futbol Zapotitlán")
+                Text("Firebase Prueba")
                     .bold()
                     .underline()
                 }
@@ -58,7 +58,10 @@ struct RegisterEmailView: View {
                 Divider()
                 TextField("añade tu contraseña",text: $textFieldPasseord )
                 Button("Aceptar") {
+                    //con esto hacemos la autenticaion
                     authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
+                    
+                 //   en esta parte en donde se crea la columna para cada usuario y su respectiva informacion
                     Firestore.firestore().collection(textFieldEmail).addDocument(data: ["nombre": nombre ,
                         "ApellidoP": apellidoP,
                         "ApellidoM": apellidoM,
