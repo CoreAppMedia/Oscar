@@ -27,6 +27,11 @@
 		ECABBF282AE063B20040F96F /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF272AE063B20040F96F /* LoginEmailView.swift */; };
 		ECABBF2A2AE064480040F96F /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF292AE064480040F96F /* DismissView.swift */; };
 		ECABBF2C2AE064DA0040F96F /* ViewPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF2B2AE064DA0040F96F /* ViewPrincipal.swift */; };
+		ECABBF2F2AE0699E0040F96F /* linkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF2E2AE0699E0040F96F /* linkDatasource.swift */; };
+		ECABBF312AE069AB0040F96F /* linkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF302AE069AB0040F96F /* linkRepository.swift */; };
+		ECABBF332AE069BD0040F96F /* linkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF322AE069BD0040F96F /* linkViewModel.swift */; };
+		ECABBF352AE06D220040F96F /* Perfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF342AE06D220040F96F /* Perfiles.swift */; };
+		ECABBF372AE06D780040F96F /* CrearPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBF362AE06D780040F96F /* CrearPerfil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		ECABBF272AE063B20040F96F /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
 		ECABBF292AE064480040F96F /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
 		ECABBF2B2AE064DA0040F96F /* ViewPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPrincipal.swift; sourceTree = "<group>"; };
+		ECABBF2E2AE0699E0040F96F /* linkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linkDatasource.swift; sourceTree = "<group>"; };
+		ECABBF302AE069AB0040F96F /* linkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linkRepository.swift; sourceTree = "<group>"; };
+		ECABBF322AE069BD0040F96F /* linkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linkViewModel.swift; sourceTree = "<group>"; };
+		ECABBF342AE06D220040F96F /* Perfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfiles.swift; sourceTree = "<group>"; };
+		ECABBF362AE06D780040F96F /* CrearPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearPerfil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,7 @@
 				ECABBEFA2AE05BED0040F96F /* ContentView.swift */,
 				ECABBF2B2AE064DA0040F96F /* ViewPrincipal.swift */,
 				ECABBF292AE064480040F96F /* DismissView.swift */,
+				ECABBF2D2AE0696B0040F96F /* base de datos */,
 				ECABBF1C2AE062EE0040F96F /* Login */,
 				ECABBF062AE05D040040F96F /* GoogleService-Info.plist */,
 				ECABBEFC2AE05BEF0040F96F /* Assets.xcassets */,
@@ -137,6 +148,18 @@
 				ECABBF232AE0636E0040F96F /* AuthenticationViewModel.swift */,
 			);
 			path = Repositorys;
+			sourceTree = "<group>";
+		};
+		ECABBF2D2AE0696B0040F96F /* base de datos */ = {
+			isa = PBXGroup;
+			children = (
+				ECABBF2E2AE0699E0040F96F /* linkDatasource.swift */,
+				ECABBF302AE069AB0040F96F /* linkRepository.swift */,
+				ECABBF322AE069BD0040F96F /* linkViewModel.swift */,
+				ECABBF342AE06D220040F96F /* Perfiles.swift */,
+				ECABBF362AE06D780040F96F /* CrearPerfil.swift */,
+			);
+			path = "base de datos";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,10 +246,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECABBF332AE069BD0040F96F /* linkViewModel.swift in Sources */,
 				ECABBF262AE063A20040F96F /* RegisterEmailView.swift in Sources */,
+				ECABBF352AE06D220040F96F /* Perfiles.swift in Sources */,
 				ECABBEFB2AE05BED0040F96F /* ContentView.swift in Sources */,
+				ECABBF2F2AE0699E0040F96F /* linkDatasource.swift in Sources */,
+				ECABBF372AE06D780040F96F /* CrearPerfil.swift in Sources */,
 				ECABBF282AE063B20040F96F /* LoginEmailView.swift in Sources */,
 				ECABBF2C2AE064DA0040F96F /* ViewPrincipal.swift in Sources */,
+				ECABBF312AE069AB0040F96F /* linkRepository.swift in Sources */,
 				ECABBF2A2AE064480040F96F /* DismissView.swift in Sources */,
 				ECABBF242AE0636E0040F96F /* AuthenticationViewModel.swift in Sources */,
 				ECABBF222AE0635D0040F96F /* AuthenticationRepository.swift in Sources */,
