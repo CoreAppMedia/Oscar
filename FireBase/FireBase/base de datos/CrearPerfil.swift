@@ -62,19 +62,17 @@ struct CrearPerfil: View {
                                                     numeroTel: numeroTel,
                                                     fecha: fecha)
                         
-                    
-                        
-                        Firestore.firestore().collection(textFieldEmail).addDocument(data: ["nombre": nombre ,
+                        Firestore.firestore().collection(textFieldEmail).document("Info").setData([
+                            "nombre": nombre ,
                             "ApellidoP": apellidoP,
                             "ApellidoM": apellidoM,
                             "descripcion": descripcion,
                             "titulo": titulo,
-                            "numeroTel": numeroTel]
-                            ){ error in
+                            "numeroTel": numeroTel]) { error in
                             if let error = error {
-                                print("Error al crear la colección: \(error)")
+                                print("Error al agregar el documento 'Info': \(error.localizedDescription)")
                             } else {
-                                print("Colección creada exitosamente: \("Rules")")
+                                print("Documento 'Info' agregado con éxito a la colección \(textFieldEmail)")
                             }
                         }
                         

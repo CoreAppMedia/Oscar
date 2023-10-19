@@ -6,13 +6,71 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestoreSwift
 
 struct Perfiles: View {
+    //variable Pribada que contendra la estructura "Info"
+    @State private var quizInfo: PerfilData?
+    @ObservedObject var authenticationViewModel: AuthenticationViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if let perfilData = quizInfo{
+            VStack(spacing: 10){
+                HStack{
+                    Text(perfilData.descripcion)
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    Button{
+                        authenticationViewModel.logout()
+                    }label: {
+                        Image(systemName: "arrowshape.backward.circle.fill")
+                            .font(.title)
+                            .foregroundColor(.black)
+                    }
+                    
+                }
+                HStack{
+                    Text(perfilData.apellidoP)
+                    Text(perfilData.apellidoM)
+                    Text(perfilData.nombre)
+                }
+                Spacer()
+            }
+            .padding(15)
+            
+        }else{
+            VStack(spacing: 4){
+                ProgressView()
+                Text("Porfavor espere")
+                    .font(.caption2)
+                    .foregroundColor(.gray)
+            }
+            .task {
+                do{
+                    try await fetchData()
+                }catch{
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    //funciones para obtener la informasion del cuestionatio y las Preguntas
+    func fetchData()async throws{
+        let perfilData = try await Firestore.firestore().collection("Israel@gmail.com").document("Info").getDocument().data(as: PerfilData.self)
+
+        //actualizar la infromacion en el hilo principal
+        await MainActor.run(body: {
+            self.quizInfo = perfilData
+        })
+        
+        
     }
 }
 
+
+
 #Preview {
-    Perfiles()
+    Perfiles(authenticationViewModel: AuthenticationViewModel())
 }
+

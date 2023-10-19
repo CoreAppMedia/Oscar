@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB56E2172AE0D7C1006013D6 /* PerfilStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2162AE0D7C1006013D6 /* PerfilStruct.swift */; };
 		ECABBEF92AE05BED0040F96F /* FireBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBEF82AE05BED0040F96F /* FireBaseApp.swift */; };
 		ECABBEFB2AE05BED0040F96F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBEFA2AE05BED0040F96F /* ContentView.swift */; };
 		ECABBEFD2AE05BEF0040F96F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECABBEFC2AE05BEF0040F96F /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB56E2162AE0D7C1006013D6 /* PerfilStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilStruct.swift; sourceTree = "<group>"; };
 		ECABBEF52AE05BED0040F96F /* FireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECABBEF82AE05BED0040F96F /* FireBaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseApp.swift; sourceTree = "<group>"; };
 		ECABBEFA2AE05BED0040F96F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		ECABBF2D2AE0696B0040F96F /* base de datos */ = {
 			isa = PBXGroup;
 			children = (
+				AB56E2162AE0D7C1006013D6 /* PerfilStruct.swift */,
 				ECABBF2E2AE0699E0040F96F /* linkDatasource.swift */,
 				ECABBF302AE069AB0040F96F /* linkRepository.swift */,
 				ECABBF322AE069BD0040F96F /* linkViewModel.swift */,
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECABBF332AE069BD0040F96F /* linkViewModel.swift in Sources */,
+				AB56E2172AE0D7C1006013D6 /* PerfilStruct.swift in Sources */,
 				ECABBF262AE063A20040F96F /* RegisterEmailView.swift in Sources */,
 				ECABBF352AE06D220040F96F /* Perfiles.swift in Sources */,
 				ECABBEFB2AE05BED0040F96F /* ContentView.swift in Sources */,

@@ -72,7 +72,20 @@ struct RegisterEmailView: View {
                         if let error = error {
                             print("Error al crear la colección: \(error)")
                         } else {
-                            print("Colección creada exitosamente: \("Rules")")
+                            print("Colección creada exitosamente: \("master")")
+                        }
+                    }
+                    Firestore.firestore().collection(textFieldEmail).document("Info").setData([
+                        "nombre": nombre ,
+                        "ApellidoP": apellidoP,
+                        "ApellidoM": apellidoM,
+                        "descripcion": descripcion,
+                        "titulo": titulo,
+                        "numeroTel": numeroTel]) { error in
+                        if let error = error {
+                            print("Error al agregar el documento 'Info': \(error.localizedDescription)")
+                        } else {
+                            print("Documento 'Info' agregado con éxito a la colección \(textFieldEmail)")
                         }
                     }
                     
