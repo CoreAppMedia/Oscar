@@ -75,10 +75,10 @@ struct RegisterEmailView: View {
                             print("Colección creada exitosamente: \("master")")
                         }
                     }
-                    Firestore.firestore().collection(textFieldEmail).document("Info").setData([
+                    Firestore.firestore().collection("Usuarios").document(textFieldEmail).setData([
                         "nombre": nombre ,
-                        "ApellidoP": apellidoP,
-                        "ApellidoM": apellidoM,
+                        "apellidoP": apellidoP,
+                        "apellidoM": apellidoM,
                         "descripcion": descripcion,
                         "titulo": titulo,
                         "numeroTel": numeroTel]) { error in

@@ -28,7 +28,6 @@ struct Perfiles: View {
                             .font(.title)
                             .foregroundColor(.black)
                     }
-                    
                 }
                 HStack{
                     Text(perfilData.apellidoP)
@@ -57,7 +56,7 @@ struct Perfiles: View {
     }
     //funciones para obtener la informasion del cuestionatio y las Preguntas
     func fetchData()async throws{
-        let perfilData = try await Firestore.firestore().collection("Israel@gmail.com").document("Info").getDocument().data(as: PerfilData.self)
+        let perfilData = try await Firestore.firestore().collection("Usuarios").document("Israel@gmail.com").getDocument().data(as: PerfilData.self)
 
         //actualizar la infromacion en el hilo principal
         await MainActor.run(body: {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB56E2172AE0D7C1006013D6 /* PerfilStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2162AE0D7C1006013D6 /* PerfilStruct.swift */; };
+		AB56E2192AE1BC9F006013D6 /* Perfil1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2182AE1BC9F006013D6 /* Perfil1.swift */; };
 		ECABBEF92AE05BED0040F96F /* FireBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBEF82AE05BED0040F96F /* FireBaseApp.swift */; };
 		ECABBEFB2AE05BED0040F96F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABBEFA2AE05BED0040F96F /* ContentView.swift */; };
 		ECABBEFD2AE05BEF0040F96F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECABBEFC2AE05BEF0040F96F /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		AB56E2162AE0D7C1006013D6 /* PerfilStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilStruct.swift; sourceTree = "<group>"; };
+		AB56E2182AE1BC9F006013D6 /* Perfil1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil1.swift; sourceTree = "<group>"; };
 		ECABBEF52AE05BED0040F96F /* FireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECABBEF82AE05BED0040F96F /* FireBaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseApp.swift; sourceTree = "<group>"; };
 		ECABBEFA2AE05BED0040F96F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				ECABBF302AE069AB0040F96F /* linkRepository.swift */,
 				ECABBF322AE069BD0040F96F /* linkViewModel.swift */,
 				ECABBF342AE06D220040F96F /* Perfiles.swift */,
+				AB56E2182AE1BC9F006013D6 /* Perfil1.swift */,
 				ECABBF362AE06D780040F96F /* CrearPerfil.swift */,
 			);
 			path = "base de datos";
@@ -260,6 +263,7 @@
 				ECABBF2C2AE064DA0040F96F /* ViewPrincipal.swift in Sources */,
 				ECABBF312AE069AB0040F96F /* linkRepository.swift in Sources */,
 				ECABBF2A2AE064480040F96F /* DismissView.swift in Sources */,
+				AB56E2192AE1BC9F006013D6 /* Perfil1.swift in Sources */,
 				ECABBF242AE0636E0040F96F /* AuthenticationViewModel.swift in Sources */,
 				ECABBF222AE0635D0040F96F /* AuthenticationRepository.swift in Sources */,
 				ECABBF202AE063490040F96F /* AuthenticationFirebaseDataSource.swift in Sources */,
