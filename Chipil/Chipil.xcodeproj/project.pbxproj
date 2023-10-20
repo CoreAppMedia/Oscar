@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB56E2272AE21096006013D6 /* ChipilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2262AE21096006013D6 /* ChipilApp.swift */; };
+		AB56E2292AE21096006013D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2282AE21096006013D6 /* ContentView.swift */; };
+		AB56E22B2AE21098006013D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB56E22A2AE21098006013D6 /* Assets.xcassets */; };
+		AB56E22E2AE21098006013D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB56E22D2AE21098006013D6 /* Preview Assets.xcassets */; };
+		AB56E2302AE21098006013D6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E22F2AE21098006013D6 /* Persistence.swift */; };
+		AB56E2332AE21098006013D6 /* Chipil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2312AE21098006013D6 /* Chipil.xcdatamodeld */; };
+		AB56E23D2AE21098006013D6 /* ChipilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E23C2AE21098006013D6 /* ChipilTests.swift */; };
+		AB56E2472AE21098006013D6 /* ChipilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2462AE21098006013D6 /* ChipilUITests.swift */; };
+		AB56E2492AE21098006013D6 /* ChipilUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2482AE21098006013D6 /* ChipilUITestsLaunchTests.swift */; };
+		AB56E2592AE2115F006013D6 /* AuthenticationFirebaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2582AE2115F006013D6 /* AuthenticationFirebaseDataSource.swift */; };
+		AB56E25B2AE2117E006013D6 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E25A2AE2117E006013D6 /* AuthenticationRepository.swift */; };
+		AB56E25D2AE2118B006013D6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E25C2AE2118B006013D6 /* AuthenticationViewModel.swift */; };
+		AB56E25F2AE211B8006013D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB56E25E2AE211B8006013D6 /* GoogleService-Info.plist */; };
+		AB56E2622AE21254006013D6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AB56E2612AE21254006013D6 /* FirebaseAnalytics */; };
+		AB56E2642AE21254006013D6 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = AB56E2632AE21254006013D6 /* FirebaseAnalyticsOnDeviceConversion */; };
+		AB56E2662AE21254006013D6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB56E2652AE21254006013D6 /* FirebaseAnalyticsSwift */; };
+		AB56E2682AE21254006013D6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB56E2672AE21254006013D6 /* FirebaseAuth */; };
+		AB56E26A2AE21254006013D6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AB56E2692AE21254006013D6 /* FirebaseDatabase */; };
+		AB56E26C2AE21254006013D6 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB56E26B2AE21254006013D6 /* FirebaseDatabaseSwift */; };
+		AB56E26E2AE21254006013D6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AB56E26D2AE21254006013D6 /* FirebaseFirestore */; };
+		AB56E2702AE21254006013D6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB56E26F2AE21254006013D6 /* FirebaseFirestoreSwift */; };
+		AB56E2722AE21319006013D6 /* RegistroEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2712AE21319006013D6 /* RegistroEmailView.swift */; };
+		AB56E2742AE2132C006013D6 /* IngresoEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2732AE2132C006013D6 /* IngresoEmailView.swift */; };
+		AB56E2772AE21466006013D6 /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2752AE21405006013D6 /* DismissView.swift */; };
+		AB56E2792AE215A7006013D6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E2782AE215A7006013D6 /* HomeView.swift */; };
+		AB56E27B2AE21654006013D6 /* Pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E27A2AE21654006013D6 /* Pruebas.swift */; };
+		AB56E27E2AE219D6006013D6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E27D2AE219D6006013D6 /* BaseView.swift */; };
+		AB56E2802AE219E5006013D6 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56E27F2AE219E5006013D6 /* SideMenu.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB56E2392AE21098006013D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB56E21B2AE21096006013D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB56E2222AE21096006013D6;
+			remoteInfo = Chipil;
+		};
+		AB56E2432AE21098006013D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB56E21B2AE21096006013D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB56E2222AE21096006013D6;
+			remoteInfo = Chipil;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB56E2232AE21096006013D6 /* Chipil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chipil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB56E2262AE21096006013D6 /* ChipilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipilApp.swift; sourceTree = "<group>"; };
+		AB56E2282AE21096006013D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB56E22A2AE21098006013D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB56E22D2AE21098006013D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB56E22F2AE21098006013D6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		AB56E2322AE21098006013D6 /* Chipil.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chipil.xcdatamodel; sourceTree = "<group>"; };
+		AB56E2382AE21098006013D6 /* ChipilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChipilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB56E23C2AE21098006013D6 /* ChipilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipilTests.swift; sourceTree = "<group>"; };
+		AB56E2422AE21098006013D6 /* ChipilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChipilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB56E2462AE21098006013D6 /* ChipilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipilUITests.swift; sourceTree = "<group>"; };
+		AB56E2482AE21098006013D6 /* ChipilUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipilUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB56E2582AE2115F006013D6 /* AuthenticationFirebaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebaseDataSource.swift; sourceTree = "<group>"; };
+		AB56E25A2AE2117E006013D6 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		AB56E25C2AE2118B006013D6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		AB56E25E2AE211B8006013D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB56E2712AE21319006013D6 /* RegistroEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroEmailView.swift; sourceTree = "<group>"; };
+		AB56E2732AE2132C006013D6 /* IngresoEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngresoEmailView.swift; sourceTree = "<group>"; };
+		AB56E2752AE21405006013D6 /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
+		AB56E2782AE215A7006013D6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AB56E27A2AE21654006013D6 /* Pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pruebas.swift; sourceTree = "<group>"; };
+		AB56E27D2AE219D6006013D6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		AB56E27F2AE219E5006013D6 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB56E2202AE21096006013D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB56E26C2AE21254006013D6 /* FirebaseDatabaseSwift in Frameworks */,
+				AB56E26A2AE21254006013D6 /* FirebaseDatabase in Frameworks */,
+				AB56E2662AE21254006013D6 /* FirebaseAnalyticsSwift in Frameworks */,
+				AB56E2622AE21254006013D6 /* FirebaseAnalytics in Frameworks */,
+				AB56E2642AE21254006013D6 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				AB56E2682AE21254006013D6 /* FirebaseAuth in Frameworks */,
+				AB56E26E2AE21254006013D6 /* FirebaseFirestore in Frameworks */,
+				AB56E2702AE21254006013D6 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB56E2352AE21098006013D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB56E23F2AE21098006013D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB56E21A2AE21096006013D6 = {
+			isa = PBXGroup;
+			children = (
+				AB56E2252AE21096006013D6 /* Chipil */,
+				AB56E23B2AE21098006013D6 /* ChipilTests */,
+				AB56E2452AE21098006013D6 /* ChipilUITests */,
+				AB56E2242AE21096006013D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB56E2242AE21096006013D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E2232AE21096006013D6 /* Chipil.app */,
+				AB56E2382AE21098006013D6 /* ChipilTests.xctest */,
+				AB56E2422AE21098006013D6 /* ChipilUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB56E2252AE21096006013D6 /* Chipil */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E2262AE21096006013D6 /* ChipilApp.swift */,
+				AB56E2752AE21405006013D6 /* DismissView.swift */,
+				AB56E2282AE21096006013D6 /* ContentView.swift */,
+				AB56E27A2AE21654006013D6 /* Pruebas.swift */,
+				AB56E2782AE215A7006013D6 /* HomeView.swift */,
+				AB56E27C2AE2199F006013D6 /* Menu */,
+				AB56E2552AE21101006013D6 /* Login */,
+				AB56E22A2AE21098006013D6 /* Assets.xcassets */,
+				AB56E22F2AE21098006013D6 /* Persistence.swift */,
+				AB56E2312AE21098006013D6 /* Chipil.xcdatamodeld */,
+				AB56E25E2AE211B8006013D6 /* GoogleService-Info.plist */,
+				AB56E22C2AE21098006013D6 /* Preview Content */,
+			);
+			path = Chipil;
+			sourceTree = "<group>";
+		};
+		AB56E22C2AE21098006013D6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E22D2AE21098006013D6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB56E23B2AE21098006013D6 /* ChipilTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E23C2AE21098006013D6 /* ChipilTests.swift */,
+			);
+			path = ChipilTests;
+			sourceTree = "<group>";
+		};
+		AB56E2452AE21098006013D6 /* ChipilUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E2462AE21098006013D6 /* ChipilUITests.swift */,
+				AB56E2482AE21098006013D6 /* ChipilUITestsLaunchTests.swift */,
+			);
+			path = ChipilUITests;
+			sourceTree = "<group>";
+		};
+		AB56E2552AE21101006013D6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E2562AE2111C006013D6 /* Repositorios */,
+				AB56E2572AE2112B006013D6 /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AB56E2562AE2111C006013D6 /* Repositorios */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E2582AE2115F006013D6 /* AuthenticationFirebaseDataSource.swift */,
+				AB56E25A2AE2117E006013D6 /* AuthenticationRepository.swift */,
+				AB56E25C2AE2118B006013D6 /* AuthenticationViewModel.swift */,
+			);
+			path = Repositorios;
+			sourceTree = "<group>";
+		};
+		AB56E2572AE2112B006013D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E2712AE21319006013D6 /* RegistroEmailView.swift */,
+				AB56E2732AE2132C006013D6 /* IngresoEmailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB56E27C2AE2199F006013D6 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AB56E27D2AE219D6006013D6 /* BaseView.swift */,
+				AB56E27F2AE219E5006013D6 /* SideMenu.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB56E2222AE21096006013D6 /* Chipil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB56E24C2AE21098006013D6 /* Build configuration list for PBXNativeTarget "Chipil" */;
+			buildPhases = (
+				AB56E21F2AE21096006013D6 /* Sources */,
+				AB56E2202AE21096006013D6 /* Frameworks */,
+				AB56E2212AE21096006013D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chipil;
+			packageProductDependencies = (
+				AB56E2612AE21254006013D6 /* FirebaseAnalytics */,
+				AB56E2632AE21254006013D6 /* FirebaseAnalyticsOnDeviceConversion */,
+				AB56E2652AE21254006013D6 /* FirebaseAnalyticsSwift */,
+				AB56E2672AE21254006013D6 /* FirebaseAuth */,
+				AB56E2692AE21254006013D6 /* FirebaseDatabase */,
+				AB56E26B2AE21254006013D6 /* FirebaseDatabaseSwift */,
+				AB56E26D2AE21254006013D6 /* FirebaseFirestore */,
+				AB56E26F2AE21254006013D6 /* FirebaseFirestoreSwift */,
+			);
+			productName = Chipil;
+			productReference = AB56E2232AE21096006013D6 /* Chipil.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB56E2372AE21098006013D6 /* ChipilTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB56E24F2AE21098006013D6 /* Build configuration list for PBXNativeTarget "ChipilTests" */;
+			buildPhases = (
+				AB56E2342AE21098006013D6 /* Sources */,
+				AB56E2352AE21098006013D6 /* Frameworks */,
+				AB56E2362AE21098006013D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB56E23A2AE21098006013D6 /* PBXTargetDependency */,
+			);
+			name = ChipilTests;
+			productName = ChipilTests;
+			productReference = AB56E2382AE21098006013D6 /* ChipilTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB56E2412AE21098006013D6 /* ChipilUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB56E2522AE21098006013D6 /* Build configuration list for PBXNativeTarget "ChipilUITests" */;
+			buildPhases = (
+				AB56E23E2AE21098006013D6 /* Sources */,
+				AB56E23F2AE21098006013D6 /* Frameworks */,
+				AB56E2402AE21098006013D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB56E2442AE21098006013D6 /* PBXTargetDependency */,
+			);
+			name = ChipilUITests;
+			productName = ChipilUITests;
+			productReference = AB56E2422AE21098006013D6 /* ChipilUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB56E21B2AE21096006013D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AB56E2222AE21096006013D6 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					AB56E2372AE21098006013D6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AB56E2222AE21096006013D6;
+					};
+					AB56E2412AE21098006013D6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AB56E2222AE21096006013D6;
+					};
+				};
+			};
+			buildConfigurationList = AB56E21E2AE21096006013D6 /* Build configuration list for PBXProject "Chipil" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB56E21A2AE21096006013D6;
+			packageReferences = (
+				AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = AB56E2242AE21096006013D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB56E2222AE21096006013D6 /* Chipil */,
+				AB56E2372AE21098006013D6 /* ChipilTests */,
+				AB56E2412AE21098006013D6 /* ChipilUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB56E2212AE21096006013D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB56E22E2AE21098006013D6 /* Preview Assets.xcassets in Resources */,
+				AB56E22B2AE21098006013D6 /* Assets.xcassets in Resources */,
+				AB56E25F2AE211B8006013D6 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB56E2362AE21098006013D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB56E2402AE21098006013D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB56E21F2AE21096006013D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB56E2332AE21098006013D6 /* Chipil.xcdatamodeld in Sources */,
+				AB56E27E2AE219D6006013D6 /* BaseView.swift in Sources */,
+				AB56E2772AE21466006013D6 /* DismissView.swift in Sources */,
+				AB56E2802AE219E5006013D6 /* SideMenu.swift in Sources */,
+				AB56E2302AE21098006013D6 /* Persistence.swift in Sources */,
+				AB56E25D2AE2118B006013D6 /* AuthenticationViewModel.swift in Sources */,
+				AB56E2592AE2115F006013D6 /* AuthenticationFirebaseDataSource.swift in Sources */,
+				AB56E2792AE215A7006013D6 /* HomeView.swift in Sources */,
+				AB56E27B2AE21654006013D6 /* Pruebas.swift in Sources */,
+				AB56E2742AE2132C006013D6 /* IngresoEmailView.swift in Sources */,
+				AB56E2722AE21319006013D6 /* RegistroEmailView.swift in Sources */,
+				AB56E25B2AE2117E006013D6 /* AuthenticationRepository.swift in Sources */,
+				AB56E2292AE21096006013D6 /* ContentView.swift in Sources */,
+				AB56E2272AE21096006013D6 /* ChipilApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB56E2342AE21098006013D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB56E23D2AE21098006013D6 /* ChipilTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB56E23E2AE21098006013D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB56E2472AE21098006013D6 /* ChipilUITests.swift in Sources */,
+				AB56E2492AE21098006013D6 /* ChipilUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB56E23A2AE21098006013D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB56E2222AE21096006013D6 /* Chipil */;
+			targetProxy = AB56E2392AE21098006013D6 /* PBXContainerItemProxy */;
+		};
+		AB56E2442AE21098006013D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB56E2222AE21096006013D6 /* Chipil */;
+			targetProxy = AB56E2432AE21098006013D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AB56E24A2AE21098006013D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB56E24B2AE21098006013D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB56E24D2AE21098006013D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Chipil/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.core.Chipil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB56E24E2AE21098006013D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Chipil/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.core.Chipil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AB56E2502AE21098006013D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.core.ChipilTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chipil.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Chipil";
+			};
+			name = Debug;
+		};
+		AB56E2512AE21098006013D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.core.ChipilTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chipil.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Chipil";
+			};
+			name = Release;
+		};
+		AB56E2532AE21098006013D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.core.ChipilUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chipil;
+			};
+			name = Debug;
+		};
+		AB56E2542AE21098006013D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.core.ChipilUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chipil;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB56E21E2AE21096006013D6 /* Build configuration list for PBXProject "Chipil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB56E24A2AE21098006013D6 /* Debug */,
+				AB56E24B2AE21098006013D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB56E24C2AE21098006013D6 /* Build configuration list for PBXNativeTarget "Chipil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB56E24D2AE21098006013D6 /* Debug */,
+				AB56E24E2AE21098006013D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB56E24F2AE21098006013D6 /* Build configuration list for PBXNativeTarget "ChipilTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB56E2502AE21098006013D6 /* Debug */,
+				AB56E2512AE21098006013D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB56E2522AE21098006013D6 /* Build configuration list for PBXNativeTarget "ChipilUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB56E2532AE21098006013D6 /* Debug */,
+				AB56E2542AE21098006013D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB56E2612AE21254006013D6 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		AB56E2632AE21254006013D6 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		AB56E2652AE21254006013D6 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		AB56E2672AE21254006013D6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		AB56E2692AE21254006013D6 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		AB56E26B2AE21254006013D6 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		AB56E26D2AE21254006013D6 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		AB56E26F2AE21254006013D6 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB56E2602AE21254006013D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		AB56E2312AE21098006013D6 /* Chipil.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB56E2322AE21098006013D6 /* Chipil.xcdatamodel */,
+			);
+			currentVersion = AB56E2322AE21098006013D6 /* Chipil.xcdatamodel */;
+			path = Chipil.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AB56E21B2AE21096006013D6 /* Project object */;
+}

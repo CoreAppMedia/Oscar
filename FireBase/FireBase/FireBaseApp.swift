@@ -13,9 +13,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
     return true
+
   }
 }
-
 @main
 struct FireBaseApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
