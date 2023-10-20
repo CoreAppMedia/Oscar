@@ -63,8 +63,16 @@ struct BaseView: View {
                             TabButton(image: "message")
                             
                         }//HStack de los botones para seleccionar una View principal
+                        .background(
+                            Color.green
+                                .opacity(1)
+                                .ignoresSafeArea(.container, edges: .vertical))
                         .padding([.top],15)
-                    }
+                    }        
+                    .background(
+                        Color.green
+                            .opacity(1)
+                            .ignoresSafeArea(.container, edges: .vertical))
 
                     
                 }//VStack
@@ -73,7 +81,7 @@ struct BaseView: View {
                 .overlay(
                 Rectangle()
                     .fill(
-                        Color.primary
+                        Color.blue
                             .opacity(Double((offset / sideBarWidth)/5))
                     )
                     .ignoresSafeArea(.container, edges: .vertical)
