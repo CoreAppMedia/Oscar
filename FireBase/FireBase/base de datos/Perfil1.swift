@@ -13,6 +13,8 @@ struct Perfil1: View {
     @State private var apellidoP = ""
     @State private var apellidoM = ""
     
+    @ObservedObject var usuario1 = UserData()//@ObservedObject se utliliza para modificar un objeto complejo que no este en la misma View
+    
     var body: some View {
         VStack {
             Text("Nombre: \(nombre)")
@@ -33,7 +35,7 @@ struct Perfil1: View {
         // Nombre del documento que deseas consultar
         let nombreDocumento = "Israel@gmail.com"
 
-        db.collection(nombreColeccion).document(nombreDocumento).getDocument { (document, error) in
+        db.collection(nombreColeccion).document(usuario1.name).getDocument { (document, error) in
             if let document = document, document.exists {
                 if let data = document.data() {
                     nombre = data["nombre"] as? String ?? ""

@@ -35,77 +35,81 @@ struct RegisterEmailView: View {
             .multilineTextAlignment(.center)
             .font(.largeTitle)
             .tint(.primary)
-            Group{
-                Text("Registrate")
-                    .tint(.secondary)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 2)
-                    .padding(.bottom, 2)
-                TextField("añade tu correo electrocino",text: $textFieldEmail )
-                TextField("Nombre ", text: $nombre)
-                HStack{
-                    TextField("Apellido Paterno", text: $apellidoP)
-                    TextField("Apellido materno", text: $apellidoM)
+            
+            ScrollView{
+                Group{
+                    Text("Registrate")
+                        .tint(.secondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 2)
+                        .padding(.bottom, 2)
+                    TextField("añade tu correo electrocino",text: $textFieldEmail )
+                    TextField("Nombre ", text: $nombre)
+                    HStack{
+                        TextField("Apellido Paterno", text: $apellidoP)
+                        TextField("Apellido materno", text: $apellidoM)
+                    }
+                    TextField("Telefono", text: $numeroTel)
+                        .keyboardType(.numberPad)
+                    TextField("Descripcion de tu persona", text: $descripcion)
+                        .keyboardType(.emailAddress)
+                    TextField("grupo al que pertenece", text: $titulo)
+                        .keyboardType(.emailAddress)
+                    
+                    DatePicker("Birthdate", selection: $fecha, displayedComponents: .date)
+                    Divider()
+                    TextField("añade tu contraseña",text: $textFieldPasseord )
+                    Button("Aceptar") {
+                        //con esto hacemos la autenticaion
+                        authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
+                        
+                     //   en esta parte en donde se crea la columna para cada usuario y su respectiva informacion
+                        Firestore.firestore().collection(textFieldEmail).addDocument(data: ["nombre": nombre ,
+                            "ApellidoP": apellidoP,
+                            "ApellidoM": apellidoM,
+                            "descripcion": descripcion,
+                            "titulo": titulo,
+                            "numeroTel": numeroTel]
+                            ){ error in
+                            if let error = error {
+                                print("Error al crear la colección: \(error)")
+                            } else {
+                                print("Colección creada exitosamente: \("master")")
+                            }
+                        }
+                        Firestore.firestore().collection("Usuarios").document(textFieldEmail).setData([
+                            "nombre": nombre ,
+                            "apellidoP": apellidoP,
+                            "apellidoM": apellidoM,
+                            "descripcion": descripcion,
+                            "titulo": titulo,
+                            "numeroTel": numeroTel]) { error in
+                            if let error = error {
+                                print("Error al agregar el documento 'Info': \(error.localizedDescription)")
+                            } else {
+                                print("Documento 'Info' agregado con éxito a la colección \(textFieldEmail)")
+                            }
+                        }
+                        
+                        
+                    }
+                    .padding(.top, 18)
+                    .buttonStyle(.bordered)
+                    .tint(.blue)
+                    if let messageError = authenticationViewModel.messageError{
+                        Text(messageError)
+                            .bold()
+                            .font(.body)
+                            .foregroundColor(.red)
+                            .padding(.top,20)
+                    }
                 }
-                TextField("Telefono", text: $numeroTel)
-                    .keyboardType(.numberPad)
-                TextField("Descripcion de tu persona", text: $descripcion)
-                    .keyboardType(.emailAddress)
-                TextField("grupo al que pertenece", text: $titulo)
-                    .keyboardType(.emailAddress)
+                .textFieldStyle(.roundedBorder)
+                .padding(.horizontal, 64)
+                Spacer()
                 
-                DatePicker("Birthdate", selection: $fecha, displayedComponents: .date)
-                Divider()
-                TextField("añade tu contraseña",text: $textFieldPasseord )
-                Button("Aceptar") {
-                    //con esto hacemos la autenticaion
-                    authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
-                    
-                 //   en esta parte en donde se crea la columna para cada usuario y su respectiva informacion
-                    Firestore.firestore().collection(textFieldEmail).addDocument(data: ["nombre": nombre ,
-                        "ApellidoP": apellidoP,
-                        "ApellidoM": apellidoM,
-                        "descripcion": descripcion,
-                        "titulo": titulo,
-                        "numeroTel": numeroTel]
-                        ){ error in
-                        if let error = error {
-                            print("Error al crear la colección: \(error)")
-                        } else {
-                            print("Colección creada exitosamente: \("master")")
-                        }
-                    }
-                    Firestore.firestore().collection("Usuarios").document(textFieldEmail).setData([
-                        "nombre": nombre ,
-                        "apellidoP": apellidoP,
-                        "apellidoM": apellidoM,
-                        "descripcion": descripcion,
-                        "titulo": titulo,
-                        "numeroTel": numeroTel]) { error in
-                        if let error = error {
-                            print("Error al agregar el documento 'Info': \(error.localizedDescription)")
-                        } else {
-                            print("Documento 'Info' agregado con éxito a la colección \(textFieldEmail)")
-                        }
-                    }
-                    
-                    
-                }
-                .padding(.top, 18)
-                .buttonStyle(.bordered)
-                .tint(.blue)
-                if let messageError = authenticationViewModel.messageError{
-                    Text(messageError)
-                        .bold()
-                        .font(.body)
-                        .foregroundColor(.red)
-                        .padding(.top,20)
-                }
-            }
-            .textFieldStyle(.roundedBorder)
-            .padding(.horizontal, 64)
-            Spacer()
-        }//Vsrak principal
+            }//ScrollView
+        }//VStack principal
     }
 }
 
