@@ -10,24 +10,21 @@ import SwiftUI
 struct ViewPrincipal: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     var body: some View {
-        VStack{
-            Text("Hasta aqui vas bien")
-            Button{
-                authenticationViewModel.logout()
-            }label: {
-                Image(systemName: "arrowshape.backward.circle.fill")
-                    .font(.title)
-                    .foregroundColor(.black)
+        NavigationView{
+            VStack{
+                Spacer()
+                BaseView()
             }
-            .tint(.black)
-        }
-        .controlSize(.large)
-        .buttonStyle(.bordered)
-        .buttonBorderShape(.capsule)
-        .padding(.top, 40)
-        
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Home")
+            .toolbar {
+                Button("Logout"){
+                    authenticationViewModel.logout()
+                }
+            }
         }
     }
+}
 
 #Preview {
     ViewPrincipal(authenticationViewModel: AuthenticationViewModel())

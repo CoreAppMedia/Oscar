@@ -29,7 +29,7 @@ struct ProyectoChipilApp: App {
     var body: some Scene {
         WindowGroup {
             if let _ = authenticationViewModel.user{
-                ViewPrincipal(authenticationViewModel: authenticationViewModel)
+                BaseView(authenticationViewModel: authenticationViewModel)
             }else{
                 ContentView(authenticationViewModel: authenticationViewModel)
             }

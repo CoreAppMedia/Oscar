@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1C8F532AE45CF800E0A49F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C8F522AE45CF800E0A49F /* BaseView.swift */; };
 		EC2C11522AE301E20076B947 /* ProyectoChipilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11512AE301E20076B947 /* ProyectoChipilApp.swift */; };
 		EC2C11542AE301E20076B947 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11532AE301E20076B947 /* ContentView.swift */; };
 		EC2C11562AE301E40076B947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2C11552AE301E40076B947 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB1C8F522AE45CF800E0A49F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EC2C114E2AE301E20076B947 /* ProyectoChipil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoChipil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2C11512AE301E20076B947 /* ProyectoChipilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectoChipilApp.swift; sourceTree = "<group>"; };
 		EC2C11532AE301E20076B947 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB1C8F4F2AE45CD700E0A49F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C8F522AE45CF800E0A49F /* BaseView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		EC2C11452AE301E20076B947 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 				EC2C11A92AE3052F0076B947 /* DismissView.swift */,
 				EC2C11532AE301E20076B947 /* ContentView.swift */,
 				EC2C11AB2AE3055C0076B947 /* ViewPrincipal.swift */,
+				AB1C8F4F2AE45CD700E0A49F /* Menu */,
 				EC2C119D2AE303940076B947 /* Inicio de sesion */,
 				EC2C11552AE301E40076B947 /* Assets.xcassets */,
 				EC2C115A2AE301E40076B947 /* Persistence.swift */,
@@ -271,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2C115B2AE301E40076B947 /* Persistence.swift in Sources */,
+				AB1C8F532AE45CF800E0A49F /* BaseView.swift in Sources */,
 				EC2C11AA2AE3052F0076B947 /* DismissView.swift in Sources */,
 				EC2C115E2AE301E40076B947 /* ProyectoChipil.xcdatamodeld in Sources */,
 				EC2C11A62AE304AC0076B947 /* RegisterEmailView.swift in Sources */,

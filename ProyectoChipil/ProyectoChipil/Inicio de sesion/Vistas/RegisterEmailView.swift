@@ -62,7 +62,6 @@ struct RegisterEmailView: View {
                     Button("Aceptar") {
                         //con esto hacemos la autenticaion
                         authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
-                        
                      //   en esta parte en donde se crea la columna para cada usuario y su respectiva informacion
                         Firestore.firestore().collection("Usuarios").document(textFieldEmail).setData([
                             "nombre": nombre ,
@@ -72,9 +71,9 @@ struct RegisterEmailView: View {
                             "titulo": titulo,
                             "numeroTel": numeroTel]) { error in
                             if let error = error {
-                                print("Error al agregar el documento 'Info': \(error.localizedDescription)")
+                                print("Error al agregar el documento \(textFieldEmail): \(error.localizedDescription)")
                             } else {
-                                print("Documento 'Info' agregado con éxito a la colección \(textFieldEmail)")
+                                print("Documento \(textFieldEmail) agregado con éxito")
                             }
                         }
                         
