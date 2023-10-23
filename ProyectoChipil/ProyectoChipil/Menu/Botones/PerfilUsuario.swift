@@ -21,23 +21,44 @@ struct PerfilUsuario: View {
     @Binding var value: String
     
     var body: some View {
-        VStack{
-            Text("El valor Actual es: \(value)")
-        }
         if let perfilData = quizInfo{
             VStack(spacing: 10){
-                Text("El valor Actual es: \(value)")
-                Text(usuarioTexto)
-                HStack{
-                    Text(perfilData.descripcion)
+                Text("Bienvenido:")
+                    Text(perfilData.nombre)
                         .font(.title)
                         .fontWeight(.semibold)
-
+                VStack{
+                    Text("Licenciatura a la que pertenece: ")
+                    Text(perfilData.descripcion)
+                        .font(.title3)
+                        .fontWeight(.semibold)
                 }
-                HStack{
-                    Text(perfilData.apellidoP)
-                    Text(perfilData.apellidoM)
-                    Text(perfilData.nombre)
+                VStack{
+                    Text("Campus y Grado: ")
+                    Text(perfilData.titulo)
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                }
+                VStack{
+                    Text("Nombre Completo: ")
+                    HStack{
+                        Text(perfilData.apellidoP)
+                        Text(perfilData.apellidoM)
+                        Text(perfilData.nombre)
+                    }
+                    .fontWeight(.semibold)
+                }
+                VStack{
+                    Text("Telefono: ")
+                    Text(perfilData.numeroTel)
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                }
+                VStack{
+                    Text("Correo electronico: ")
+                    Text(usuarioTexto)
+                        .font(.title3)
+                        .fontWeight(.semibold)
                 }
                 Spacer()
             }
@@ -56,7 +77,7 @@ struct PerfilUsuario: View {
             }
             .task {
                 do{
-                    try await fetchData()
+                    try await fetchData(usuario: value)
                 }catch{
                     print(error.localizedDescription)
                 }
@@ -65,8 +86,10 @@ struct PerfilUsuario: View {
     }
     
     //funciones para obtener la informasion del cuestionatio y las Preguntas
-    func fetchData()async throws{
-        let perfilData = try await Firestore.firestore().collection("Usuarios").document("Oscar@gmail.com").getDocument().data(as: PerfilData.self)
+    func fetchData(usuario: String)async throws{
+        print("hasta aqui vamos bien")
+        print(usuario)
+        let perfilData = try await Firestore.firestore().collection("Usuarios").document(usuario).getDocument().data(as: PerfilData.self)
 
         //actualizar la infromacion en el hilo principal
         await MainActor.run(body: {
@@ -91,6 +114,7 @@ struct PerfilData: Codable{
     let descripcion: String
     let titulo: String
     let numeroTel: String
+    let correoElectronico: String
     
     
     enum CodingKeys: CodingKey{
@@ -101,6 +125,7 @@ struct PerfilData: Codable{
         case descripcion
         case titulo
         case numeroTel
+        case correoElectronico
         
     }
     

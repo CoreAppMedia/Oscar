@@ -44,6 +44,8 @@ struct RegisterEmailView: View {
                         .padding(.top, 2)
                         .padding(.bottom, 2)
                     TextField("añade tu correo electrocino",text: $textFieldEmail )
+                        .textContentType(.none)
+                        .autocapitalization(.none)
                     TextField("Nombre ", text: $nombre)
                     HStack{
                         TextField("Apellido Paterno", text: $apellidoP)
@@ -69,7 +71,8 @@ struct RegisterEmailView: View {
                             "apellidoM": apellidoM,
                             "descripcion": descripcion,
                             "titulo": titulo,
-                            "numeroTel": numeroTel]) { error in
+                            "numeroTel": numeroTel,
+                            "correoElectronico": textFieldEmail]) { error in
                             if let error = error {
                                 print("Error al agregar el documento \(textFieldEmail): \(error.localizedDescription)")
                             } else {
