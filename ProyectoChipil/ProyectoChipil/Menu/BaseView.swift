@@ -13,15 +13,14 @@ struct BaseView: View {
     @State var ShowMenu: Bool = false
     //variable para seleccionar una View
     @State var currentTab = "Home"
-    
 //offset para arrastrar gesuture y mostrar Menú
     @State var offset: CGFloat = 0
     @State var lastStoredOffset: CGFloat = 0
-    
     //Desplazamiento del gesto
     @GestureState var gestureOffset: CGFloat = 0
-    
     @State private var value = ""
+    
+    @State private var perfilData_1: PerfilData?
     
     var nombreDeUsuario: String {
         return authenticationViewModel.user?.email ?? "Miriam@gmail.com"
@@ -45,10 +44,12 @@ struct BaseView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 65, height: 65)
                             .clipShape(Circle())
-                        Text("Optimus")
-                            .font(.title2.bold())
-                        Text(usuarioTexto)
-                            .font(.callout)
+                        VStack(alignment: .leading, spacing: 0){
+                            Text("Bienvenido")
+                                .font(.callout)
+                            Text(usuarioTexto)
+                                .font(.title2.bold())
+                        }
                         HStack(spacing: 12){
                             
                             Button{

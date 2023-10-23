@@ -31,14 +31,6 @@ struct Home: View {
                         .font(.title)
                         .fontWeight(.semibold)
                         .hAligh(.leading)
-                    Button{
-                        authenticationViewModel.logout()
-                    }label: {
-                        Image(systemName: "arrowshape.backward.circle.fill")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            
-                    }
                 }
 
                 CustomLabel("list.bullet.rectangle.portrait", "\(questions.count)", "Preguntas de opcion multiple")

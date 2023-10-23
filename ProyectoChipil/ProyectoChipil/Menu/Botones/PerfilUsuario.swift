@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 
 struct PerfilUsuario: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
-    @State private var quizInfo: PerfilData?
+    @State private var perfil_1: PerfilData?
     
     @State private var usuarioTexto: String = ""
     var nombreDeUsuario: String {
@@ -21,7 +21,7 @@ struct PerfilUsuario: View {
     @Binding var value: String
     
     var body: some View {
-        if let perfilData = quizInfo{
+        if let perfilData = perfil_1{
             VStack(spacing: 10){
                 Text("Bienvenido:")
                     Text(perfilData.nombre)
@@ -93,7 +93,7 @@ struct PerfilUsuario: View {
 
         //actualizar la infromacion en el hilo principal
         await MainActor.run(body: {
-            self.quizInfo = perfilData
+            self.perfil_1 = perfilData
         })
         
         
