@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB1C8F532AE45CF800E0A49F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C8F522AE45CF800E0A49F /* BaseView.swift */; };
+		AB1C8FBD2AE6147000E0A49F /* PerfilUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */; };
 		EC2C11522AE301E20076B947 /* ProyectoChipilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11512AE301E20076B947 /* ProyectoChipilApp.swift */; };
 		EC2C11542AE301E20076B947 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11532AE301E20076B947 /* ContentView.swift */; };
 		EC2C11562AE301E40076B947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2C11552AE301E40076B947 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		AB1C8F522AE45CF800E0A49F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilUsuario.swift; sourceTree = "<group>"; };
 		EC2C114E2AE301E20076B947 /* ProyectoChipil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoChipil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2C11512AE301E20076B947 /* ProyectoChipilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectoChipilApp.swift; sourceTree = "<group>"; };
 		EC2C11532AE301E20076B947 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,9 +113,18 @@
 		AB1C8F4F2AE45CD700E0A49F /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				AB1C8F542AE5DA3400E0A49F /* Botones */,
 				AB1C8F522AE45CF800E0A49F /* BaseView.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		AB1C8F542AE5DA3400E0A49F /* Botones */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */,
+			);
+			path = Botones;
 			sourceTree = "<group>";
 		};
 		EC2C11452AE301E20076B947 = {
@@ -281,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1C8FBD2AE6147000E0A49F /* PerfilUsuario.swift in Sources */,
 				EC2C115B2AE301E40076B947 /* Persistence.swift in Sources */,
 				AB1C8F532AE45CF800E0A49F /* BaseView.swift in Sources */,
 				EC2C11AA2AE3052F0076B947 /* DismissView.swift in Sources */,

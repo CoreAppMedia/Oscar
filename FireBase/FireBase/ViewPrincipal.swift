@@ -44,21 +44,22 @@ struct ViewPrincipal: View {
                             .font(.title)
                             .foregroundColor(.black)
                     }
+                
                 Text("Mi  Nombre es: \(usuario.nombre)")
                 TextField("añade tu correo electrocino",text: $usuario.nombre )
                     .padding()
                 Button("Actualizar Datos") {
-                    usuario.name = usuario.nombre
+                     usuario.nombre = usuarioTexto
+                    consultarDocumentoInfo()
+                    
                 }
                 VStack {
                     Text("Nombre: \(nombre)")
                     Text("Apellido Paterno: \(apellidoP)")
 
-                    Button("Consultar Documento 'Info'") {
-                        consultarDocumentoInfo()
-                    }
                 }
                 NavigationLink(destination: Perfil1(usuario1: usuario), tag: 1, selection: $seleccion){
+                    
                     Button("Ir a BindingView") {
                         seleccion = 1
                     }

@@ -9,10 +9,8 @@ import SwiftUI
 
 struct BaseView: View {
     @StateObject var authenticationViewModel = AuthenticationViewModel()
-    
+    //ocultar o mostrar el menu lateral
     @State var ShowMenu: Bool = false
-    //ocultar un nativo
-    
     //variable para seleccionar una View
     @State var currentTab = "Home"
     
@@ -23,6 +21,12 @@ struct BaseView: View {
     //Desplazamiento del gesto
     @GestureState var gestureOffset: CGFloat = 0
     
+    @State private var value = ""
+    
+    var nombreDeUsuario: String {
+        return authenticationViewModel.user?.email ?? "Miriam@gmail.com"
+    }
+    @State private var usuarioTexto: String = ""
     
     var body: some View {
         
@@ -32,7 +36,7 @@ struct BaseView: View {
         //vista de la navegacion completa
         NavigationView{
             HStack(spacing: 0){
-                //Menu lateral
+                // Inicia Menu lateral
                 VStack(alignment: .leading, spacing:  0){
                     VStack(alignment: .leading, spacing: 14){
                         
@@ -43,7 +47,7 @@ struct BaseView: View {
                             .clipShape(Circle())
                         Text("Optimus")
                             .font(.title2.bold())
-                        Text("@Optimus")
+                        Text(usuarioTexto)
                             .font(.callout)
                         HStack(spacing: 12){
                             
@@ -75,7 +79,21 @@ struct BaseView: View {
                         VStack{
                             VStack(alignment: .leading, spacing: 38){
                                 
-                                TabButton(title: "Perfil", image: "person.fill")
+                                NavigationLink(){
+                                    PerfilUsuario(authenticationViewModel: AuthenticationViewModel(), value: .constant( usuarioTexto))
+                                }label: {
+                                    HStack(spacing: 14){
+                                        
+                                        Image(systemName: "person.fill")
+                                            .resizable()
+                                            .renderingMode(.template)
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 22, height: 22)
+                                        Text("perfil")
+                                    }
+                                    .foregroundColor(.primary)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                }
                                 TabButton(title: "Lista", image: "person")
                                 TabButton(title: "Temas", image: "person.fill")
                                 TabButton(title: "Consejos", image: "person")
@@ -112,7 +130,7 @@ struct BaseView: View {
                     VStack(spacing: 0){
                         Divider()
                         HStack{
-                            //cambiar ppr iun navigationLink cuando se requiera ir a otra View, se dejo en Button para que no marcara error ya que por el momento no direcciona a ninguna view
+                            //Boton para salir de la APP t regresar al login
                             Button{
                                 authenticationViewModel.logout()
                             }label: {
@@ -138,23 +156,31 @@ struct BaseView: View {
                         .opacity(0.09)
                         .ignoresSafeArea(.container, edges: .vertical))
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .onAppear {
+                    // Actualizar la variable usuarioTexto cuando se carga la vista
+                    usuarioTexto = nombreDeUsuario
+                }
+                //termina menu lateral
+                
                 // Vista de la pestaña Principal
                 VStack(spacing:0){
-                    TabView(selection: $currentTab){
-                        //Este "Text" se repetira dependiendo el  numero de botones que etengan en el menu lateral(SideMenu), en este caso son 7
-                        Text("Home")
-                            .navigationBarTitleDisplayMode(.inline)
-                            .navigationBarHidden(true)
-                            .tag("house")
+                    TabView(){
+                        VStack{
+                            Text("Home")
+                                .navigationBarTitleDisplayMode(.inline)
+                                .navigationBarHidden(true)
+                                .tag("house")
+                            
+                            Text("Hola mundo")
+                        }
                     }//TabView
-
                 }//VStack
                 .frame(width: getRect().width)
                 //BG cuando se muestra el menú
                 .overlay(
                 Rectangle()
                     .fill(
-                        Color.primary
+                        Color.green
                             .opacity(Double((offset / sideBarWidth)/5))
                     )
                     .ignoresSafeArea(.container, edges: .vertical)
@@ -163,7 +189,6 @@ struct BaseView: View {
                             ShowMenu.toggle()
                         }
                     })
-                
             }
             //tamaño máximo
             .frame(width: getRect().width + sideBarWidth)
@@ -193,19 +218,15 @@ struct BaseView: View {
                 offset = 0
                 lastStoredOffset = 0
             }
-            
         }
         .onChange(of: gestureOffset){ newValue in
             onChange()
         }
     }
     func onChange(){
-        
         let sideBarWidth = getRect().width - 90
-        
         offset = (gestureOffset != 0) ? (gestureOffset + lastStoredOffset < sideBarWidth ? gestureOffset + lastStoredOffset : offset): offset
-    }
-    
+    }//termina funcion
     func onEnd(value: DragGesture.Value){
         let sideBarWidth = getRect().width - 90
         let translation = value.translation.width
@@ -235,15 +256,11 @@ struct BaseView: View {
                     offset = sideBarWidth
                     ShowMenu = true
                 }
-                
             }
         }
-        
         //almacenar el ultimo dezplazamiento
         lastStoredOffset = offset
-        
-        
-    }
+    }//termina funcion
     
     @ViewBuilder
     func TabButton(title: String, image: String)->some View{
