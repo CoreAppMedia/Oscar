@@ -66,7 +66,7 @@ struct PerfilUsuario: View {
     
     //funciones para obtener la informasion del cuestionatio y las Preguntas
     func fetchData()async throws{
-        let perfilData = try await Firestore.firestore().collection("Usuarios").document(value).getDocument().data(as: PerfilData.self)
+        let perfilData = try await Firestore.firestore().collection("Usuarios").document("Oscar@gmail.com").getDocument().data(as: PerfilData.self)
 
         //actualizar la infromacion en el hilo principal
         await MainActor.run(body: {
