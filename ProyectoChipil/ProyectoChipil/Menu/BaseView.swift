@@ -94,7 +94,21 @@ struct BaseView: View {
                                     .foregroundColor(.primary)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 }
-                                TabButton(title: "Lista", image: "person")
+                                NavigationLink(){
+                                    Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
+                                }label: {
+                                    HStack(spacing: 14){
+                                        
+                                        Image(systemName: "person")
+                                            .resizable()
+                                            .renderingMode(.template)
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 22, height: 22)
+                                        Text("Cuestionario")
+                                    }
+                                    .foregroundColor(.primary)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                }
                                 TabButton(title: "Temas", image: "person.fill")
                                 TabButton(title: "Consejos", image: "person")
                                 TabButton(title: "Momentos", image: "person.fill")
