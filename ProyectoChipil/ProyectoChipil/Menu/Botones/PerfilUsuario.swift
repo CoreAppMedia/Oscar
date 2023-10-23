@@ -21,6 +21,9 @@ struct PerfilUsuario: View {
     @Binding var value: String
     
     var body: some View {
+        VStack{
+            Text("El valor Actual es: \(value)")
+        }
         if let perfilData = quizInfo{
             VStack(spacing: 10){
                 Text("El valor Actual es: \(value)")
