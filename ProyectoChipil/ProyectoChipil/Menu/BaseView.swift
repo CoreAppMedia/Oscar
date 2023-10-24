@@ -39,7 +39,7 @@ struct BaseView: View {
                 VStack(alignment: .leading, spacing:  0){
                     VStack(alignment: .leading, spacing: 14){
                         
-                        Image(systemName: "person")
+                        Image("icono")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 65, height: 65)
@@ -58,8 +58,7 @@ struct BaseView: View {
                                 Label(
                                     title: { Text("Seguidos") },
                                     icon: { Image(systemName: "42.circle")}
-                                )
-                            }//termina boton
+                                )}//termina boton
                             
                             Button{
                                 
@@ -67,9 +66,8 @@ struct BaseView: View {
                                 Label(
                                     title: { Text("Seguidores") },
                                     icon: { Image(systemName: "18.circle")}
-                                )
-                            }//termina boton
-                            
+                                )}//termina boton
+                
                         }// HStack donde esatn los botones de seguidores y seguidos
                         .foregroundColor(.primary)
                     }//VStack del contenido en el rectangulo lateral
@@ -81,7 +79,7 @@ struct BaseView: View {
                             VStack(alignment: .leading, spacing: 38){
                                 
                                 NavigationLink(){
-                                    PerfilUsuario(authenticationViewModel: AuthenticationViewModel(), value: .constant( usuarioTexto))
+                                    PerfilUsuario(authenticationViewModel: AuthenticationViewModel(), value: .constant( usuarioTexto)).preferredColorScheme(.light)
                                 }label: {
                                     HStack(spacing: 14){
                                         
@@ -130,8 +128,14 @@ struct BaseView: View {
                                 Button("Ajustes y privacidad"){
                                     
                                 }
-                                Button("Centro de ayuda"){
-                                    
+                                NavigationLink(){
+                                    Credenciales()
+                                }label: {
+                                    HStack(spacing: 14){
+                                        Text("Credenciales")
+                                    }
+                                    .foregroundColor(.primary)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             }//vstack
                             .padding()
@@ -167,8 +171,8 @@ struct BaseView: View {
                 .frame(width: getRect().width - 90)
                 .frame(maxHeight: .infinity)
                 .background(
-                    Color.primary
-                        .opacity(0.09)
+                    Color.chipil
+                        .opacity(0.7)
                         .ignoresSafeArea(.container, edges: .vertical))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .onAppear {
@@ -195,7 +199,7 @@ struct BaseView: View {
                 .overlay(
                 Rectangle()
                     .fill(
-                        Color.green
+                        Color.black
                             .opacity(Double((offset / sideBarWidth)/5))
                     )
                     .ignoresSafeArea(.container, edges: .vertical)

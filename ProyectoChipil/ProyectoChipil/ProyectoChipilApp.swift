@@ -29,9 +29,9 @@ struct ProyectoChipilApp: App {
     var body: some Scene {
         WindowGroup {
             if let _ = authenticationViewModel.user{
-                BaseView(authenticationViewModel: authenticationViewModel)
+                BaseView(authenticationViewModel: authenticationViewModel).preferredColorScheme(.light)
             }else{
-                ContentView(authenticationViewModel: authenticationViewModel)
+                ContentView(authenticationViewModel: authenticationViewModel).preferredColorScheme(.light)
             }
         }
     }
