@@ -127,8 +127,6 @@
 			children = (
 				AB1C8F522AE45CF800E0A49F /* BaseView.swift */,
 				AB1C8F542AE5DA3400E0A49F /* Botones */,
-				AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */,
-				AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -137,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */,
+				AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */,
+				AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */,
 			);
 			path = Botones;
 			sourceTree = "<group>";

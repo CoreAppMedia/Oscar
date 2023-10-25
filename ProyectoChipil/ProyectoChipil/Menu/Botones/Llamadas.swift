@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Llamadas: View {
+    
     var body: some View {
         ZStack{
             Color("chipil").opacity(1).edgesIgnoringSafeArea(.all)//cambiar de color en fondo

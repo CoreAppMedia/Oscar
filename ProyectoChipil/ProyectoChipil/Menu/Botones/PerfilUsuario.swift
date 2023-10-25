@@ -13,13 +13,7 @@ import FirebaseFirestoreSwift
 struct PerfilUsuario: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State private var perfil_1: PerfilData?
-    
-    @State private var usuarioTexto: String = ""
-    var nombreDeUsuario: String {
-        return authenticationViewModel.user?.email ?? "Miriam@gmail.com"
-    }
     @Binding var value: String
-    
     var body: some View {
         if let perfilData = perfil_1{
             VStack(spacing: 10){
@@ -56,15 +50,11 @@ struct PerfilUsuario: View {
                 }
                 VStack{
                     Text("Correo electronico: ")
-                    Text(usuarioTexto)
+                    Text(perfilData.correoElectronico)
                         .font(.title3)
                         .fontWeight(.semibold)
                 }
                 Spacer()
-            }
-            .onAppear {
-                // Actualizar la variable usuarioTexto cuando se carga la vista
-                usuarioTexto = nombreDeUsuario
             }
             .padding(15)
             
@@ -89,15 +79,15 @@ struct PerfilUsuario: View {
     func fetchData(usuario: String)async throws{
         print("hasta aqui vamos bien")
         print(usuario)
-        let perfilData = try await Firestore.firestore().collection("Usuarios").document(usuario).getDocument().data(as: PerfilData.self)
+        
+        let perfilData = try await Firestore.firestore().collection(usuario).document("oscar@gmail.com").getDocument().data(as: PerfilData.self)
 
         //actualizar la infromacion en el hilo principal
         await MainActor.run(body: {
             self.perfil_1 = perfilData
         })
-        
-        
     }//fin de la funcion
+    
 }
 
 #Preview {

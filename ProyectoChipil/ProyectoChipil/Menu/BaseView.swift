@@ -18,14 +18,16 @@ struct BaseView: View {
     @State var lastStoredOffset: CGFloat = 0
     //Desplazamiento del gesto
     @GestureState var gestureOffset: CGFloat = 0
-    @State private var value = ""
     
+    @State private var value = ""
     @State private var perfilData_1: PerfilData?
     
     var nombreDeUsuario: String {
-        return authenticationViewModel.user?.email ?? "Miriam@gmail.com"
+        return authenticationViewModel.user?.email ?? "Ixchell@gmail.com"
     }
+    
     @State private var usuarioTexto: String = ""
+    
     @State var isModal: Bool = false
     
     var body: some View {
