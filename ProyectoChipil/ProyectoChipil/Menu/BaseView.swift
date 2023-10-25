@@ -26,6 +26,7 @@ struct BaseView: View {
         return authenticationViewModel.user?.email ?? "Miriam@gmail.com"
     }
     @State private var usuarioTexto: String = ""
+    @State var isModal: Bool = false
     
     var body: some View {
         
@@ -108,7 +109,21 @@ struct BaseView: View {
                                     .foregroundColor(.primary)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 }
-                                TabButton(title: "Temas", image: "person.fill")
+                                NavigationLink(){
+                                    Llamadas()
+                                }label: {
+                                    HStack(spacing: 14){
+                                        
+                                        Image(systemName: "person.fill")
+                                            .resizable()
+                                            .renderingMode(.template)
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 22, height: 22)
+                                        Text("Agenda")
+                                    }
+                                    .foregroundColor(.primary)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                }
                                 TabButton(title: "Consejos", image: "person")
                                 TabButton(title: "Momentos", image: "person.fill")
                                 TabButton(title: "Tus MeGusta", image: "person")
@@ -128,15 +143,13 @@ struct BaseView: View {
                                 Button("Ajustes y privacidad"){
                                     
                                 }
-                                NavigationLink(){
-                                    Credenciales()
-                                }label: {
-                                    HStack(spacing: 14){
-                                        Text("Credenciales")
-                                    }
-                                    .foregroundColor(.primary)
+                                
+                                Button("Creadores") {
+                                     self.isModal = true
+                                 }.sheet(isPresented: $isModal, content: {
+                                     Credenciales()
+                                 }).foregroundColor(.primary)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                }
                             }//vstack
                             .padding()
                             .padding(.leading)
