@@ -80,7 +80,7 @@ struct PerfilUsuario: View {
         print("hasta aqui vamos bien")
         print(usuario)
         
-        let perfilData = try await Firestore.firestore().collection(usuario).document("oscar@gmail.com").getDocument().data(as: PerfilData.self)
+        let perfilData = try await Firestore.firestore().collection("Usuarios").document(usuario).getDocument().data(as: PerfilData.self)
 
         //actualizar la infromacion en el hilo principal
         await MainActor.run(body: {
