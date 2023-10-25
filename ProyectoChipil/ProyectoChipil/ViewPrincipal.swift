@@ -12,15 +12,7 @@ struct ViewPrincipal: View {
     var body: some View {
         NavigationView{
             VStack{
-                Spacer()
-                BaseView()
-            }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Home")
-            .toolbar {
-                Button("Logout"){
-                    authenticationViewModel.logout()
-                }
+                Text("Hola Mundo")
             }
         }
     }
