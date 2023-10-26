@@ -17,7 +17,7 @@ struct LoginEmailView: View {
                 .padding(.top, 8)
             Group{
                 Text("Bienvenido nuevamente a")
-                Text("Liga de futbol Zapotitlán")
+                Text("Chupil, tu asistente emocional")
                     .bold()
                     .underline()
                 }

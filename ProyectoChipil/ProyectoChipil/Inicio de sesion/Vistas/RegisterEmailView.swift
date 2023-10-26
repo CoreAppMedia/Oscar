@@ -27,7 +27,7 @@ struct RegisterEmailView: View {
                 .padding(.top, 8)
             Group{
                 Text("Bienvenido a")
-                Text("Firebase Prueba")
+                Text("Chipil,tu asistente emocional")
                     .bold()
                     .underline()
                 }

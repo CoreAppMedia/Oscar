@@ -37,76 +37,67 @@ struct BaseView: View {
         
         
         //vista de la navegacion completa
-        NavigationView{
-            HStack(spacing: 0){
-                // Inicia Menu lateral
-                VStack(alignment: .leading, spacing:  0){
-                    VStack(alignment: .leading, spacing: 14){
-                        
-                        Image("icono")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 65, height: 65)
-                            .clipShape(Circle())
-                        VStack(alignment: .leading, spacing: 0){
-                            Text("Bienvenido")
-                                .font(.callout)
-                            Text(usuarioTexto)
-                                .font(.title2.bold())
-                        }
-                        HStack(spacing: 12){
-                            
-                            Button{
-                                
+NavigationView{
+    HStack(spacing: 0){
+        // Inicia Menu lateral
+        VStack(alignment: .leading, spacing:  0){
+            VStack(alignment: .leading, spacing: 14){
+                Image("icono")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 65, height: 65)
+                    .clipShape(Circle())
+                VStack(alignment: .leading, spacing: 0){
+                    Text("Bienvenido")
+                        .font(.callout)
+                    Text(usuarioTexto)
+                        .font(.title2.bold())
+                    }
+                    HStack(spacing: 12){
+                        Button{
                             }label: {
-                                Label(
-                                    title: { Text("Seguidos") },
-                                    icon: { Image(systemName: "42.circle")}
+                            Label(
+                                title: { Text("Seguidos") },
+                                icon: { Image(systemName: "42.circle")}
                                 )}//termina boton
-                            
-                            Button{
-                                
+                        Button{
                             }label: {
-                                Label(
-                                    title: { Text("Seguidores") },
-                                    icon: { Image(systemName: "18.circle")}
+                            Label(
+                                title: { Text("Seguidores") },
+                                icon: { Image(systemName: "18.circle")}
                                 )}//termina boton
-                
                         }// HStack donde esatn los botones de seguidores y seguidos
                         .foregroundColor(.primary)
                     }//VStack del contenido en el rectangulo lateral
                     .padding(.horizontal)
                     .padding(.leading)
                     
-                    ScrollView(.vertical, showsIndicators: false){
-                        VStack{
-                            VStack(alignment: .leading, spacing: 38){
-                                
-                                NavigationLink(){
-                                    PerfilUsuario(authenticationViewModel: AuthenticationViewModel(), value: .constant( usuarioTexto)).preferredColorScheme(.light)
+            ScrollView(.vertical, showsIndicators: false){
+                    VStack{
+                        VStack(alignment: .leading, spacing: 38){
+                            NavigationLink(){
+                                PerfilUsuario(authenticationViewModel: AuthenticationViewModel(), value: .constant( usuarioTexto)).preferredColorScheme(.light)
                                 }label: {
-                                    HStack(spacing: 14){
-                                        
-                                        Image(systemName: "person.fill")
-                                            .resizable()
-                                            .renderingMode(.template)
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 22, height: 22)
+                                HStack(spacing: 14){
+                                    Image(systemName: "person.fill")
+                                        .resizable()
+                                        .renderingMode(.template)
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 22, height: 22)
                                         Text("perfil")
                                     }
                                     .foregroundColor(.primary)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 }
-                                NavigationLink(){
-                                    Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
+                            NavigationLink(){
+                                Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
                                 }label: {
-                                    HStack(spacing: 14){
-                                        
-                                        Image(systemName: "person")
-                                            .resizable()
-                                            .renderingMode(.template)
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 22, height: 22)
+                                HStack(spacing: 14){
+                                    Image(systemName: "person")
+                                        .resizable()
+                                        .renderingMode(.template)
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 22, height: 22)
                                         Text("Cuestionario")
                                     }
                                     .foregroundColor(.primary)
@@ -116,7 +107,6 @@ struct BaseView: View {
                                     Llamadas()
                                 }label: {
                                     HStack(spacing: 14){
-                                        
                                         Image(systemName: "person.fill")
                                             .resizable()
                                             .renderingMode(.template)
@@ -198,43 +188,42 @@ struct BaseView: View {
                 //termina menu lateral
                 
                 // Vista de la pestaña Principal
-                    VStack(spacing:0){
-                        TabView(){
-                            VStack{
-                              //Empieza vista principal de la APP
-                                HStack{
-                                    Image("Chipil")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 30, height: 30)
-                                    VStack{
-                                        Text("Bienvenidos a CHipil")
-                                            .fontWeight(.bold)
-                                        Text("Tu apoyo de Vida")
-                                            .fontWeight(.bold)
+                VStack(spacing:0){
+                    TabView(){
+                        VStack{
+                        //Empieza vista principal de la APP
+                            HStack{
+                                Image("Chipil")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 30, height: 30)
+                                VStack{
+                                    Text("Bienvenidos a Chipil")
+                                        .fontWeight(.bold)
+                                    Text("Tu apoyo emocional")
+                                        .fontWeight(.bold)
                                     }
                                 }
-                                List{
-                                    ForEach(LinkViewModel.links){ link in
-                                        VStack(alignment: .leading, spacing: 5){
-                                            
-                                            HStack{
-                                                Text("Titulo:")
-                                                    .bold()
-                                                    .lineLimit(4)
-                                                Text("\(link.titulo)")
-                                                    .bold()
-                                                    .foregroundColor(.black)
-                                                    .font(.caption)
-                                                Spacer()
-                                                Button(action: {
-                                                    LinkViewModel.updateIsFavorited(link: link)
+                            List{
+                                ForEach(LinkViewModel.links){ link in
+                                    VStack(alignment: .leading, spacing: 5){
+                                        HStack{
+                                            Text("Titulo:")
+                                                .bold()
+                                                .lineLimit(4)
+                                            Text("\(link.titulo)")
+                                                .bold()
+                                                .foregroundColor(.black)
+                                                .font(.caption)
+                                            Spacer()
+                                            Button(action: {
+                                                LinkViewModel.updateIsFavorited(link: link)
                                                 }, label: {
-                                                    if link.like{
-                                                        Image(systemName: "star.fill")
-                                                            .resizable()
-                                                            .foregroundColor(.yellow)
-                                                            .frame(width: 25, height: 25)
+                                                if link.like{
+                                                    Image(systemName: "star.fill")
+                                                        .resizable()
+                                                        .foregroundColor(.yellow)
+                                                        .frame(width: 25, height: 25)
                                                     }
                                                 })
                                             }
@@ -379,8 +368,6 @@ struct BaseView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }//Termina Funcion
-
-    
 }
 
 #Preview {
