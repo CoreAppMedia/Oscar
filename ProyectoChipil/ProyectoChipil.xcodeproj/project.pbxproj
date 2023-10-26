@@ -56,6 +56,10 @@
 		EC2C11AA2AE3052F0076B947 /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11A92AE3052F0076B947 /* DismissView.swift */; };
 		EC2C11AC2AE3055C0076B947 /* ViewPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11AB2AE3055C0076B947 /* ViewPrincipal.swift */; };
 		ECDCF0022AE70CB800723F61 /* CrearCuestionario.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCF0012AE70CB800723F61 /* CrearCuestionario.swift */; };
+		ECFA3B392AE9B4EE00009850 /* MuralDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA3B382AE9B4EE00009850 /* MuralDatasource.swift */; };
+		ECFA3B3B2AE9B50600009850 /* MuralRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA3B3A2AE9B50600009850 /* MuralRepository.swift */; };
+		ECFA3B3D2AE9B51D00009850 /* muralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA3B3C2AE9B51D00009850 /* muralViewModel.swift */; };
+		ECFA3B3F2AE9D0A800009850 /* Noticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA3B3E2AE9D0A800009850 /* Noticia.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		EC2C11A92AE3052F0076B947 /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
 		EC2C11AB2AE3055C0076B947 /* ViewPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPrincipal.swift; sourceTree = "<group>"; };
 		ECDCF0012AE70CB800723F61 /* CrearCuestionario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCuestionario.swift; sourceTree = "<group>"; };
+		ECFA3B382AE9B4EE00009850 /* MuralDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralDatasource.swift; sourceTree = "<group>"; };
+		ECFA3B3A2AE9B50600009850 /* MuralRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralRepository.swift; sourceTree = "<group>"; };
+		ECFA3B3C2AE9B51D00009850 /* muralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muralViewModel.swift; sourceTree = "<group>"; };
+		ECFA3B3E2AE9D0A800009850 /* Noticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +183,9 @@
 				EC2C11A92AE3052F0076B947 /* DismissView.swift */,
 				EC2C11532AE301E20076B947 /* ContentView.swift */,
 				EC2C11AB2AE3055C0076B947 /* ViewPrincipal.swift */,
-				EC0B1F582AE70005006ED5D1 /* Cuestionarios */,
+				ECFA3B372AE9B4C300009850 /* FireBase */,
 				AB1C8F4F2AE45CD700E0A49F /* Menu */,
+				EC0B1F582AE70005006ED5D1 /* Cuestionarios */,
 				EC2C119D2AE303940076B947 /* Inicio de sesion */,
 				EC2C11552AE301E40076B947 /* Assets.xcassets */,
 				EC2C115A2AE301E40076B947 /* Persistence.swift */,
@@ -213,6 +222,17 @@
 				EC2C11A72AE304BD0076B947 /* LoginEmailView.swift */,
 			);
 			path = Vistas;
+			sourceTree = "<group>";
+		};
+		ECFA3B372AE9B4C300009850 /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				ECFA3B382AE9B4EE00009850 /* MuralDatasource.swift */,
+				ECFA3B3A2AE9B50600009850 /* MuralRepository.swift */,
+				ECFA3B3C2AE9B51D00009850 /* muralViewModel.swift */,
+				ECFA3B3E2AE9D0A800009850 /* Noticia.swift */,
+			);
+			path = FireBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,12 +340,16 @@
 			files = (
 				AB1C8FBD2AE6147000E0A49F /* PerfilUsuario.swift in Sources */,
 				EC2C115B2AE301E40076B947 /* Persistence.swift in Sources */,
+				ECFA3B3D2AE9B51D00009850 /* muralViewModel.swift in Sources */,
 				AB1C8F532AE45CF800E0A49F /* BaseView.swift in Sources */,
 				AB2CFB3A2AE85D64006F7FC1 /* Credenciales.swift in Sources */,
 				EC2C11AA2AE3052F0076B947 /* DismissView.swift in Sources */,
 				EC2C115E2AE301E40076B947 /* ProyectoChipil.xcdatamodeld in Sources */,
 				EC2C11A62AE304AC0076B947 /* RegisterEmailView.swift in Sources */,
 				EC2C11A32AE304020076B947 /* AuthenticationViewModel.swift in Sources */,
+				ECFA3B392AE9B4EE00009850 /* MuralDatasource.swift in Sources */,
+				ECFA3B3F2AE9D0A800009850 /* Noticia.swift in Sources */,
+				ECFA3B3B2AE9B50600009850 /* MuralRepository.swift in Sources */,
 				EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */,
 				EC0B1F5F2AE7012F006ED5D1 /* QuestionsViews.swift in Sources */,
 				AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */,

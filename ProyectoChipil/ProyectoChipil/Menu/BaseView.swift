@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BaseView: View {
     @StateObject var authenticationViewModel = AuthenticationViewModel()
+    @ObservedObject var LinkViewModel: LinkViewModel
     //ocultar o mostrar el menu lateral
     @State var ShowMenu: Bool = false
     //variable para seleccionar una View
@@ -197,15 +198,75 @@ struct BaseView: View {
                 //termina menu lateral
                 
                 // Vista de la pestaña Principal
-                VStack(spacing:0){
-                    TabView(){
-                        VStack{
-                            Text("Home")
-                                .navigationBarTitleDisplayMode(.inline)
-                                .navigationBarHidden(true)
-                                .tag("house")
-                            
-                            Text("Hola mundo")
+                    VStack(spacing:0){
+                        TabView(){
+                            VStack{
+                              //Empieza vista principal de la APP
+                                HStack{
+                                    Image("Chipil")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 30, height: 30)
+                                    VStack{
+                                        Text("Bienvenidos a CHipil")
+                                            .fontWeight(.bold)
+                                        Text("Tu apoyo de Vida")
+                                            .fontWeight(.bold)
+                                    }
+                                }
+                                List{
+                                    ForEach(LinkViewModel.links){ link in
+                                        VStack(alignment: .leading, spacing: 5){
+                                            
+                                            HStack{
+                                                Text("Titulo:")
+                                                    .bold()
+                                                    .lineLimit(4)
+                                                Text("\(link.titulo)")
+                                                    .bold()
+                                                    .foregroundColor(.black)
+                                                    .font(.caption)
+                                                Spacer()
+                                                Button(action: {
+                                                    LinkViewModel.updateIsFavorited(link: link)
+                                                }, label: {
+                                                    if link.like{
+                                                        Image(systemName: "star.fill")
+                                                            .resizable()
+                                                            .foregroundColor(.yellow)
+                                                            .frame(width: 25, height: 25)
+                                                    }
+                                                })
+                                            }
+                                            HStack{
+                                                Text("Noticia: ")
+                                                    .bold()
+                                                    .lineLimit(4)
+                                                Text("\(link.noticia)")
+                                                    .bold()
+                                                    .foregroundColor(.black)
+                                                    .font(.caption)
+
+                                            }
+                                            HStack{
+                                                Text("Fecha: ")
+                                                    .bold()
+                                                    .lineLimit(4)
+                                                Text("\(link.fecha)")
+                                                    .bold()
+                                                    .foregroundColor(.black)
+                                                    .font(.caption)
+                                            }
+                                            Divider().background(.black)
+                                        }//Vstack
+                                        
+                                    }//fin fel ForEach
+                                    
+                                }//Fin de la lista
+                                .task {
+                            LinkViewModel.getAllLink()
+                        }
+                         //Termina Vista principal de la APP
                         }
                     }//TabView
                 }//VStack
@@ -224,6 +285,7 @@ struct BaseView: View {
                         }
                     })
             }
+            
             //tamaño máximo
             .frame(width: getRect().width + sideBarWidth)
             .offset(x: -sideBarWidth / 2)
@@ -241,6 +303,7 @@ struct BaseView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }//NavigationView
+        
         .animation(.easeOut, value: offset == 0)
         .onChange(of: ShowMenu){ newValue in
             
@@ -321,7 +384,7 @@ struct BaseView: View {
 }
 
 #Preview {
-    BaseView()
+    BaseView(LinkViewModel: LinkViewModel())
 }
 
 // extending view to get screen rect
