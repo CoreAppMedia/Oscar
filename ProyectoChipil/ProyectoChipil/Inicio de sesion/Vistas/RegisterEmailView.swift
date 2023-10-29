@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseFirestore
 struct RegisterEmailView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
+    @ObservedObject var LinkViewModel: LinkViewModel
     @State var textFieldEmail: String = ""
     @State var textFieldPasseord: String = ""
     
@@ -65,21 +66,13 @@ struct RegisterEmailView: View {
                         //con esto hacemos la autenticaion
                         authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
                      //   en esta parte en donde se crea la columna para cada usuario y su respectiva informacion
-                        Firestore.firestore().collection("Usuarios").document(textFieldEmail).setData([
-                            "nombre": nombre ,
-                            "apellidoP": apellidoP,
-                            "apellidoM": apellidoM,
-                            "descripcion": descripcion,
-                            "titulo": titulo,
-                            "numeroTel": numeroTel,
-                            "correoElectronico": textFieldEmail]) { error in
-                            if let error = error {
-                                print("Error al agregar el documento \(textFieldEmail): \(error.localizedDescription)")
-                            } else {
-                                print("Documento \(textFieldEmail) agregado con éxito")
-                            }
-                        }
-                        
+        LinkViewModel.crearTabla(nombre: nombre,
+                                 apellidoP: apellidoP,
+                                 apellidoM: apellidoM,
+                                 descripcion: descripcion,
+                                 titulo: titulo,
+                                 numeroTel: numeroTel,
+                                 textFieldEmail: textFieldEmail)
                         
                     }
                     .padding(.top, 18)
@@ -103,5 +96,5 @@ struct RegisterEmailView: View {
 }
 
 #Preview {
-    RegisterEmailView(authenticationViewModel: AuthenticationViewModel())
+    RegisterEmailView(authenticationViewModel: AuthenticationViewModel(), LinkViewModel: LinkViewModel())
 }

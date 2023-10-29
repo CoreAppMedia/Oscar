@@ -45,6 +45,17 @@ final class LinkViewModel: ObservableObject {
             }
         }
     }
+    func crearTabla(nombre: String, apellidoP: String, apellidoM: String,descripcion:String,titulo: String,numeroTel: String,textFieldEmail: String){
+        linkRepository.crearTabla(nombre: nombre,
+                                  apellidoP: apellidoP,
+                                  apellidoM: apellidoM,
+                                  descripcion: descripcion,
+                                  titulo: titulo,
+                                  numeroTel: numeroTel,
+                                  textFieldEmail: textFieldEmail)
+        print("Tabla guardada exitosamente")
+        
+    }
     func updateIsFavorited(link: LinkModel){
         let updateLink = LinkModel(id: link.id,
                                    like: link.like ? false: true,
