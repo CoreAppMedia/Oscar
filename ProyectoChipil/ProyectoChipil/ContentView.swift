@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import LocalAuthentication
+
 //vamos a crrear un enum para poder seleccionar casos
 enum Autenticar: String, Identifiable {
     
@@ -20,6 +22,7 @@ enum Autenticar: String, Identifiable {
 struct ContentView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State private var AutenticationSheetView: Autenticar?
+    @State private var authenticationSheetView: AuthenticationSheetView?
     @State var titles = [
      "Ayuda desde casita",
      "Un lugar seguro para ti",
@@ -160,7 +163,7 @@ struct ContentView: View {
             }
             
         }
-        
+            
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(text.count) * 0.02) {
             withAnimation(.easeInOut(duration: 0.5)){
                 subTitleAnimatio.toggle()
@@ -170,6 +173,7 @@ struct ContentView: View {
                 completion()
             }
         }
+        
         
     }//llave del body
 }//llave principal

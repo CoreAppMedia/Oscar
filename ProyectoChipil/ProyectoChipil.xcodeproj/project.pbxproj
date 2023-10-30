@@ -67,6 +67,7 @@
 		AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilUsuario.swift; sourceTree = "<group>"; };
 		AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credenciales.swift; sourceTree = "<group>"; };
 		AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Llamadas.swift; sourceTree = "<group>"; };
+		ABD254082AEF5351003D719D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EC0B1F5A2AE7004A006ED5D1 /* EstructurasCuestionarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstructurasCuestionarios.swift; sourceTree = "<group>"; };
 		EC0B1F5C2AE700D2006ED5D1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EC0B1F5E2AE7012F006ED5D1 /* QuestionsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViews.swift; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 		EC2C11502AE301E20076B947 /* ProyectoChipil */ = {
 			isa = PBXGroup;
 			children = (
+				ABD254082AEF5351003D719D /* Info.plist */,
 				EC2C11512AE301E20076B947 /* ProyectoChipilApp.swift */,
 				EC2C11A92AE3052F0076B947 /* DismissView.swift */,
 				EC2C11532AE301E20076B947 /* ContentView.swift */,
@@ -497,6 +499,8 @@
 				DEVELOPMENT_TEAM = V323JCJ58W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProyectoChipil/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Se necesita Acceso a tus datos de FaceID";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -507,7 +511,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.unam.ProyectoChipil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unam.Proyecto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -526,6 +530,8 @@
 				DEVELOPMENT_TEAM = V323JCJ58W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProyectoChipil/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Se necesita Acceso a tus datos de FaceID";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -536,7 +542,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.unam.ProyectoChipil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unam.Proyecto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
