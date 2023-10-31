@@ -47,6 +47,9 @@ NavigationView{
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 65, height: 65)
                     .clipShape(Circle())
+                    .overlay{
+                        Circle().stroke(.black, lineWidth: 1)
+                    }
                 VStack(alignment: .leading, spacing: 0){
                     Text("Bienvenido")
                         .font(.callout)
@@ -117,10 +120,39 @@ NavigationView{
                                     .foregroundColor(.primary)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 }
-                                TabButton(title: "Consejos", image: "person")
-                                TabButton(title: "Momentos", image: "person.fill")
-                                TabButton(title: "Tus MeGusta", image: "person")
-                                TabButton(title: "Bloqueos", image: "person.fill")
+                            NavigationLink(){
+                                Hospitales()
+                            }label: {
+                                HStack(spacing: 14){
+                                    Image(systemName: "person")
+                                        .resizable()
+                                        .renderingMode(.template)
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 22, height: 22)
+                                    Text("Hospitales")
+                                }
+                                .foregroundColor(.primary)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                
+                            }
+                            NavigationLink(){
+                                ViewPrincipal()
+                            }label: {
+                                HStack(spacing: 14){
+                                    Image(systemName: "person.fill")
+                                        .resizable()
+                                        .renderingMode(.template)
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 22, height: 22)
+                                    Text("Inicio de sesion ")
+                                }
+                                .foregroundColor(.primary)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                
+                            }
+                                TabButton(title: "Bloqueos", image: "person")
                                 
                             }//VStack de los botones
                             .padding()
@@ -193,6 +225,20 @@ NavigationView{
                         VStack{
                         //Empieza vista principal de la APP
                             HStack{
+                                Button{
+                                    withAnimation{ShowMenu.toggle()}
+                                }label: {
+                                    Image("icono")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 45, height: 45)
+                                        .clipShape(Circle())
+                                        .overlay{
+                                            Circle().stroke(.black, lineWidth: 1)
+                                        }
+                                }
+                                .padding(.leading)
+                                Spacer()
                                 Image("Chipil")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
@@ -203,7 +249,27 @@ NavigationView{
                                     Text("Tu apoyo emocional")
                                         .fontWeight(.bold)
                                     }
+                                Spacer()
+                                
+                                Button(action: {
+                                    guard let phoneNumber = URL(string: "tel://5539829273") else { return }
+                                    UIApplication.shared.open(phoneNumber)
+                                }) {
+                                    Image(systemName: "phone.bubble.left.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 35, height: 35)
+                                        .foregroundColor(.red)
+                                    
+                                   //     .shadow(color: .blue, radius:10)
                                 }
+                                .padding(.trailing)
+                                }
+                            .padding(.bottom)
+                            .background(
+                                    Color.chipil
+                                        .opacity(0.7)
+                                        .ignoresSafeArea(.container, edges: .vertical))
                             List{
                                 ForEach(LinkViewModel.links){ link in
                                     VStack(alignment: .leading, spacing: 5){

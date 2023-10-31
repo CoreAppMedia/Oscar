@@ -55,6 +55,7 @@
 		EC2C11A82AE304BD0076B947 /* LoginEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11A72AE304BD0076B947 /* LoginEmailView.swift */; };
 		EC2C11AA2AE3052F0076B947 /* DismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11A92AE3052F0076B947 /* DismissView.swift */; };
 		EC2C11AC2AE3055C0076B947 /* ViewPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11AB2AE3055C0076B947 /* ViewPrincipal.swift */; };
+		ECA02DA12AF033CE007BAC30 /* Hospitales.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA02DA02AF033CE007BAC30 /* Hospitales.swift */; };
 		ECDCF0022AE70CB800723F61 /* CrearCuestionario.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDCF0012AE70CB800723F61 /* CrearCuestionario.swift */; };
 		ECFA3B392AE9B4EE00009850 /* MuralDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA3B382AE9B4EE00009850 /* MuralDatasource.swift */; };
 		ECFA3B3B2AE9B50600009850 /* MuralRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA3B3A2AE9B50600009850 /* MuralRepository.swift */; };
@@ -86,6 +87,7 @@
 		EC2C11A72AE304BD0076B947 /* LoginEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailView.swift; sourceTree = "<group>"; };
 		EC2C11A92AE3052F0076B947 /* DismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissView.swift; sourceTree = "<group>"; };
 		EC2C11AB2AE3055C0076B947 /* ViewPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPrincipal.swift; sourceTree = "<group>"; };
+		ECA02DA02AF033CE007BAC30 /* Hospitales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospitales.swift; sourceTree = "<group>"; };
 		ECDCF0012AE70CB800723F61 /* CrearCuestionario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCuestionario.swift; sourceTree = "<group>"; };
 		ECFA3B382AE9B4EE00009850 /* MuralDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralDatasource.swift; sourceTree = "<group>"; };
 		ECFA3B3A2AE9B50600009850 /* MuralRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuralRepository.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */,
+				ECA02DA02AF033CE007BAC30 /* Hospitales.swift */,
 				AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */,
 				AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */,
 			);
@@ -355,6 +358,7 @@
 				EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */,
 				EC0B1F5F2AE7012F006ED5D1 /* QuestionsViews.swift in Sources */,
 				AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */,
+				ECA02DA12AF033CE007BAC30 /* Hospitales.swift in Sources */,
 				EC2C11A82AE304BD0076B947 /* LoginEmailView.swift in Sources */,
 				EC2C119F2AE303BF0076B947 /* AuthenticationFirebaseDataSource.swift in Sources */,
 				EC2C11A12AE303EA0076B947 /* AuthenticationRepository.swift in Sources */,

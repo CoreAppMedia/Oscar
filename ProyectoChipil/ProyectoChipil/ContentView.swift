@@ -22,7 +22,6 @@ enum Autenticar: String, Identifiable {
 struct ContentView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State private var AutenticationSheetView: Autenticar?
-    @State private var authenticationSheetView: AuthenticationSheetView?
     @State var titles = [
      "Ayuda desde casita",
      "Un lugar seguro para ti",
