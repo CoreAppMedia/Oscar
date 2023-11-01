@@ -33,14 +33,15 @@ final class LinkRepository {
                                                         completionBlock: completionBlock)
         }
     //esta funcion nos permite crear una nueva tabla para cada usuario
-    func crearTabla(nombre: String, apellidoP: String, apellidoM: String,descripcion:String,titulo: String,numeroTel: String,textFieldEmail: String){
+    func crearTabla(nombre: String, apellidoP: String, apellidoM: String,descripcion:String,titulo: String,numeroTel: String,textFieldEmail: String, fecha: Date){
         linkDatasource.crearTabla(nombre: nombre,
                                   apellidoP: apellidoP,
                                   apellidoM: apellidoM,
                                   descripcion: descripcion,
                                   titulo: titulo,
                                   numeroTel: numeroTel,
-                                  textFieldEmail: textFieldEmail)
+                                  textFieldEmail: textFieldEmail,
+                                  fecha: fecha)
         }
     
     func update(link: LinkModel){

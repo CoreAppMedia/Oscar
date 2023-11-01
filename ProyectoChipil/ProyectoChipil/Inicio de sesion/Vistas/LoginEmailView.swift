@@ -79,7 +79,7 @@ struct LoginEmailView: View {
                 }
             }
             Spacer()
-        }//Vsrak principal
+        }//Vstack principal
         .background(Color("chipil").ignoresSafeArea(.all, edges: .all))
     }
 }

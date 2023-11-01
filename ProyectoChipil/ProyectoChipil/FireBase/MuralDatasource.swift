@@ -79,7 +79,7 @@ final class LinkDatasource {
         database.collection(collection).document(documentId).delete()
     }
     //esta funcion nos permite crear una nueva tabla para cada usuario
-    func crearTabla(nombre: String, apellidoP: String, apellidoM: String,descripcion:String,titulo: String,numeroTel: String,textFieldEmail: String){
+    func crearTabla(nombre: String, apellidoP: String, apellidoM: String,descripcion:String,titulo: String,numeroTel: String,textFieldEmail: String, fecha: Date){
         Firestore.firestore().collection("Usuarios").document(textFieldEmail).setData([
             "nombre": nombre ,
             "apellidoP": apellidoP,
@@ -87,7 +87,8 @@ final class LinkDatasource {
             "descripcion": descripcion,
             "titulo": titulo,
             "numeroTel": numeroTel,
-            "correoElectronico": textFieldEmail]) { error in
+            "correoElectronico": textFieldEmail,
+            "fecha": fecha]) { error in
             if let error = error {
                 print("Error al agregar el documento \(textFieldEmail): \(error.localizedDescription)")
             } else {

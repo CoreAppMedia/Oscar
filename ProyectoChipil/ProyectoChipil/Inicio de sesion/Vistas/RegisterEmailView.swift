@@ -60,9 +60,10 @@ struct RegisterEmailView: View {
                     TextField("grupo al que pertenece", text: $titulo)
                         .keyboardType(.emailAddress)
                     
-                    DatePicker("Birthdate", selection: $fecha, displayedComponents: .date)
+                    DatePicker("Nacimiento: ", selection: $fecha, displayedComponents: .date)
                     Divider()
                     TextField("añade tu contraseña",text: $textFieldPasseord )
+                        .padding(.bottom)
                     Button("Aceptar") {
                         //con esto hacemos la autenticaion
                         authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
@@ -73,14 +74,20 @@ struct RegisterEmailView: View {
                                  descripcion: descripcion,
                                  titulo: titulo,
                                  numeroTel: numeroTel,
-                                 textFieldEmail: textFieldEmail)
+                                 textFieldEmail: textFieldEmail, fecha: fecha)
                         
                     }
-                    .padding(.top, 18)
-                    .buttonStyle(.bordered)
-                    .tint(.blue)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 150)
+                    .background(Color.green)
+                    .clipShape(Capsule())
+                    .opacity(textFieldEmail != "" && textFieldPasseord != "" && nombre != "" && apellidoP != "" && apellidoM != "" && titulo != "" && numeroTel != "" && descripcion != "" ? 1 : 0.5)
+                    .disabled(textFieldEmail != "" && textFieldPasseord != "" && nombre != "" && apellidoP != "" && apellidoM != "" && titulo != "" && numeroTel != "" && descripcion != ""  ? false : true)
+                    
                     if let messageError = authenticationViewModel.messageError{
-                        Text(messageError)
+                        Text("Error Master, ingresa un Usuario y contraeña valido")
                             .bold()
                             .font(.body)
                             .foregroundColor(.red)
@@ -93,6 +100,7 @@ struct RegisterEmailView: View {
                 
             }//ScrollView
         }//VStack principal
+        .background(Color("chipil").ignoresSafeArea(.all, edges: .all))
     }
 }
 

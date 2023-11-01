@@ -45,14 +45,15 @@ final class LinkViewModel: ObservableObject {
             }
         }
     }
-    func crearTabla(nombre: String, apellidoP: String, apellidoM: String,descripcion:String,titulo: String,numeroTel: String,textFieldEmail: String){
+    func crearTabla(nombre: String, apellidoP: String, apellidoM: String,descripcion:String,titulo: String,numeroTel: String,textFieldEmail: String, fecha: Date){
         linkRepository.crearTabla(nombre: nombre,
                                   apellidoP: apellidoP,
                                   apellidoM: apellidoM,
                                   descripcion: descripcion,
                                   titulo: titulo,
                                   numeroTel: numeroTel,
-                                  textFieldEmail: textFieldEmail)
+                                  textFieldEmail: textFieldEmail,
+                                  fecha: fecha)
         print("Tabla guardada exitosamente")
         
     }
