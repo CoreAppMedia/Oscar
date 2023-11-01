@@ -18,7 +18,7 @@ struct DismissView: View {
             .tint(.black)
             .padding(.trailing, 12)
         }
-        .foregroundColor(.blue)
+        .foregroundColor(.green)
         .font(.title3)
         //.buttonStyle(.bordered)
     }

@@ -17,7 +17,7 @@ struct LoginEmailView: View {
                 .padding(.top, 8)
             Group{
                 Text("Bienvenido nuevamente a")
-                Text("Chupil, tu asistente emocional")
+                Text("Chipil tu asistente emocional")
                     .bold()
                     .underline()
                 }
@@ -31,14 +31,44 @@ struct LoginEmailView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 2)
                     .padding(.bottom, 2)
-                TextField("añade tu correo electrocino",text: $textFieldEmail )
-                TextField("añade tu contraseña",text: $textFieldPasseord )
+                HStack{
+                    Image(systemName: "envelope")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    TextField("Email", text: $textFieldEmail)
+                        .autocapitalization(.none)
+                }
+                .padding()
+                .background(Color.white.opacity(textFieldEmail == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                
+                HStack{
+                    Image(systemName: "lock")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    SecureField("Password", text: $textFieldPasseord)
+                        .autocapitalization(.none)
+                }
+                .padding()
+                .background(Color.white.opacity(textFieldPasseord == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                .padding(.top)
+                
                 Button("Login") {
                     authenticationViewModel.login(email: textFieldEmail, password: textFieldPasseord)
                 }
-                .padding(.top, 18)
-                .buttonStyle(.bordered)
-                .tint(.blue)
+                .fontWeight(.heavy)
+                .foregroundColor(.black)
+                .padding(.vertical)
+                .frame(width: UIScreen.main.bounds.width - 150)
+                .background(Color.green)
+                .clipShape(Capsule())
+                .opacity(textFieldEmail != "" && textFieldPasseord != "" ? 1 : 0.5)
+                .disabled(textFieldEmail != "" && textFieldPasseord != "" ? false : true)
                 
                 if let mesengeError = authenticationViewModel.messageError{
                     Text(mesengeError)
@@ -48,10 +78,9 @@ struct LoginEmailView: View {
                         .padding(.top, 20)
                 }
             }
-            .textFieldStyle(.roundedBorder)
-            .padding(.horizontal, 64)
             Spacer()
         }//Vsrak principal
+        .background(Color("chipil").ignoresSafeArea(.all, edges: .all))
     }
 }
 

@@ -11,6 +11,10 @@
 		AB1C8FBD2AE6147000E0A49F /* PerfilUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */; };
 		AB2CFB3A2AE85D64006F7FC1 /* Credenciales.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */; };
 		AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */; };
+		ABD2540B2AF0A138003D719D /* prueba-login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540A2AF0A138003D719D /* prueba-login.swift */; };
+		ABD2540D2AF0A199003D719D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540C2AF0A199003D719D /* LoginViewModel.swift */; };
+		ABD2540F2AF2B6DC003D719D /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540E2AF2B6DC003D719D /* LoadingScreen.swift */; };
+		ABD254112AF2B9E8003D719D /* HomePrueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD254102AF2B9E8003D719D /* HomePrueba.swift */; };
 		EC0B1F5B2AE7004A006ED5D1 /* EstructurasCuestionarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1F5A2AE7004A006ED5D1 /* EstructurasCuestionarios.swift */; };
 		EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1F5C2AE700D2006ED5D1 /* Home.swift */; };
 		EC0B1F5F2AE7012F006ED5D1 /* QuestionsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1F5E2AE7012F006ED5D1 /* QuestionsViews.swift */; };
@@ -69,6 +73,10 @@
 		AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credenciales.swift; sourceTree = "<group>"; };
 		AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Llamadas.swift; sourceTree = "<group>"; };
 		ABD254082AEF5351003D719D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		ABD2540A2AF0A138003D719D /* prueba-login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "prueba-login.swift"; sourceTree = "<group>"; };
+		ABD2540C2AF0A199003D719D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		ABD2540E2AF2B6DC003D719D /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		ABD254102AF2B9E8003D719D /* HomePrueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrueba.swift; sourceTree = "<group>"; };
 		EC0B1F5A2AE7004A006ED5D1 /* EstructurasCuestionarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstructurasCuestionarios.swift; sourceTree = "<group>"; };
 		EC0B1F5C2AE700D2006ED5D1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EC0B1F5E2AE7012F006ED5D1 /* QuestionsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViews.swift; sourceTree = "<group>"; };
@@ -153,6 +161,18 @@
 			path = Botones;
 			sourceTree = "<group>";
 		};
+		ABD254092AF0A114003D719D /* prueba de inicio-login */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C11AB2AE3055C0076B947 /* ViewPrincipal.swift */,
+				ABD2540A2AF0A138003D719D /* prueba-login.swift */,
+				ABD2540C2AF0A199003D719D /* LoginViewModel.swift */,
+				ABD2540E2AF2B6DC003D719D /* LoadingScreen.swift */,
+				ABD254102AF2B9E8003D719D /* HomePrueba.swift */,
+			);
+			path = "prueba de inicio-login";
+			sourceTree = "<group>";
+		};
 		EC0B1F582AE70005006ED5D1 /* Cuestionarios */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +207,7 @@
 				EC2C11512AE301E20076B947 /* ProyectoChipilApp.swift */,
 				EC2C11A92AE3052F0076B947 /* DismissView.swift */,
 				EC2C11532AE301E20076B947 /* ContentView.swift */,
-				EC2C11AB2AE3055C0076B947 /* ViewPrincipal.swift */,
+				ABD254092AF0A114003D719D /* prueba de inicio-login */,
 				ECFA3B372AE9B4C300009850 /* FireBase */,
 				AB1C8F4F2AE45CD700E0A49F /* Menu */,
 				EC0B1F582AE70005006ED5D1 /* Cuestionarios */,
@@ -351,14 +371,17 @@
 				EC2C11AA2AE3052F0076B947 /* DismissView.swift in Sources */,
 				EC2C115E2AE301E40076B947 /* ProyectoChipil.xcdatamodeld in Sources */,
 				EC2C11A62AE304AC0076B947 /* RegisterEmailView.swift in Sources */,
+				ABD2540D2AF0A199003D719D /* LoginViewModel.swift in Sources */,
 				EC2C11A32AE304020076B947 /* AuthenticationViewModel.swift in Sources */,
 				ECFA3B392AE9B4EE00009850 /* MuralDatasource.swift in Sources */,
+				ABD254112AF2B9E8003D719D /* HomePrueba.swift in Sources */,
 				ECFA3B3F2AE9D0A800009850 /* Noticia.swift in Sources */,
 				ECFA3B3B2AE9B50600009850 /* MuralRepository.swift in Sources */,
 				EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */,
 				EC0B1F5F2AE7012F006ED5D1 /* QuestionsViews.swift in Sources */,
 				AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */,
 				ECA02DA12AF033CE007BAC30 /* Hospitales.swift in Sources */,
+				ABD2540B2AF0A138003D719D /* prueba-login.swift in Sources */,
 				EC2C11A82AE304BD0076B947 /* LoginEmailView.swift in Sources */,
 				EC2C119F2AE303BF0076B947 /* AuthenticationFirebaseDataSource.swift in Sources */,
 				EC2C11A12AE303EA0076B947 /* AuthenticationRepository.swift in Sources */,
@@ -367,6 +390,7 @@
 				EC2C11AC2AE3055C0076B947 /* ViewPrincipal.swift in Sources */,
 				EC0B1F5B2AE7004A006ED5D1 /* EstructurasCuestionarios.swift in Sources */,
 				EC2C11522AE301E20076B947 /* ProyectoChipilApp.swift in Sources */,
+				ABD2540F2AF2B6DC003D719D /* LoadingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +539,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.unam.Proyecto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unam.ProyectoChipil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -546,7 +570,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.unam.Proyecto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unam.ProyectoChipil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

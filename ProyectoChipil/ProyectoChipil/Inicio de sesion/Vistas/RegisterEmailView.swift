@@ -10,6 +10,7 @@ import FirebaseFirestore
 struct RegisterEmailView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @ObservedObject var LinkViewModel: LinkViewModel
+    
     @State var textFieldEmail: String = ""
     @State var textFieldPasseord: String = ""
     
@@ -20,7 +21,7 @@ struct RegisterEmailView: View {
     @State private var titulo = ""
     @State private var numeroTel = ""
     @State private var fecha = Date()
-    
+        
     
     var body: some View {
         VStack{
