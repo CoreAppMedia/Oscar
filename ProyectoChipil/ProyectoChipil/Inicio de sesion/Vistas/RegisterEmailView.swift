@@ -26,43 +26,142 @@ struct RegisterEmailView: View {
     var body: some View {
         VStack{
             DismissView()
-                .padding(.top, 8)
-            Group{
-                Text("Bienvenido a")
-                Text("Chipil,tu asistente emocional")
-                    .bold()
-                    .underline()
-                }
-            .padding(.horizontal, 8)
-            .multilineTextAlignment(.center)
-            .font(.largeTitle)
-            .tint(.primary)
-            
-            ScrollView{
-                Group{
-                    Text("Registrate")
-                        .tint(.secondary)
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 2)
-                        .padding(.bottom, 2)
-                    TextField("añade tu correo electrocino",text: $textFieldEmail )
-                        .textContentType(.none)
+            HStack{
+                Image("Chipil")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100)
+                Text("Chipil")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.leading, 20)
+            }
+            HStack{
+                VStack(alignment: .leading, spacing: 12, content: {
+                    Text("Registro")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    
+                    Text("Porfavor Registrese para continuar")
+                        .foregroundColor(Color.white.opacity(0.5))
+                        .padding(.top,-12)
+                })
+                
+                Spacer(minLength: 0)
+            }
+            .padding()
+            ScrollView{ 
+                HStack{
+                    Image(systemName: "envelope.fill")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    TextField("Email", text: $textFieldEmail)
                         .autocapitalization(.none)
-                    TextField("Nombre ", text: $nombre)
-                    HStack{
-                        TextField("Apellido Paterno", text: $apellidoP)
-                        TextField("Apellido materno", text: $apellidoM)
-                    }
+                }
+                .padding()
+                .background(Color.white.opacity(textFieldEmail == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                
+                HStack{
+                    Image(systemName: "person.circle")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    TextField("Nombre(s)", text: $nombre)
+                        .autocapitalization(.none)
+                }
+                .padding()
+                .background(Color.white.opacity(nombre == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                
+                        HStack{
+                            Image(systemName: "person.fill")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                                .frame(width: 35)
+                            TextField("Apellido paterno", text: $apellidoP)
+                                .autocapitalization(.none)
+                        }
+                        .padding()
+                        .background(Color.white.opacity(apellidoP == "" ? 0 : 0.12))
+                        .cornerRadius(15)
+                        .padding(.horizontal)
+                        HStack{
+                            Image(systemName: "person")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                                .frame(width: 35)
+                            TextField("Apellido Materno", text: $apellidoM)
+                                .autocapitalization(.none)
+                        }
+                        .padding()
+                        .background(Color.white.opacity(apellidoM == "" ? 0 : 0.12))
+                        .cornerRadius(15)
+                        .padding(.horizontal)
+                HStack{
+                    Image(systemName: "phone.fill")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
                     TextField("Telefono", text: $numeroTel)
-                        .keyboardType(.numberPad)
-                    TextField("Descripcion de tu persona", text: $descripcion)
-                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                }
+                .padding()
+                .background(Color.white.opacity(numeroTel == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                .keyboardType(.numberPad)
+                HStack{
+                    Image(systemName: "pencil.and.scribble")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    TextField("Descripcion", text: $descripcion)
+                        .autocapitalization(.none)
+                }
+                .padding()
+                .background(Color.white.opacity(descripcion == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                HStack{
+                    Image(systemName: "doc.text.magnifyingglass")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
                     TextField("grupo al que pertenece", text: $titulo)
-                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                }
+                .padding()
+                .background(Color.white.opacity(titulo == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
                     
                     DatePicker("Nacimiento: ", selection: $fecha, displayedComponents: .date)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.black)
+                        .padding(10)
+                        .frame(width: UIScreen.main.bounds.width - 120)
+                        .background(Color.white.opacity(0.6))
+                        .clipShape(Capsule())
                     Divider()
-                    TextField("añade tu contraseña",text: $textFieldPasseord )
+                HStack{
+                    Image(systemName: "lock")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    SecureField("Password", text: $textFieldPasseord)
+                        .autocapitalization(.none)
+                }
+                .padding()
+                .background(Color.white.opacity(textFieldPasseord == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                .padding(.top)
                         .padding(.bottom)
                     Button("Aceptar") {
                         //con esto hacemos la autenticaion
@@ -93,9 +192,6 @@ struct RegisterEmailView: View {
                             .foregroundColor(.red)
                             .padding(.top,20)
                     }
-                }
-                .textFieldStyle(.roundedBorder)
-                .padding(.horizontal, 64)
                 Spacer()
                 
             }//ScrollView

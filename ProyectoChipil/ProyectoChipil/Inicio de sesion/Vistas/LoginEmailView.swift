@@ -15,22 +15,34 @@ struct LoginEmailView: View {
         VStack{
             DismissView()
                 .padding(.top, 8)
+            Spacer(minLength: 0)
+            HStack{
+                Image("Chipil")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100)
+                    .padding(.vertical)
+                Text("Chipil")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.leading, 20)
+            }
+            HStack{
+                VStack(alignment: .leading, spacing: 12, content: {
+                    Text("Inicio de sesión")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    
+                    Text("Porfavor inicie para continuar")
+                        .foregroundColor(Color.white.opacity(0.5))
+                })
+                
+                Spacer(minLength: 0)
+            }
+            .padding()
             Group{
-                Text("Bienvenido nuevamente a")
-                Text("Chipil tu asistente emocional")
-                    .bold()
-                    .underline()
-                }
-            .padding(.horizontal, 8)
-            .multilineTextAlignment(.center)
-            .font(.largeTitle)
-            .tint(.primary)
-            Group{
-                Text("inicia sesion")
-                    .tint(.secondary)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 2)
-                    .padding(.bottom, 2)
                 HStack{
                     Image(systemName: "envelope")
                         .font(.title2)
@@ -79,6 +91,12 @@ struct LoginEmailView: View {
                 }
             }
             Spacer()
+                .padding(.top)
+                
+                Button(action: {}, label:{
+                    Text("¿olvidaste tu contraseña?")
+                        .foregroundColor(Color.white.opacity(0.6))
+                })
         }//Vstack principal
         .background(Color("chipil").ignoresSafeArea(.all, edges: .all))
     }
