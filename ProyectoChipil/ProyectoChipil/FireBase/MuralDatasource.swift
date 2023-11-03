@@ -9,6 +9,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 
+
 // esta estructura nos ayuda a almacenar los tados para posterirmente mandarlos a la base de datos
 struct LinkModel: Decodable, Identifiable, Encodable{
     @DocumentID var id: String?

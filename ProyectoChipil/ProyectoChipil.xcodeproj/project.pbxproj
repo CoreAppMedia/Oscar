@@ -15,6 +15,8 @@
 		ABD2540D2AF0A199003D719D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540C2AF0A199003D719D /* LoginViewModel.swift */; };
 		ABD2540F2AF2B6DC003D719D /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540E2AF2B6DC003D719D /* LoadingScreen.swift */; };
 		ABD254112AF2B9E8003D719D /* HomePrueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD254102AF2B9E8003D719D /* HomePrueba.swift */; };
+		ABD254782AF49093003D719D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD254772AF49093003D719D /* ImagePicker.swift */; };
+		ABD2547A2AF490C6003D719D /* cargarImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD254792AF490C6003D719D /* cargarImagen.swift */; };
 		EC0B1F5B2AE7004A006ED5D1 /* EstructurasCuestionarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1F5A2AE7004A006ED5D1 /* EstructurasCuestionarios.swift */; };
 		EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1F5C2AE700D2006ED5D1 /* Home.swift */; };
 		EC0B1F5F2AE7012F006ED5D1 /* QuestionsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0B1F5E2AE7012F006ED5D1 /* QuestionsViews.swift */; };
@@ -77,6 +79,8 @@
 		ABD2540C2AF0A199003D719D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ABD2540E2AF2B6DC003D719D /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		ABD254102AF2B9E8003D719D /* HomePrueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrueba.swift; sourceTree = "<group>"; };
+		ABD254772AF49093003D719D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		ABD254792AF490C6003D719D /* cargarImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cargarImagen.swift; sourceTree = "<group>"; };
 		EC0B1F5A2AE7004A006ED5D1 /* EstructurasCuestionarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstructurasCuestionarios.swift; sourceTree = "<group>"; };
 		EC0B1F5C2AE700D2006ED5D1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EC0B1F5E2AE7012F006ED5D1 /* QuestionsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViews.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		AB1C8F542AE5DA3400E0A49F /* Botones */ = {
 			isa = PBXGroup;
 			children = (
+				ABD254762AF49086003D719D /* cargar fotos */,
 				AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */,
 				ECA02DA02AF033CE007BAC30 /* Hospitales.swift */,
 				AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */,
@@ -171,6 +176,15 @@
 				ABD254102AF2B9E8003D719D /* HomePrueba.swift */,
 			);
 			path = "prueba de inicio-login";
+			sourceTree = "<group>";
+		};
+		ABD254762AF49086003D719D /* cargar fotos */ = {
+			isa = PBXGroup;
+			children = (
+				ABD254772AF49093003D719D /* ImagePicker.swift */,
+				ABD254792AF490C6003D719D /* cargarImagen.swift */,
+			);
+			path = "cargar fotos";
 			sourceTree = "<group>";
 		};
 		EC0B1F582AE70005006ED5D1 /* Cuestionarios */ = {
@@ -380,6 +394,7 @@
 				EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */,
 				EC0B1F5F2AE7012F006ED5D1 /* QuestionsViews.swift in Sources */,
 				AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */,
+				ABD254782AF49093003D719D /* ImagePicker.swift in Sources */,
 				ECA02DA12AF033CE007BAC30 /* Hospitales.swift in Sources */,
 				ABD2540B2AF0A138003D719D /* prueba-login.swift in Sources */,
 				EC2C11A82AE304BD0076B947 /* LoginEmailView.swift in Sources */,
@@ -390,6 +405,7 @@
 				EC2C11AC2AE3055C0076B947 /* ViewPrincipal.swift in Sources */,
 				EC0B1F5B2AE7004A006ED5D1 /* EstructurasCuestionarios.swift in Sources */,
 				EC2C11522AE301E20076B947 /* ProyectoChipilApp.swift in Sources */,
+				ABD2547A2AF490C6003D719D /* cargarImagen.swift in Sources */,
 				ABD2540F2AF2B6DC003D719D /* LoadingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -152,6 +152,22 @@ NavigationView{
                                 
                                 
                             }
+                            NavigationLink(){
+                                cargarImagen()
+                            }label: {
+                                HStack(spacing: 14){
+                                    Image(systemName: "person.fill")
+                                        .resizable()
+                                        .renderingMode(.template)
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 22, height: 22)
+                                    Text("Cargar foto ")
+                                }
+                                .foregroundColor(.primary)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                
+                            }
                                 TabButton(title: "Bloqueos", image: "person")
                                 
                             }//VStack de los botones
