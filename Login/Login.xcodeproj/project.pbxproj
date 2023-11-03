@@ -140,8 +140,6 @@
 				ABD254622AF2CAF3003D719D /* Repositive Login */,
 				ABD2541E2AF2C8C6003D719D /* LoginApp.swift */,
 				ABD254202AF2C8C6003D719D /* ContentView.swift */,
-				ABD254632AF4887F003D719D /* ImagePicker.swift */,
-				ABD254652AF488A6003D719D /* SwiftUIView.swift */,
 				ABD254592AF2CA03003D719D /* inicio de sesion */,
 				ABD254222AF2C8C8003D719D /* Assets.xcassets */,
 				ABD254482AF2C932003D719D /* GoogleService-Info.plist */,
@@ -189,6 +187,8 @@
 		ABD254622AF2CAF3003D719D /* Repositive Login */ = {
 			isa = PBXGroup;
 			children = (
+				ABD254652AF488A6003D719D /* SwiftUIView.swift */,
+				ABD254632AF4887F003D719D /* ImagePicker.swift */,
 			);
 			path = "Repositive Login";
 			sourceTree = "<group>";
