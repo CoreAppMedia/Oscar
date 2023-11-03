@@ -114,13 +114,13 @@ struct Home: View {
                         .padding(-1)
                         .background{
                             Circle()
-                                .stroke(Color("BG"), lineWidth: 1)
+                                .stroke(Color("chipil"), lineWidth: 1)
                         }
                 }
             VStack(alignment: .leading, spacing: 4){
                 Text(title)
                     .fontWeight(.bold)
-                    .foregroundColor(Color("BG"))
+                    .foregroundColor(Color("chipil"))
                 Text(subTitle)
                     .font(.caption)
                     .fontWeight(.medium)
@@ -167,10 +167,10 @@ struct CustomButton: View {
                 .hAligh(.center)
                 .padding(.top,15)
                 .padding(.bottom,10)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .background{
                     Rectangle()
-                        .fill(Color("Pink"))
+                        .fill(Color.green)
                         .ignoresSafeArea()
                 }
         }

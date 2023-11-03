@@ -82,7 +82,7 @@ struct QuestionsViews: View {
         .padding(15)
         .hAligh(.center).vAligh(.top)
         .background{
-            Color("BG")
+            Color("chipil")
                 .ignoresSafeArea()
         }
         //Como nuestro fondo es obscuro, hay que forzar el Modo obscurom en la App

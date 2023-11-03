@@ -13,6 +13,8 @@ struct RegisterEmailView: View {
     
     @State var textFieldEmail: String = ""
     @State var textFieldPasseord: String = ""
+    @State var repeatedPassword: String = ""
+    @State private var showingAlert = false
     
     @State private var nombre = ""
     @State private var apellidoP = ""
@@ -26,6 +28,7 @@ struct RegisterEmailView: View {
     var body: some View {
         VStack{
             DismissView()
+        ScrollView{ 
             HStack{
                 Image("Chipil")
                     .resizable()
@@ -52,7 +55,7 @@ struct RegisterEmailView: View {
                 Spacer(minLength: 0)
             }
             .padding()
-            ScrollView{ 
+
                 HStack{
                     Image(systemName: "envelope.fill")
                         .font(.title2)
@@ -162,20 +165,31 @@ struct RegisterEmailView: View {
                 .cornerRadius(15)
                 .padding(.horizontal)
                 .padding(.top)
+                HStack{
+                    Image(systemName: "lock.fill")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    SecureField("Repetir Password", text: $repeatedPassword)
+                        .autocapitalization(.none)
+                }
+                .padding()
+                .background(Color.white.opacity(repeatedPassword == "" ? 0 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+
                         .padding(.bottom)
-                    Button("Aceptar") {
-                        //con esto hacemos la autenticaion
+                Button("Aceptar") {
+                    if textFieldPasseord == repeatedPassword {
+                        // Las contraseñas coinciden, continuar con la autenticación y el registro.
                         authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
-                     //   en esta parte en donde se crea la columna para cada usuario y su respectiva informacion
-        LinkViewModel.crearTabla(nombre: nombre,
-                                 apellidoP: apellidoP,
-                                 apellidoM: apellidoM,
-                                 descripcion: descripcion,
-                                 titulo: titulo,
-                                 numeroTel: numeroTel,
-                                 textFieldEmail: textFieldEmail, fecha: fecha)
-                        
+                        LinkViewModel.crearTabla(nombre: nombre, apellidoP: apellidoP, apellidoM: apellidoM, descripcion: descripcion, titulo: titulo, numeroTel: numeroTel, textFieldEmail: textFieldEmail, fecha: fecha)
+                    } else {
+                        // Las contraseñas no coinciden, muestra un mensaje de error.
+                        // Puedes manejar esto mostrando un mensaje de error al usuario.
+                        showingAlert = true
                     }
+                }
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
                     .padding(.vertical)
@@ -184,6 +198,13 @@ struct RegisterEmailView: View {
                     .clipShape(Capsule())
                     .opacity(textFieldEmail != "" && textFieldPasseord != "" && nombre != "" && apellidoP != "" && apellidoM != "" && titulo != "" && numeroTel != "" && descripcion != "" ? 1 : 0.5)
                     .disabled(textFieldEmail != "" && textFieldPasseord != "" && nombre != "" && apellidoP != "" && apellidoM != "" && titulo != "" && numeroTel != "" && descripcion != ""  ? false : true)
+                    .alert(isPresented: $showingAlert) {
+                        Alert(
+                            title: Text("Contraseñas no coinciden"),
+                            message: Text("Las contraseñas ingresadas no coinciden. Por favor, asegúrate de que ambas contraseñas sean idénticas."),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
                     
                     if let messageError = authenticationViewModel.messageError{
                         Text("Error Master, ingresa un Usuario y contraeña valido")

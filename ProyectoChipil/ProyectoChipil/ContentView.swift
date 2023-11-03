@@ -43,9 +43,9 @@ struct ContentView: View {
             GeometryReader{ proxy in
                 let size = proxy.size
                 
-                Color.black
+                Color.chipil
                 ForEach(1...3, id: \.self){ index in
-                    Image("pic\(index)")
+                    Image("Chipil")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: size.width, height: size.height)
