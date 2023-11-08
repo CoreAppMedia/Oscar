@@ -28,6 +28,12 @@ void multiplicarYRestarMatrices(float matrizA[2][2], float matrizB[2][2], float 
             resultado[i][j] -= matrizC[i][j];
         }
     }
+        // Multiplicar el resultado por -1
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            resultado[i][j] *= -1;
+        }
+    }
 }
 
 void imprimirMatriz(float matriz[2][2]) {

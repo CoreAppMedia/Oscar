@@ -145,6 +145,30 @@ void multiplicarMatrices(float matrizA[2][2], float matrizB[2][2], float resulta
         }
     }
 }
+void multiplicarYRestarMatrices(float matrizA[2][2], float matrizB[2][2], float matrizC[2][2], float resultado[2][2]) {
+    // Multiplicar matrizA por matrizB y guardar el resultado en resultado
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            resultado[i][j] = 0.0;
+            for (int k = 0; k < 2; k++) {
+                resultado[i][j] += matrizA[i][k] * matrizB[k][j];
+            }
+        }
+    }
+
+    // Restar matrizC de resultado
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            resultado[i][j] -= matrizC[i][j];
+        }
+    }
+        // Multiplicar el resultado por -1
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            resultado[i][j] *= -1;
+        }
+    }
+}
 
 
 
@@ -155,83 +179,166 @@ int main() {
 
   /*ingresarMatriz(matriz);  // Llamar a la función para ingresar valores en la matriz */
 
-    float inversa[2][2];   // Declarar la matriz inversa
+    float inversaA11[2][2];   // Declarar la matriz inversa
     float Matriz2x2[2][2];  // Declarar una nueva matriz para almacenar los valores deseados
-    float Matriz11[2][2];
-    float Matriz12[2][2];
-    float resultadoI_1[2][2];  // Matriz para almacenar el resultado de la multiplicación (float)
+    float MatrizA11[2][2];
+    float MatrizA12[2][2];
+    float MatrizA13[2][2];
+    float Matrizb1[2][2];
+    float MatrizA21[2][2];
+    float MatrizA22[2][2];
+    float MatrizA23[2][2];
+    float Matrizb2[2][2];
+    float MatrizA31[2][2];
+    float MatrizA32[2][2];
+    float MatrizA33[2][2];
+    float Matrizb3[2][2];
+    float inversaA22[2][2];
 
-    copiarValoresMatriz11(matriz, Matriz11);  // Llamar a la función para copiar valores
+    float resultadoI_1[2][2]; 
+    float resultadoA12[2][2]; // Matriz para almacenar el resultado de la multiplicación (float)
+    float resultadoA13[2][2];
+    float resultadob1[2][2];
+    float resultadoO[2][2];
+    float resultadoA22[2][2];
+    float resultadoA23[2][2];
+    float resultadob2[2][2];
+    float resultadoA31[2][2];
+    float resultadoA32[2][2];
+    float resultadoA33[2][2];
+    float resultadob3[2][2];
+
+    copiarValoresMatriz11(matriz, MatrizA11);  // Llamar a la función para copiar valores
     printf("Matriz11");
-    imprimirMatriz2x2(Matriz11);  // Llamar a la función para imprimir la nueva matriz
-     float determinante11 = calcularDeterminante2x2(Matriz11);  // Calcular el determinante
+    imprimirMatriz2x2(MatrizA11);  // Llamar a la función para imprimir la nueva matriz
+     float determinante11 = calcularDeterminante2x2(MatrizA11);  // Calcular el determinante
     printf("Determinante de la nueva matriz 11: %.2f\n", determinante11);
 
-    calcularMatrizInversa(Matriz11, inversa);
-    if (calcularDeterminante2x2(Matriz11) != 0) {
+    calcularMatrizInversa(MatrizA11, inversaA11);
+    if (calcularDeterminante2x2(MatrizA11) != 0) {
         printf("Inversa de la matriz 11:\n");
-        imprimirMatriz2x2(inversa);
+        imprimirMatriz2x2(inversaA11);
     }
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatriz12(matriz, Matriz2x2);  // Llamar a la función para copiar valores
+    copiarValoresMatriz12(matriz, MatrizA12);  // Llamar a la función para copiar valores
     printf("\nMatriz12");
-    imprimirMatriz2x2(Matriz2x2);  // Llamar a la función para imprimir la nueva matriz
+    imprimirMatriz2x2(MatrizA12);  // Llamar a la función para imprimir la nueva matriz
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatriz13(matriz, Matriz2x2);  
-    inicializarCeros(Matriz2x2);
+    copiarValoresMatriz13(matriz, MatrizA13);  
+    inicializarCeros(MatrizA13);
     printf("\nMatriz13");
-    imprimirMatriz2x2(Matriz2x2);  
+    imprimirMatriz2x2(MatrizA13);  
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatriz21(matriz,Matriz2x2);
+    copiarValoresMatriz21(matriz,MatrizA21);
     printf("\nMatriz21");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(MatrizA21);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatriz22(matriz,Matriz2x2);
+    copiarValoresMatriz22(matriz,MatrizA22);
     printf("\nMatriz22");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(MatrizA22);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatriz23(matriz,Matriz2x2);
-    inicializarCeros(Matriz2x2);
+    copiarValoresMatriz23(matriz,MatrizA23);
+    inicializarCeros(MatrizA23);
     printf("\nMatriz23");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(MatrizA23);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatriz31(matriz,Matriz2x2);
-    inicializarCeros1(Matriz2x2);
+    copiarValoresMatriz31(matriz,MatrizA31);
+    inicializarCeros1(MatrizA31);
     printf("\nMatriz31");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(MatrizA31);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatriz32(matriz,Matriz2x2);
-    inicializarCeros1(Matriz2x2);
+    copiarValoresMatriz32(matriz,MatrizA32);
+    inicializarCeros1(MatrizA32);
     printf("\nMatriz32");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(MatrizA32);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatriz33(matriz,Matriz2x2);
-    inicializarCeros2(Matriz2x2);
+    copiarValoresMatriz33(matriz,MatrizA33);
+    inicializarCeros2(MatrizA33);
     printf("\nMatriz33");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(MatrizA33);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatrizb1(matriz,Matriz2x2);
-    inicializarCeros(Matriz2x2);
+    copiarValoresMatrizb1(matriz,Matrizb1);
+    inicializarCeros(Matrizb1);
     printf("\nMatriz b1");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(Matrizb1);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatrizb2(matriz,Matriz2x2);
-    inicializarCeros(Matriz2x2);
+    copiarValoresMatrizb2(matriz,Matrizb2);
+    inicializarCeros(Matrizb2);
     printf("\nMatriz b2");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(Matrizb2);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    copiarValoresMatrizb3(matriz,Matriz2x2);
-    inicializarCeros2(Matriz2x2);
+    copiarValoresMatrizb3(matriz,Matrizb3);
+    inicializarCeros2(Matrizb3);
     printf("\nMatriz b3");
-    imprimirMatriz2x2(Matriz2x2);
+    imprimirMatriz2x2(Matrizb3);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
-    multiplicarMatrices(Matriz11,inversa,resultadoI_1);
-    printf("\nMUltiplicacion de A11 y su Iversa ");
+    multiplicarMatrices(MatrizA11,inversaA11,resultadoI_1);
+    printf("\nMUltiplicacion de A11 y su Iversa = I ");
     imprimirMatriz2x2(resultadoI_1);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarMatrices(inversaA11,MatrizA12,resultadoA12);
+    printf("\nMUltiplicacion de A12 y la Iversa de A11 = A12 ");
+    imprimirMatriz2x2(resultadoA12);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarMatrices(inversaA11,MatrizA13,resultadoA13);
+    printf("\nMUltiplicacion de A13 y la Iversa de A11 = A13");
+    imprimirMatriz2x2(resultadoA13);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarMatrices(inversaA11,Matrizb1,resultadob1);
+    printf("\nMUltiplicacion de b1 y la Iversa de A11 = b1");
+    imprimirMatriz2x2(resultadob1);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarYRestarMatrices(MatrizA21,resultadoI_1,MatrizA21,resultadoO);
+    printf("\nMUltiplicacion de A21 - A21*I = 0");
+    imprimirMatriz2x2(resultadoO);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarYRestarMatrices(MatrizA21,resultadoA12,MatrizA22,resultadoA22);
+    printf("\nMUltiplicacion de A22 - A21*A12 = A22");
+    imprimirMatriz2x2(resultadoA22);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarYRestarMatrices(MatrizA21,resultadoA13,MatrizA23,resultadoA23);
+    printf("\nMUltiplicacion de A23 - A21*A13 = A23");
+    imprimirMatriz2x2(resultadoA23);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarYRestarMatrices(MatrizA21,resultadob1,Matrizb2,resultadob2);
+    printf("\nMUltiplicacion de b2 - A21*b1 = b2");
+    imprimirMatriz2x2(resultadob2);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarYRestarMatrices(MatrizA31,resultadoI_1,MatrizA31,resultadoO);
+    printf("\nMUltiplicacion de A31 - A31*I = 0");
+    imprimirMatriz2x2(resultadoO);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarYRestarMatrices(MatrizA31,resultadoA12,MatrizA32,resultadoA32);
+    printf("\nMUltiplicacion de A32 - A31*A12 = A32");
+    imprimirMatriz2x2(resultadoA32);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarYRestarMatrices(MatrizA31,resultadoA13,MatrizA33,resultadoA33);
+    printf("\nMUltiplicacion de A33 - A31*A13 = A33");
+    imprimirMatriz2x2(resultadoA33);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    multiplicarYRestarMatrices(MatrizA31,resultadob1,Matrizb3,resultadob3);
+    printf("\nMUltiplicacion de b3 - A31*b1 = b3");
+    imprimirMatriz2x2(resultadob3);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    printf("\nCALCULAMOS EL DETERMINANTE DE LA MATRIZ A22 PARA PODER CONTINUAR\n");
+    printf("CON LA CONDICION DE QUE SEA NO SINGULAR\n");
+//CALCULAMOS EL DETERMINANTE DE LA MATRIZ A22
+    imprimirMatriz2x2(resultadoA22);  // Llamar a la función para imprimir la nueva matriz
+     float determinante22 = calcularDeterminante2x2(resultadoA22);  // Calcular el determinante
+    printf("Determinante de la nueva matriz 22: %.2f\n", determinante22);
+    calcularMatrizInversa(resultadoA22, inversaA22);
+    if (calcularDeterminante2x2(resultadoA22) != 0) {
+        printf("Inversa de la matriz 22:\n");
+        imprimirMatriz2x2(inversaA22);
+    }
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
 
 
 
 
+
+
+printf("\n\nFin del Programa\n");
     return 0;
 }
 
