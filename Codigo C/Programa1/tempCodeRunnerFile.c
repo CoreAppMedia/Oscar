@@ -1,0 +1,1 @@
+   inversa[1][1] = matriz[0][0] / determinante2x2;
