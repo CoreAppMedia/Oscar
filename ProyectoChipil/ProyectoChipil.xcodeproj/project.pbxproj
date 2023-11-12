@@ -145,6 +145,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F4F1DB52B00783400114759 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AB1C8F4F2AE45CD700E0A49F /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +210,7 @@
 			children = (
 				EC2C11502AE301E20076B947 /* ProyectoChipil */,
 				EC2C114F2AE301E20076B947 /* Products */,
+				7F4F1DB52B00783400114759 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
