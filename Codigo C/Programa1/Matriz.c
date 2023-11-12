@@ -120,6 +120,10 @@ int calcularDeterminante2x2(float matriz[2][2]) {
     return (matriz[0][0] * matriz[1][1]) - (matriz[0][1] * matriz[1][0]);
 }
 
+int calcularDeterminanteUnico(float matriz[2][2]) {
+    return (matriz[0][0]);
+}
+
 void calcularMatrizInversa(float matriz[2][2], float inversa[2][2]) {
     int determinante2x2 = calcularDeterminante2x2(matriz);
 
@@ -128,6 +132,18 @@ void calcularMatrizInversa(float matriz[2][2], float inversa[2][2]) {
         inversa[0][1] = -matriz[0][1] / determinante2x2;
         inversa[1][0] = -matriz[1][0] / determinante2x2;
         inversa[1][1] = matriz[0][0] / determinante2x2;
+    } else {
+        printf("El determinante es igual a 0, por lo que la matriz no tiene inversa.\n");
+    }
+}
+void calcularMatrizInversa1(float matriz[2][2], float inversa[2][2]) {
+    float determinante2x2 = calcularDeterminanteUnico(matriz);
+
+    if (determinante2x2 != 0) {
+        inversa[0][0] = 1 / determinante2x2;
+        inversa[0][1] = -matriz[0][1] / determinante2x2;
+        inversa[1][0] = -matriz[1][0] / determinante2x2;
+        inversa[1][1] = matriz[1][1] / determinante2x2;
     } else {
         printf("El determinante es igual a 0, por lo que la matriz no tiene inversa.\n");
     }
@@ -180,6 +196,8 @@ int main() {
   /*ingresarMatriz(matriz);  // Llamar a la función para ingresar valores en la matriz */
 
     float inversaA11[2][2];   // Declarar la matriz inversa
+    float inversaA22[2][2];
+    float inversaA33[2][2];
     float Matriz2x2[2][2];  // Declarar una nueva matriz para almacenar los valores deseados
     float MatrizA11[2][2];
     float MatrizA12[2][2];
@@ -193,9 +211,10 @@ int main() {
     float MatrizA32[2][2];
     float MatrizA33[2][2];
     float Matrizb3[2][2];
-    float inversaA22[2][2];
-
+    
+    float resultadoA11[2][2];
     float resultadoI_1[2][2]; 
+     float resultadoI_2[2][2];
     float resultadoA12[2][2]; // Matriz para almacenar el resultado de la multiplicación (float)
     float resultadoA13[2][2];
     float resultadoA13_2[2][2];
@@ -203,6 +222,8 @@ int main() {
     float resultadob1_2[2][2];
     float resultadoO[2][2];
     float resultadoO_2[2][2];
+    float resultadoO_3[2][2];
+    float resultadoO_4[2][2];
     float resultadoA22[2][2];
     float resultadoA23[2][2];
     float resultadoA23_2[2][2];
@@ -212,6 +233,9 @@ int main() {
     float resultadoA32[2][2];
     float resultadoA33[2][2];
     float resultadob3[2][2];
+    float resultadoC3[2][2];
+    float resultadoC2[2][2];
+    float resultadoC2_2[2][2];
 
     copiarValoresMatriz11(matriz, MatrizA11);  // Llamar a la función para copiar valores
     printf("Matriz11");
@@ -283,6 +307,9 @@ int main() {
     multiplicarMatrices(MatrizA11,inversaA11,resultadoI_1);
     printf("\nMUltiplicacion de A11 y su Iversa = I ");
     imprimirMatriz2x2(resultadoI_1);
+    multiplicarMatrices(MatrizA11,inversaA11,resultadoA11);
+    printf("\nMUltiplicacion de A11 y su Iversa = I ");
+    imprimirMatriz2x2(resultadoA11);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
 
     multiplicarMatrices(inversaA11,MatrizA12,resultadoA12);
@@ -356,7 +383,7 @@ int main() {
     multiplicarMatrices(resultadoA22,inversaA22,resultadoI_1);
     printf("\nMUltiplicacion de A22 y su Iversa = I ");
     imprimirMatriz2x2(resultadoI_1);
-     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
 
     multiplicarMatrices(inversaA22,resultadoA23,resultadoA23_2);
     printf("\nMUltiplicacion de A23 y la Iversa de A22 = A23 ");
@@ -383,9 +410,64 @@ int main() {
     imprimirMatriz2x2(resultadob1_2);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
 
+    printf("\nCALCULAMOS EL DETERMINANTE DE LA MATRIZ A33 PARA PODER CONTINUAR\n");
+    printf("CON LA CONDICION DE QUE SEA NO SINGULAR\n");
+//CALCULAMOS EL DETERMINANTE DE LA MATRIZ A33
+    imprimirMatriz2x2(resultadoA33);  // Llamar a la función para imprimir la nueva matriz
+     float determinante33 = calcularDeterminanteUnico(resultadoA33);  // Calcular el determinante
+    printf("Determinante de la nueva matriz 33: %.2f\n", determinante33);
+    calcularMatrizInversa1(resultadoA33, inversaA33);
+    if (calcularDeterminanteUnico(resultadoA33) != 0) {
+        printf("Inversa de la matriz 33:\n");
+        imprimirMatriz2x2(inversaA33);
+    }
+
+    multiplicarMatrices(resultadoA33,inversaA33,resultadoI_2);
+    printf("\nMUltiplicacion de A33 y su Iversa = I ");
+    imprimirMatriz2x2(resultadoI_2);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+
+    multiplicarMatrices(inversaA33,resultadob3,resultadoC3);
+    printf("\nMUltiplicacion de A33 * b3 = C3 ");
+    imprimirMatriz2x2(resultadoC3);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+
+    multiplicarYRestarMatrices(resultadoA13_2,resultadoI_2,resultadoA13_2,resultadoO_3);
+    printf("\nMUltiplicacion de A13 - A13*I = 0");
+    imprimirMatriz2x2(resultadoO_3);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+
+    multiplicarYRestarMatrices(resultadoA13_2,resultadoC3,resultadob1_2,resultadoC2);
+    printf("\nMUltiplicacion de A13 - A13*C3 = C2");
+    imprimirMatriz2x2(resultadoC2);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+
+    multiplicarYRestarMatrices(resultadoA23_2,resultadoI_2,resultadoA23_2,resultadoO_4);
+    printf("\nMUltiplicacion de A13 - A13*I = 0");
+    imprimirMatriz2x2(resultadoO_4);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+
+    multiplicarYRestarMatrices(resultadoA23_2,resultadoI_2,resultadob2_2,resultadoC2_2);
+    printf("\nMUltiplicacion de b2 - A23*I = C2");
+    imprimirMatriz2x2(resultadoC2_2);
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
+
+    printf("\n\n\nEl resultado de todas las matrices es:\n");
+    imprimirMatriz2x2(resultadoA11);
+    imprimirMatriz2x2(resultadoI_1);
+    imprimirMatriz2x2(resultadoI_2);
+
+     printf("\nSOLUCION DEL SISTEMA DE ECUACIONES: \n");
+
+    imprimirMatriz2x2(resultadoC2);
+    imprimirMatriz2x2(resultadoC2_2);
+    imprimirMatriz2x2(resultadoC3);
+
+    
 
 
-printf("\n\nFin del Programa\n");
+
+printf("\n\nFin del Programa, falta unir a los demas\n");
     return 0;
 }
 
