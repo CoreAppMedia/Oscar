@@ -383,7 +383,17 @@ int main() {
     imprimirMatriz2x2(resultadob1_2);
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
 
-
+    printf("\nCALCULAMOS EL DETERMINANTE DE LA MATRIZ A33 PARA PODER CONTINUAR\n");
+    printf("CON LA CONDICION DE QUE SEA NO SINGULAR\n");
+//CALCULAMOS EL DETERMINANTE DE LA MATRIZ A22
+    imprimirMatriz2x2(resultadoA22);  // Llamar a la función para imprimir la nueva matriz
+     float determinante22 = calcularDeterminante2x2(resultadoA22);  // Calcular el determinante
+    printf("Determinante de la nueva matriz 22: %.2f\n", determinante22);
+    calcularMatrizInversa(resultadoA22, inversaA22);
+    if (calcularDeterminante2x2(resultadoA22) != 0) {
+        printf("Inversa de la matriz 22:\n");
+        imprimirMatriz2x2(inversaA22);
+    }
 
 printf("\n\nFin del Programa\n");
     return 0;
