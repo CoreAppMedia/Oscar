@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BaseView: View {
     @StateObject var authenticationViewModel = AuthenticationViewModel()
+    
     @ObservedObject var LinkViewModel: LinkViewModel
     //ocultar o mostrar el menu lateral
     @State var ShowMenu: Bool = false
