@@ -8,6 +8,7 @@
 import Foundation
 
 final class AuthenticationRepository{
+    
     private let authenticationFirebaseDatasource: AuthenticatinFirebaseDatasourse
     
     init(authenticationFirebaseDatasource: AuthenticatinFirebaseDatasourse = AuthenticatinFirebaseDatasourse()) {
@@ -29,4 +30,13 @@ final class AuthenticationRepository{
     func logout() throws{
         try authenticationFirebaseDatasource.logout()
     }
+    /*funcion de prueba para Autenticar y mandar correo de verificacion
+    class AuthService {
+        static let shared = AuthService()
+        let authenticationFirebaseDatasource = AuthenticationFirebaseDatasource()
+
+        func createNewUser(email: String, password: String, completionBlock: @escaping(Result<User, Error>) -> Void) {
+            authenticationFirebaseDatasource.createNewUser(email: email, password: password, completionBlock: completionBlock)
+        }
+    }*/
 }

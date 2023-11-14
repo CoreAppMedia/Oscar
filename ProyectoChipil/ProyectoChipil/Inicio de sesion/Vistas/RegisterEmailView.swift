@@ -183,6 +183,7 @@ struct RegisterEmailView: View {
                     if textFieldPasseord == repeatedPassword {
                         // Las contraseñas coinciden, continuar con la autenticación y el registro.
                         authenticationViewModel.createNewUser(email: textFieldEmail, password: textFieldPasseord)
+                            
                         LinkViewModel.crearTabla(nombre: nombre, apellidoP: apellidoP, apellidoM: apellidoM, descripcion: descripcion, titulo: titulo, numeroTel: numeroTel, textFieldEmail: textFieldEmail, fecha: fecha)
                     } else {
                         // Las contraseñas no coinciden, muestra un mensaje de error.

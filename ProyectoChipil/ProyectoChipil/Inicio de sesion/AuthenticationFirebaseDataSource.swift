@@ -63,4 +63,34 @@ final class AuthenticatinFirebaseDatasourse {
     }
     
     
+    
+    //funcion de prueba para Autenticar y mandar correo de verificacion
+    class AuthService {
+        static let shared = AuthService()
+
+        func createNewUser(email: String, password: String, completionBlock: @escaping(Result<User, Error>) -> Void){
+            Auth.auth().createUser(withEmail: email, password: password) { authDataResult, error in
+
+                if let error = error {
+                    print("Error al crear nuevo usuario: \(error.localizedDescription)")
+                    completionBlock(.failure(error))
+                    return
+                }
+
+                // Send email verification
+                authDataResult?.user.sendEmailVerification(completion: { verificationError in
+                    if let verificationError = verificationError {
+                        print("Error al enviar el correo de verificación: \(verificationError.localizedDescription)")
+                        completionBlock(.failure(verificationError))
+                    } else {
+                        let email = authDataResult?.user.email ?? "no email"
+                        print("Nuevo Usuario creado con el correo: \(email). Se ha enviado un correo de verificación.")
+                        completionBlock(.success(.init(email: email)))
+                    }
+                })
+            }
+        }
+    }
+    
+    
 }
