@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var viewModel = ViewModel()
+    
     var body: some View {
         VStack {
             Button{
