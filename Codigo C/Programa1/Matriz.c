@@ -191,6 +191,7 @@ void multiplicarYRestarMatrices(float matrizA[2][2], float matrizB[2][2], float 
 int main() {
     float matriz[5][6];  // Declarar una matriz 5x6
     inicializarMatriz(matriz); 
+   // ingresarMatriz(matriz);
     mostrarMatriz(matriz); 
 
   /*ingresarMatriz(matriz);  // Llamar a la función para ingresar valores en la matriz */
@@ -248,6 +249,7 @@ int main() {
         printf("Inversa de la matriz 11:\n");
         imprimirMatriz2x2(inversaA11);
     }
+    
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
     copiarValoresMatriz12(matriz, MatrizA12);  // Llamar a la función para copiar valores
     printf("\nMatriz12");
