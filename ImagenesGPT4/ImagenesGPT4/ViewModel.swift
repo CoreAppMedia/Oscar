@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
 final class ViewModel: ObservableObject{
     private let urlSession: URLSession
     @Published var imageURL: URL?
@@ -21,7 +23,7 @@ final class ViewModel: ObservableObject{
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        urlRequest.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
         
         let dictionary: [String: Any] = [
         
@@ -51,3 +53,39 @@ final class ViewModel: ObservableObject{
         }
     }
 }
+
+////////////////
+
+
+func cargarImagenDesdeURL(urlString: String, completion: @escaping (UIImage?) -> Void) {
+    guard let url = URL(string: urlString) else {
+        print("URL inválida")
+        completion(nil)
+        return
+    }
+
+    URLSession.shared.dataTask(with: url) { data, response, error in
+        if let error = error {
+            print("Error al cargar la imagen:", error.localizedDescription)
+            completion(nil)
+            return
+        }
+
+        guard let data = data else {
+            print("No se recibieron datos para la imagen")
+            completion(nil)
+            return
+        }
+
+        let image = UIImage(data: data)
+        completion(image)
+    }.resume()
+}
+
+
+
+
+
+
+
+
