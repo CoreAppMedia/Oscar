@@ -11,6 +11,9 @@
 		ECBDD1062B0530940066855E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDD1052B0530940066855E /* ContentView.swift */; };
 		ECBDD1082B0530960066855E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBDD1072B0530960066855E /* Assets.xcassets */; };
 		ECBDD10B2B0530960066855E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBDD10A2B0530960066855E /* Preview Assets.xcassets */; };
+		ECBDD1132B05473D0066855E /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = ECBDD1122B05473D0066855E /* SwiftOpenAI */; };
+		ECBDD1152B05477F0066855E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDD1142B05477F0066855E /* ViewModel.swift */; };
+		ECBDD1172B054E520066855E /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = ECBDD1162B054E520066855E /* SwiftOpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,7 @@
 		ECBDD1052B0530940066855E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ECBDD1072B0530960066855E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECBDD10A2B0530960066855E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ECBDD1142B05477F0066855E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBDD1172B054E520066855E /* SwiftOpenAI in Frameworks */,
+				ECBDD1132B05473D0066855E /* SwiftOpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +43,7 @@
 			children = (
 				ECBDD1022B0530940066855E /* ChatGPT4 */,
 				ECBDD1012B0530940066855E /* Products */,
+				ECBDD1182B054E5B0066855E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +60,7 @@
 			children = (
 				ECBDD1032B0530940066855E /* ChatGPT4App.swift */,
 				ECBDD1052B0530940066855E /* ContentView.swift */,
+				ECBDD1142B05477F0066855E /* ViewModel.swift */,
 				ECBDD1072B0530960066855E /* Assets.xcassets */,
 				ECBDD1092B0530960066855E /* Preview Content */,
 			);
@@ -65,6 +73,13 @@
 				ECBDD10A2B0530960066855E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ECBDD1182B054E5B0066855E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +98,10 @@
 			dependencies = (
 			);
 			name = ChatGPT4;
+			packageProductDependencies = (
+				ECBDD1122B05473D0066855E /* SwiftOpenAI */,
+				ECBDD1162B054E520066855E /* SwiftOpenAI */,
+			);
 			productName = ChatGPT4;
 			productReference = ECBDD1002B0530940066855E /* ChatGPT4.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,9 @@
 				Base,
 			);
 			mainGroup = ECBDD0F72B0530940066855E;
+			packageReferences = (
+				ECBDD1112B05473D0066855E /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
+			);
 			productRefGroup = ECBDD1012B0530940066855E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECBDD1062B0530940066855E /* ContentView.swift in Sources */,
+				ECBDD1152B05477F0066855E /* ViewModel.swift in Sources */,
 				ECBDD1042B0530940066855E /* ChatGPT4App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +367,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECBDD1112B05473D0066855E /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftBeta/SwiftOpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECBDD1122B05473D0066855E /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBDD1112B05473D0066855E /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			productName = SwiftOpenAI;
+		};
+		ECBDD1162B054E520066855E /* SwiftOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECBDD1112B05473D0066855E /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;
+			productName = SwiftOpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECBDD0F82B0530940066855E /* Project object */;
 }
