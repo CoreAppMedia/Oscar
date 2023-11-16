@@ -9,7 +9,7 @@ import Foundation
 import SwiftOpenAI
 
 final class ViewModel {
-    var openAI = SwiftOpenAI(apiKey: "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")
+    var openAI = SwiftOpenAI(apiKey: "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")
     func send() async {
         //creamos una red de mensajes
         let messages: [MessageChatGPT] = [
