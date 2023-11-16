@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    var viewModel = ViewModel()
+    var viewModel1 = ViewModel1()
     
     var body: some View {
+        
+        ChatView()
+  /*
         VStack {
             Button{
                 Task{
-                    await viewModel.send()
+                    await viewModel1.send()
                 }
             }label: {
                 Image(systemName: "paperplane.fill")
@@ -25,7 +28,7 @@ struct ContentView: View {
                 
             }
         }
-        .padding(.leading,8)
+        .padding(.leading,8) */
     }
 }
 

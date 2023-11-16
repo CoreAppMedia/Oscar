@@ -23,7 +23,7 @@ final class ViewModel: ObservableObject{
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        urlRequest.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
         
         let dictionary: [String: Any] = [
         

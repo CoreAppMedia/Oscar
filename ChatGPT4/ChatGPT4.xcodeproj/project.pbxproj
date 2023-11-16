@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB02A0E62B05DB9000E491D7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02A0E52B05DB9000E491D7 /* ChatViewModel.swift */; };
+		AB02A0E82B05DBA300E491D7 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02A0E72B05DBA300E491D7 /* ChatView.swift */; };
+		AB02A0EA2B05DD3100E491D7 /* OpenAIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02A0E92B05DD3100E491D7 /* OpenAIservice.swift */; };
+		AB02A0ED2B05DEBE00E491D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AB02A0EC2B05DEBE00E491D7 /* Alamofire */; };
+		AB02A0EF2B05E07600E491D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02A0EE2B05E07600E491D7 /* Constants.swift */; };
 		ECBDD1042B0530940066855E /* ChatGPT4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDD1032B0530940066855E /* ChatGPT4App.swift */; };
 		ECBDD1062B0530940066855E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDD1052B0530940066855E /* ContentView.swift */; };
 		ECBDD1082B0530960066855E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBDD1072B0530960066855E /* Assets.xcassets */; };
@@ -17,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB02A0E52B05DB9000E491D7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		AB02A0E72B05DBA300E491D7 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		AB02A0E92B05DD3100E491D7 /* OpenAIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIservice.swift; sourceTree = "<group>"; };
+		AB02A0EE2B05E07600E491D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ECBDD1002B0530940066855E /* ChatGPT4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBDD1032B0530940066855E /* ChatGPT4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT4App.swift; sourceTree = "<group>"; };
 		ECBDD1052B0530940066855E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB02A0ED2B05DEBE00E491D7 /* Alamofire in Frameworks */,
 				ECBDD1172B054E520066855E /* SwiftOpenAI in Frameworks */,
 				ECBDD1132B05473D0066855E /* SwiftOpenAI in Frameworks */,
 			);
@@ -38,6 +48,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB02A0E42B05DADF00E491D7 /* ChatGPT3.5-trubo */ = {
+			isa = PBXGroup;
+			children = (
+				AB02A0E52B05DB9000E491D7 /* ChatViewModel.swift */,
+				AB02A0E92B05DD3100E491D7 /* OpenAIservice.swift */,
+				AB02A0EE2B05E07600E491D7 /* Constants.swift */,
+				AB02A0E72B05DBA300E491D7 /* ChatView.swift */,
+			);
+			path = "ChatGPT3.5-trubo";
+			sourceTree = "<group>";
+		};
 		ECBDD0F72B0530940066855E = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +82,7 @@
 				ECBDD1032B0530940066855E /* ChatGPT4App.swift */,
 				ECBDD1052B0530940066855E /* ContentView.swift */,
 				ECBDD1142B05477F0066855E /* ViewModel.swift */,
+				AB02A0E42B05DADF00E491D7 /* ChatGPT3.5-trubo */,
 				ECBDD1072B0530960066855E /* Assets.xcassets */,
 				ECBDD1092B0530960066855E /* Preview Content */,
 			);
@@ -101,6 +123,7 @@
 			packageProductDependencies = (
 				ECBDD1122B05473D0066855E /* SwiftOpenAI */,
 				ECBDD1162B054E520066855E /* SwiftOpenAI */,
+				AB02A0EC2B05DEBE00E491D7 /* Alamofire */,
 			);
 			productName = ChatGPT4;
 			productReference = ECBDD1002B0530940066855E /* ChatGPT4.app */;
@@ -132,6 +155,7 @@
 			mainGroup = ECBDD0F72B0530940066855E;
 			packageReferences = (
 				ECBDD1112B05473D0066855E /* XCRemoteSwiftPackageReference "SwiftOpenAI" */,
+				AB02A0EB2B05DEBE00E491D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = ECBDD1012B0530940066855E /* Products */;
 			projectDirPath = "";
@@ -161,7 +185,11 @@
 			files = (
 				ECBDD1062B0530940066855E /* ContentView.swift in Sources */,
 				ECBDD1152B05477F0066855E /* ViewModel.swift in Sources */,
+				AB02A0E82B05DBA300E491D7 /* ChatView.swift in Sources */,
+				AB02A0E62B05DB9000E491D7 /* ChatViewModel.swift in Sources */,
+				AB02A0EF2B05E07600E491D7 /* Constants.swift in Sources */,
 				ECBDD1042B0530940066855E /* ChatGPT4App.swift in Sources */,
+				AB02A0EA2B05DD3100E491D7 /* OpenAIservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +397,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AB02A0EB2B05DEBE00E491D7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 		ECBDD1112B05473D0066855E /* XCRemoteSwiftPackageReference "SwiftOpenAI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftBeta/SwiftOpenAI.git";
@@ -380,6 +416,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AB02A0EC2B05DEBE00E491D7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB02A0EB2B05DEBE00E491D7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		ECBDD1122B05473D0066855E /* SwiftOpenAI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ECBDD1112B05473D0066855E /* XCRemoteSwiftPackageReference "SwiftOpenAI" */;

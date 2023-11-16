@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var url = "https://via.placeholder.com/300"
     var body: some View {
-   ChatView()
+   GenerateView()
     }
 }
 
