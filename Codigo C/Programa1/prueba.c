@@ -467,7 +467,7 @@ int main() {
 
 
 
-printf("\n\nFin del Programa\n");
+printf("\n\nFin del Programa, falta unir a los demas\n");
     return 0;
 }
 
