@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 void ingresarMatriz(float matriz[5][6]) {
+	int i;
+	int j;
     printf("Ingresa los valores de la matriz 6x6:\n");
 
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 6; j++) {
+    for(i = 0; i < 5; i++){
+        for (j = 0; j < 6; j++) {
             printf("Ingrese el valor para la posición [%d][%d]: ", i + 1, j + 1);
             scanf("%f", &matriz[i][j]);
         }
@@ -12,6 +14,8 @@ void ingresarMatriz(float matriz[5][6]) {
 }
 
 void inicializarMatriz(float matriz[5][6]) {
+		int i;
+		int j;
     int datos[] = {
         1, 2, 7, -9, 5, 58,
         6, 9, 3, 6, 6, 36,
@@ -20,15 +24,17 @@ void inicializarMatriz(float matriz[5][6]) {
         -8, 2, -8, 5, -5, 14
     };
 
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 6; j++) {
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 6; j++) {
             matriz[i][j] = datos[i * 6 + j];
         }
     }
 }
 void mostrarMatriz(float matriz[5][6]) {
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 6; j++) {
+		int i;
+		int j;
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 6; j++) {
             printf("%.2f ", matriz[i][j]);
         }
         printf("\n");
@@ -38,15 +44,19 @@ void mostrarMatriz(float matriz[5][6]) {
     
 //crear matriz de 2x2, inversa  y su determinante
 void copiarValoresMatriz11(float matriz[6][6], float Matriz2x2[2][2]) {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+		int i;
+		int j;
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             Matriz2x2[i][j] = matriz[i][j];
         }
     }
 }
 void copiarValoresMatriz12(float matriz[6][6], float Matriz2x2[2][2]) {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+		int i;
+		int j;
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             Matriz2x2[i][j] = matriz[i][j+2];
         }
     }
@@ -56,15 +66,19 @@ void copiarValoresMatriz13(int matriz[5][6], int nuevaMatriz[2][2]) {
     nuevaMatriz[1][0] = matriz[1][4];
 }
 void copiarValoresMatriz21(float matriz[5][6], float Matriz2x2[2][2]) {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+		int i;
+		int j;
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             Matriz2x2[i][j] = matriz[i+2][j];
         }
     }
 }
 void copiarValoresMatriz22(float matriz[5][6], float Matriz2x2[2][2]) {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+		int i;
+		int j;
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             Matriz2x2[i][j] = matriz[i+2][j+2];
         }
     }
@@ -107,9 +121,11 @@ void inicializarCeros2(int nuevaMatriz[2][2]) {
 
 //sta funcion la usamos para imprimir las Matrices
 void imprimirMatriz2x2(float matriz2x2[2][2]) {
+		int i;
+		int j;
     printf("\n");
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             printf("%0.2f ", matriz2x2[i][j]);
         }
         printf("\n");
@@ -152,35 +168,41 @@ void calcularMatrizInversa1(float matriz[2][2], float inversa[2][2]) {
 
 //operaciones para el metodo de Gauz-Jordan
 void multiplicarMatrices(float matrizA[2][2], float matrizB[2][2], float resultado[2][2]) {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+		int i;
+		int j;
+		int k;
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             resultado[i][j] = 0.0;
-            for (int k = 0; k < 2; k++) {
+            for (k = 0; k < 2; k++) {
                 resultado[i][j] += matrizA[i][k] * matrizB[k][j];
             }
         }
     }
 }
 void multiplicarYRestarMatrices(float matrizA[2][2], float matrizB[2][2], float matrizC[2][2], float resultado[2][2]) {
+		int i;
+		int j;
+		int k;
     // Multiplicar matrizA por matrizB y guardar el resultado en resultado
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             resultado[i][j] = 0.0;
-            for (int k = 0; k < 2; k++) {
+            for (k = 0; k < 2; k++) {
                 resultado[i][j] += matrizA[i][k] * matrizB[k][j];
             }
         }
     }
 
     // Restar matrizC de resultado
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             resultado[i][j] -= matrizC[i][j];
         }
     }
         // Multiplicar el resultado por -1
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             resultado[i][j] *= -1;
         }
     }

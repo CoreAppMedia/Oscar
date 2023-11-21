@@ -4,8 +4,10 @@
 #define COLUMNAS 5
 
 void imprimirMatriz(double matriz[FILAS][COLUMNAS]) {
-    for (int i = 0; i < FILAS; i++) {
-        for (int j = 0; j < COLUMNAS; j++) {
+	int i;
+	int j;
+    for( i = 0; i < FILAS; i++) {
+        for (j = 0; j < COLUMNAS; j++) {
             printf("%.2f\t", matriz[i][j]);
         }
         printf("\n");
@@ -13,7 +15,8 @@ void imprimirMatriz(double matriz[FILAS][COLUMNAS]) {
 }
 
 void intercambiarFilas(double matriz[FILAS][COLUMNAS], int fila1, int fila2) {
-    for (int i = 0; i < COLUMNAS; i++) {
+	int i;
+    for (i = 0; i < COLUMNAS; i++) {
         double temp = matriz[fila1][i];
         matriz[fila1][i] = matriz[fila2][i];
         matriz[fila2][i] = temp;
@@ -21,27 +24,30 @@ void intercambiarFilas(double matriz[FILAS][COLUMNAS], int fila1, int fila2) {
 }
 
 void invertirMatriz(double matriz[FILAS][COLUMNAS]) {
+	int i;
+	int j;
+	int k;
     // Implementar el método de intercambio para invertir la matriz
-    for (int i = 0; i < FILAS; i++) {
-        for (int j = 0; j < COLUMNAS; j++) {
+    for (i = 0; i < FILAS; i++) {
+        for (j = 0; j < COLUMNAS; j++) {
             if (i != j) {
                 double factor = matriz[j][i] / matriz[i][i];
-                for (int k = 0; k < COLUMNAS; k++) {
+                for (k = 0; k < COLUMNAS; k++) {
                     matriz[j][k] -= factor * matriz[i][k];
                 }
             }
         }
     }
-    for (int i = 0; i < FILAS; i++) {
+    for ( i = 0; i < FILAS; i++) {
         double factor = matriz[i][i];
-        for (int j = 0; j < COLUMNAS; j++) {
+        for ( j = 0; j < COLUMNAS; j++) {
             matriz[i][j] /= factor;
         }
     }
-    for (int i = FILAS - 1; i >= 0; i--) {
-        for (int j = i - 1; j >= 0; j--) {
+    for ( i = FILAS - 1; i >= 0; i--) {
+        for ( j = i - 1; j >= 0; j--) {
             double factor = matriz[j][i] / matriz[i][i];
-            for (int k = 0; k < COLUMNAS; k++) {
+            for ( k = 0; k < COLUMNAS; k++) {
                 matriz[j][k] -= factor * matriz[i][k];
             }
         }
