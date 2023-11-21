@@ -58,7 +58,7 @@ int MetodoSecante(){
 void ingresarMatriz(float matriz[5][6]) {
 	int i;
 	int j;
-    printf("Ingresa los valores de la matriz 6x6:\n");
+    printf("Ingresa los valores de la matriz 5x6:\n");
 
     for(i = 0; i < 5; i++){
         for (j = 0; j < 6; j++) {
@@ -204,7 +204,7 @@ void calcularMatrizInversa(float matriz[2][2], float inversa[2][2]) {
         inversa[1][0] = -matriz[1][0] / determinante2x2;
         inversa[1][1] = matriz[0][0] / determinante2x2;
     } else {
-        printf("El determinante es igual a 0, por lo que la matriz no tiene inversa.\n");
+        printf("El determinante es igual a 0(converge), por lo que la matriz no tiene inversa.\n");
     }
 }
 void calcularMatrizInversa1(float matriz[2][2], float inversa[2][2]) {
@@ -324,7 +324,6 @@ int	JauzjordanParticionado(){
         printf("Inversa de la matriz 11:\n");
         imprimirMatriz2x2(inversaA11);
     }
-    
     printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.");
     copiarValoresMatriz12(matriz, MatrizA12);  // Llamar a la función para copiar valores
     printf("\nMatriz12");
@@ -382,8 +381,8 @@ int	JauzjordanParticionado(){
 //Empezamos las multiplicaciones de matrices
 
     multiplicarMatrices(MatrizA11,inversaA11,resultadoI_1);
-    printf("\nMUltiplicacion de A11 y su Iversa = I ");
-    imprimirMatriz2x2(resultadoI_1);
+    //printf("\nMUltiplicacion de A11 y su Iversa = I ");
+   // imprimirMatriz2x2(resultadoI_1);
     multiplicarMatrices(MatrizA11,inversaA11,resultadoA11);
     printf("\nMUltiplicacion de A11 y su Iversa = I ");
     imprimirMatriz2x2(resultadoA11);
@@ -625,17 +624,26 @@ int MetodoIntercambio(){
 
 int main() {
     int opcion;
-    	printf("Universidad Nacional autonoma de Mexico:\n");
-    	printf("Facultad de Estudios Superiores Acatlan:\n");
+    	printf("\n\nUniversidad Nacional autonoma de Mexico\n");
+    	printf("Facultad de Estudios Superiores Acatlan\n");
+        printf("\nMetodos Numericos 1\n");
+        printf("Integrantes del Equipo:\n\n");
+        printf("Mendoza Hernandez daniela Itzel\n");
+        printf("Quiñones Valles Pamela\n");
+        printf("Valdes Rodrigurz Oscar Roberto\n");
+
+
+
+        printf("\n");
     	
     
 
     do {
         printf("Seleccione el Metodo:\n");
-        printf("1. Metodo de la Secante 1\n");
-        printf("2. Metodo de jauz jordan 2\n");
-        printf("3. Metodo de intercambio 2\n");
-        printf("0. Salir\n");
+        printf("[1] Metodo de la Secante \n");
+        printf("[2] Metodo de Gauss-jordan \n");
+        printf("[3] Metodo de intercambio \n");
+        printf("[0] Salir\n");
         printf("Opcion: ");
         scanf("%d", &opcion);
 
