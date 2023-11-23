@@ -39,6 +39,8 @@ final class AuthenticatinFirebaseDatasourse {
         }
     }
     
+
+    
     //funcion para iniciar el usuario ya registrado
     func login(email: String, password: String, completionBlock: @escaping(Result<User, Error>) -> Void){
         Auth.auth().signIn(withEmail: email, password: password){ authDataResult, error in
@@ -76,7 +78,6 @@ final class AuthenticatinFirebaseDatasourse {
                     completionBlock(.failure(error))
                     return
                 }
-
                 // Send email verification
                 authDataResult?.user.sendEmailVerification(completion: { verificationError in
                     if let verificationError = verificationError {
@@ -91,6 +92,8 @@ final class AuthenticatinFirebaseDatasourse {
             }
         }
     }
+    
+
     
     
 }

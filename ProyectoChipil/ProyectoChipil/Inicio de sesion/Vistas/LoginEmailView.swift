@@ -11,6 +11,7 @@ struct LoginEmailView: View {
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     @State var textFieldEmail: String = ""
     @State var textFieldPasseord: String = ""
+    @State private var isPasswordResetViewPresented = false
     var body: some View {
         VStack{
             DismissView()
@@ -92,11 +93,17 @@ struct LoginEmailView: View {
             }
             Spacer()
                 .padding(.top)
-                
-                Button(action: {}, label:{
-                    Text("¿olvidaste tu contraseña?")
-                        .foregroundColor(Color.white.opacity(0.6))
-                })
+            Button("Olvidé mi Contraseña") {
+                isPasswordResetViewPresented = true
+            }
+            .font(.headline)
+            .padding()
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .sheet(isPresented: $isPasswordResetViewPresented) {
+                PasswordResetView(authenticationViewModel: AuthenticationViewModel())
+            }
+
         }//Vstack principal
         .background(Color("chipil").ignoresSafeArea(.all, edges: .all))
     }

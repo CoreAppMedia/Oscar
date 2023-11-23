@@ -72,4 +72,14 @@ final class AuthenticationViewModel: ObservableObject{
             print("Error logout Master")
         }
     }
+    
+    func resetPassword(forEmail email: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(()))
+            }
+        }
+    }
 }
