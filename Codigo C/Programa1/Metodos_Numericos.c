@@ -12,7 +12,7 @@
 // Definición de la función f(x)
 double f(double x) {
    // return 3 * x * x - exp(x); // Cambia esta función por la que desees encontrar la raíz
-    return x * log(x) - 10;
+    return pow(x,4)- 3*pow(x,3)-2;
 }
 
 // Método de la secante
@@ -41,8 +41,8 @@ double secantMethod(double (*func)(double), double x0, double x1, double epsilon
 }
 
 int MetodoSecante(){
-	    double x0 = 15.0; // Primer punto inicial
-    double x1 = 16.0; // Segundo punto inicial
+	    double x0 = 3.2; // Primer punto inicial
+    double x1 = 4.0; // Segundo punto inicial
 
     printf("Método de la secante para encontrar la raíz de f(x)\n");
     double root = secantMethod(f, x0, x1, EPSILON, MAX_ITER);
@@ -602,10 +602,10 @@ void invertirMatriz(double matriz[FILAS][COLUMNAS]) {
 
 int MetodoIntercambio(){
 	    double matriz[FILAS][COLUMNAS] = {
-        {-1, 1, 0, -3, 4},
-        {1, 0, 3, 1, 0},
-        {0, 1, -1, -1, 3},
-        {3, 0, 1, 2, 1}
+        {1, -1, 1, -1, -2},
+        {-2, 3, -1, 2, 5},
+        {4, -2, 2, -3, 6},
+        {3, 1, -5, 6, 8}
     };
 
     printf("Matriz original:\n");
