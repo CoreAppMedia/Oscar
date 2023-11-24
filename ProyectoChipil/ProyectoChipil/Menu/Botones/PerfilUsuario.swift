@@ -16,47 +16,36 @@ struct PerfilUsuario: View {
     @Binding var value: String
     var body: some View {
         if let perfilData = perfil_1{
-            VStack(spacing: 10){
-                Text("Bienvenido:")
-                    Text(perfilData.nombre)
-                        .font(.title)
-                        .fontWeight(.semibold)
-                VStack{
-                    Text("Licenciatura a la que pertenece: ")
-                    Text(perfilData.descripcion)
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                }
-                VStack{
-                    Text("Campus y Grado: ")
-                    Text(perfilData.titulo)
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                }
-                VStack{
-                    Text("Nombre Completo: ")
-                    HStack{
-                        Text(perfilData.apellidoP)
-                        Text(perfilData.apellidoM)
+            VStack(){
+                ZStack(alignment:.leading){
+                    Rectangle()
+                        .fill(.white)
+                    VStack(spacing: 10 ){
                         Text(perfilData.nombre)
+                            .font(.title)
+                        Text(perfilData.correoElectronico)
+                            .font(.title3)
+                        Text(perfilData.numeroTel)
+                            .font(.title3)
+                        Text(perfilData.titulo)
+                            .font(.title3)
+                        
                     }
-                    .fontWeight(.semibold)
+                    .padding(.leading, 40)
+
                 }
-                VStack{
-                    Text("Telefono: ")
-                    Text(perfilData.numeroTel)
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                }
-                VStack{
-                    Text("Correo electronico: ")
-                    Text(perfilData.correoElectronico)
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                }
-                Spacer()
+                .cornerRadius(50.0)
+                .padding(.leading, 50)
+                .padding(.trailing, 50)
+                .padding(.top, 150)
+                .padding(.bottom, 50)
+                Image("cara")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
+                    .offset(y: -580)
             }
-            .padding(15)
+            .background(Color("chipil").ignoresSafeArea(.all, edges: .all))
             
         }else{
             VStack(spacing: 4){

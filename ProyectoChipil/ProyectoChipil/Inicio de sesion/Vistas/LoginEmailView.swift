@@ -17,32 +17,24 @@ struct LoginEmailView: View {
             DismissView()
                 .padding(.top, 8)
             Spacer(minLength: 0)
-            HStack{
-                Image("Chipil")
+            VStack{
+                Text("TU AMIGO EN TIEMPOS DE CRISIS")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                Image("Group 1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 100)
-                    .padding(.vertical)
-                Text("Chipil")
+                    .frame(width: 200, height: 200)
+                Text("Inicio de sesión")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                    .padding(.leading, 20)
-            }
-            HStack{
-                VStack(alignment: .leading, spacing: 12, content: {
-                    Text("Inicio de sesión")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    
-                    Text("Porfavor inicie para continuar")
-                        .foregroundColor(Color.white.opacity(0.5))
-                })
                 
-                Spacer(minLength: 0)
+                Text("Por favor inicie para continuar")
+                    .foregroundColor(Color.white.opacity(0.5))
             }
-            .padding()
+            
             Group{
                 HStack{
                     Image(systemName: "envelope")
@@ -71,11 +63,11 @@ struct LoginEmailView: View {
                 .padding(.horizontal)
                 .padding(.top)
                 
-                Button("Login") {
+                Button("INICIAR") {
                     authenticationViewModel.login(email: textFieldEmail, password: textFieldPasseord)
                 }
                 .fontWeight(.heavy)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .padding(.vertical)
                 .frame(width: UIScreen.main.bounds.width - 150)
                 .background(Color.green)

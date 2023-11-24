@@ -28,20 +28,15 @@ struct PasswordResetView: View {
             DismissView()
 
             
-            HStack{
-                VStack(alignment: .leading, spacing: 12, content: {
-                    Text("Recuperar contraeña")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    
-                    Text("Porfavor siga las instrucciones")
-                        .foregroundColor(Color.white.opacity(0.5))
-                })
+            VStack{
+                Image("contrasena")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 200, height: 200)
                 
-                Spacer(minLength: 0)
+                Text("Por favor inicie para continuar")
+                    .foregroundColor(Color.white.opacity(0.5))
             }
-            .padding()
             Group{
                 HStack{
                     Image(systemName: "envelope")
@@ -63,12 +58,13 @@ struct PasswordResetView: View {
                         .foregroundColor(.white)
                         .offset(x: 142)
                         .padding(.bottom,10)
-                
+
                 HStack{
                     Image(systemName: "envelope")
                         .font(.title2)
                         .foregroundColor(.white)
                         .frame(width: 35)
+                    
                     TextField("Codigo", text: $AutenticaciontionCode)
                         .autocapitalization(.none)
                 }
@@ -76,13 +72,20 @@ struct PasswordResetView: View {
                 .background(Color.white.opacity(AutenticaciontionCode == "" ? 0 : 0.12))
                 .cornerRadius(15)
                 .padding(.horizontal)
+                Text("Ingrese el código ")
+                    .foregroundColor(Color.white.opacity(0.5))
+                    .padding(-20)
                 
                         Button{
                             verificationCode = generateVerificationCode()
                         }label: {
                             Image(systemName: "gobackward")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
                         }
                         .foregroundColor(.white)
+                
                         .padding()
                     Spacer()
                 
@@ -113,11 +116,6 @@ struct PasswordResetView: View {
             .opacity(emailAddress != "" && AutenticaciontionCode != "" ? 1 : 0.5)
             .disabled(emailAddress != "" && AutenticaciontionCode != "" ? false : true)
             
-            Image("Chipil")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
-                .padding(.vertical)
             
         }//Vstack principal
         .alert(isPresented: $showingAlert) {

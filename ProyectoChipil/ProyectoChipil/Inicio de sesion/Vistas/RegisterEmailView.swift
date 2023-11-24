@@ -28,33 +28,16 @@ struct RegisterEmailView: View {
     var body: some View {
         VStack{
             DismissView()
-        ScrollView{ 
-            HStack{
-                Image("Chipil")
+        ScrollView{
+            VStack{
+                Image("Registrate")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 100)
-                Text("Chipil")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .padding(.leading, 20)
-            }
-            HStack{
-                VStack(alignment: .leading, spacing: 12, content: {
-                    Text("Registro")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    
-                    Text("Porfavor Registrese para continuar")
-                        .foregroundColor(Color.white.opacity(0.5))
-                        .padding(.top,-12)
-                })
+                    .frame(width: 200, height: 200)
                 
-                Spacer(minLength: 0)
+                Text("Completa la infromación solicitada")
+                    .foregroundColor(Color.white.opacity(0.5))
             }
-            .padding()
 
                 HStack{
                     Image(systemName: "envelope.fill")
@@ -192,7 +175,7 @@ struct RegisterEmailView: View {
                     }
                 }
                     .fontWeight(.heavy)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 150)
                     .background(Color.green)
