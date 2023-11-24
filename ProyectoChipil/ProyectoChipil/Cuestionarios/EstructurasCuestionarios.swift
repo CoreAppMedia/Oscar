@@ -37,3 +37,14 @@ struct Preguntas: Identifiable, Codable{
         
     }
 }
+struct Informacion1: Codable{
+    var title: String
+    var peopleAttended: Int
+    var rules:[String]
+    
+    enum CodingKeys: CodingKey {
+        case title
+        case peopleAttended
+        case rules
+    }
+}

@@ -26,15 +26,9 @@ struct Home: View {
     var body: some View {
         if let info = DatosPerfil{
             VStack(spacing: 10){
-                HStack{
-                    Text(info.title)
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .hAligh(.leading)
-                }
-
                 CustomLabel("list.bullet.rectangle.portrait", "\(questions.count)", "Preguntas de opcion multiple")
                     .padding(.top,20)
+                
                 CustomLabel("person", "\(info.peopleAttended)", "asistencia de personas al ejercicio")
                     .padding(.top,5)
                 Divider()
@@ -51,6 +45,8 @@ struct Home: View {
                 .vAligh(.bottom)
                 
             }
+            
+            .navigationTitle(info.title)
             .padding(15)
             .vAligh(.top)
             .fullScreenCover(isPresented: $startQuiz){
@@ -60,6 +56,7 @@ struct Home: View {
                     DatosPerfil?.peopleAttended += 1
                 }
             }
+            .background(Color("chipil").ignoresSafeArea(.all, edges: .all))
             
         }else{
             VStack(spacing: 4){
@@ -84,16 +81,17 @@ struct Home: View {
         VStack(alignment: .leading, spacing: 15) {
             Text("antes de iniciar lea cuidadosamente")
                 .font(.title3)
+                .foregroundColor(Color.white)
                 .fontWeight(.bold)
                 .padding(.bottom,12)
             ForEach(Rules, id: \.self){ rule in
                 HStack(alignment: .top,spacing: 10) {
                     Circle()
-                        .fill(.black)
+                        .fill(.white)
                         .frame(width: 8,height: 8)
                         .offset(y:6)
                     Text(rule)
-                        .font(.callout)
+                        .foregroundColor(Color.white)
                         .lineLimit(3)
                 }
             }
@@ -110,21 +108,21 @@ struct Home: View {
                 .frame(width: 45,height: 45)
                 .background{
                     Circle()
-                        .fill(.gray.opacity(0.1))
+                        .fill(.white)
                         .padding(-1)
                         .background{
                             Circle()
-                                .stroke(Color("chipil"), lineWidth: 1)
+                                .stroke(Color(.black), lineWidth: 2)
                         }
                 }
             VStack(alignment: .leading, spacing: 4){
                 Text(title)
                     .fontWeight(.bold)
-                    .foregroundColor(Color("chipil"))
+                    .foregroundColor(Color(.white))
                 Text(subTitle)
                     .font(.caption)
                     .fontWeight(.medium)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
             }
             .hAligh(.leading)
         }
@@ -167,7 +165,7 @@ struct CustomButton: View {
                 .hAligh(.center)
                 .padding(.top,15)
                 .padding(.bottom,10)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .background{
                     Rectangle()
                         .fill(Color.green)

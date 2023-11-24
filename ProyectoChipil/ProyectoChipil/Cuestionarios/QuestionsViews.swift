@@ -92,6 +92,7 @@ struct QuestionsViews: View {
             ScoreCardView(score: score / CGFloat(questions.count) * 100){
                 dismiss()
                 onFinish()
+            
             }
         }
     }
@@ -144,6 +145,7 @@ struct QuestionsViews: View {
         }
         .padding(.horizontal,15)
     }
+    
     @ViewBuilder
     func OptionView(_ option: String, _ tint: Color)->some View{
         Text(option)
@@ -163,7 +165,7 @@ struct QuestionsViews: View {
 }
 
 #Preview {
-    ContentView(authenticationViewModel: AuthenticationViewModel())
+    Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
 }
 
 //estructura del modelo de la vista de tarjeta de puntuacion
@@ -171,18 +173,24 @@ struct ScoreCardView: View{
     var score: CGFloat
     //regresa al inicio de los cuestionarios cuando se ejecuda dismiss
     var onDismiss: ()->()
+    
     @Environment(\.dismiss) private var dismiss
-
- 
     var body: some View{
         VStack{
-            VStack(spacing: 15){
-                Text("Resultado de tu ejercicio")
-                    .font(.title3)
+            VStack(){
+                Image("Group 1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 100)
+                Text("Los resultados pueden ser compartidos con un especialista para darte seguimiento.")
+                    .foregroundColor(.white)
+                
+                Text("Resultado de tu cuestionario")
+                    .font(.title)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                 VStack(spacing: 15){
-                    Text("felicidades por tu puntuación")
+                    Text("felicidades por completar el test")
                         .font(.title2)
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
@@ -190,11 +198,17 @@ struct ScoreCardView: View{
                     Text(String(format: "%.0f", score) + "%")
                         .font(.title.bold())
                         .padding(.bottom,10)
+                    Text(String(format: "%.0f", score) + "%")
+                        .font(.title.bold())
+                        .padding(.bottom,10)
                     
-                    Image(systemName: "person.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 220)
+                    Text(String(format: "%.0f", score) + "%")
+                        .font(.title.bold())
+                        .padding(.bottom,10)
+                    
+                    Text(String(format: "%.0f", score) + "%")
+                        .font(.title.bold())
+                        .padding(.bottom,10)
                 }
                 .foregroundColor(.black)
                 .padding(.horizontal,15)
@@ -204,6 +218,7 @@ struct ScoreCardView: View{
                     RoundedRectangle(cornerRadius: 25, style: .continuous)
                         .fill(.white)
                 }
+                Spacer()
             }
             .vAligh(.center)
             CustomButton(title: "Regresar al inicio"){
@@ -215,11 +230,12 @@ struct ScoreCardView: View{
         }
         .padding(15)
         .background{
-            Color("BG")
+            Color("chipil")
                 .ignoresSafeArea()
         }
     }
 }
+
 
 
 /*palabras clave

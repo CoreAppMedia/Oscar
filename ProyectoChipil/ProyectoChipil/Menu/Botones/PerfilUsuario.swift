@@ -16,34 +16,60 @@ struct PerfilUsuario: View {
     @Binding var value: String
     var body: some View {
         if let perfilData = perfil_1{
-            VStack(){
+            ZStack(){
                 ZStack(alignment:.leading){
                     Rectangle()
                         .fill(.white)
                     VStack(spacing: 10 ){
+                        Text("Nombre:")
+                            .padding(.bottom, -15)
                         Text(perfilData.nombre)
                             .font(.title)
+                        Text("Apellidos:")
+                            .padding(.bottom, -10)
+                        HStack{
+                            Text(perfilData.apellidoP)
+                                .font(.headline)
+                            Text(perfilData.apellidoP)
+                                .font(.headline)
+                        }
+                        Text("Correo electronico:")
+                            .padding(.bottom, -15)
                         Text(perfilData.correoElectronico)
-                            .font(.title3)
+                            .font(.title3 .bold())
+                        Text("Contacto:")
+                            .padding(.bottom, -10)
                         Text(perfilData.numeroTel)
-                            .font(.title3)
+                            .font(.title3 .bold())
+                        Text("Carrera:")
+                            .padding(.bottom, -10)
                         Text(perfilData.titulo)
-                            .font(.title3)
-                        
+                            .font(.title3 .bold())
+                        Text("descripcion:")
+                            .padding(.bottom, -10)
+                        Text(perfilData.descripcion)
+                            .font(.title3 .bold())
+                       Spacer()
                     }
-                    .padding(.leading, 40)
+                    .padding(.top,35)
+                    .padding(.leading, 20)
 
                 }
                 .cornerRadius(50.0)
                 .padding(.leading, 50)
                 .padding(.trailing, 50)
-                .padding(.top, 150)
-                .padding(.bottom, 50)
+                .padding(.top, 70)
+                .padding(.bottom,70)
                 Image("cara")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100, height: 100)
-                    .offset(y: -580)
+                    .offset(y: -330)
+                Image("expediente")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 80, height: 80)
+                    .offset(x: 130, y: 290)
             }
             .background(Color("chipil").ignoresSafeArea(.all, edges: .all))
             

@@ -137,38 +137,6 @@ NavigationView{
                                 
                                 
                             }
-                            NavigationLink(){
-                                ViewPrincipal()
-                            }label: {
-                                HStack(spacing: 14){
-                                    Image(systemName: "person.fill")
-                                        .resizable()
-                                        .renderingMode(.template)
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 22, height: 22)
-                                    Text("Inicio de sesion ")
-                                }
-                                .foregroundColor(.primary)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                
-                                
-                            }
-                            NavigationLink(){
-                                cargarImagen()
-                            }label: {
-                                HStack(spacing: 14){
-                                    Image(systemName: "person.fill")
-                                        .resizable()
-                                        .renderingMode(.template)
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 22, height: 22)
-                                    Text("Cargar foto ")
-                                }
-                                .foregroundColor(.primary)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                
-                                
-                            }
                                 TabButton(title: "Bloqueos", image: "person")
                                 
                             }//VStack de los botones
@@ -248,7 +216,7 @@ NavigationView{
                                     Image("icono")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 45, height: 45)
+                                        .frame(width: 50, height: 50)
                                         .clipShape(Circle())
                                         .overlay{
                                             Circle().stroke(.black, lineWidth: 1)
@@ -256,37 +224,91 @@ NavigationView{
                                 }
                                 .padding(.leading)
                                 Spacer()
-                                Image("Chipil")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 30, height: 30)
-                                VStack{
-                                    Text("Bienvenidos a Chipil")
-                                        .fontWeight(.bold)
-                                    Text("Tu apoyo emocional")
-                                        .fontWeight(.bold)
-                                    }
-                                Spacer()
+                                    Text("Bienvenidos")
+                                    .font(.title2)
+                                        .padding(.leading, 20)
+                                        .offset(x: 10)
+                               
                                 
                                 Button(action: {
                                     guard let phoneNumber = URL(string: "tel://5539829273") else { return }
                                     UIApplication.shared.open(phoneNumber)
                                 }) {
-                                    Image(systemName: "phone.bubble.left.fill")
+                                    Image("emergencia")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 35, height: 35)
-                                        .foregroundColor(.red)
+                                        .frame(width: 140, height: 30)
                                     
                                    //     .shadow(color: .blue, radius:10)
                                 }
-                                .padding(.trailing)
+                               // .padding(.trailing)
                                 }
                             .padding(.bottom)
                             .background(
                                     Color.chipil
                                         .opacity(0.7)
                                         .ignoresSafeArea(.container, edges: .vertical))
+                            HStack{
+                                NavigationLink(){
+                                    Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
+                                    }label: {
+                                    VStack{
+                                        Image("expediente")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 60, height: 60)
+                                            .clipShape(Circle())
+                                            .overlay{
+                                                Circle().stroke(.black, lineWidth: 2)
+                                            }
+                                        Text("Diario")
+                                            .font(.headline)
+                                            .foregroundColor(.black)
+                                            .padding(.top, -5)
+                                    }
+                                }
+                                Spacer()
+                                NavigationLink(){
+                                    Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
+                                    }label: {
+                                    VStack{
+                                        Image("Group 1")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 60, height: 60)
+                                            .clipShape(Circle())
+                                            .overlay{
+                                                Circle().stroke(.black, lineWidth: 2)
+                                            }
+                                        Text("Hablame")
+                                            .font(.headline)
+                                            .foregroundColor(.black)
+                                            .padding(.top, -5)
+                                    }
+                                }
+                                Spacer()
+                                NavigationLink(){
+                                    Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
+                                    }label: {
+                                        VStack{
+                                            Image("pdf")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 60, height: 60)
+                                                .clipShape(Circle())
+                                                .overlay{
+                                                    Circle().stroke(.black, lineWidth: 2)
+                                                }
+                                            Text("Test")
+                                                .font(.headline)
+                                                .foregroundColor(.black)
+                                                .padding(.top, -5)
+                                        }
+                                    }
+                          
+                            }
+                            .padding(.leading,50)
+                            .padding(.trailing,50)
                             List{
                                 ForEach(LinkViewModel.links){ link in
                                     VStack(alignment: .leading, spacing: 5){
