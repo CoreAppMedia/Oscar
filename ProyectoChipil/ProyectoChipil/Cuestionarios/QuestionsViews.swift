@@ -88,13 +88,7 @@ struct QuestionsViews: View {
         //Como nuestro fondo es obscuro, hay que forzar el Modo obscurom en la App
         .environment(\.colorScheme, .dark)
         //hacemos que al momento de finalizar el test nos muestre una medalla en toda la View
-        .fullScreenCover(isPresented: $showScoreCard){
-            ScoreCardView(score: score / CGFloat(questions.count) * 100){
-                dismiss()
-                onFinish()
-            
-            }
-        }
+        
     }
     
     
