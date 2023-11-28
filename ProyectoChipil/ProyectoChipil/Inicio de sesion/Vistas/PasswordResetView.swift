@@ -29,7 +29,7 @@ struct PasswordResetView: View {
 
             
             VStack{
-                Image("contrasena")
+                Image("contra")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 200, height: 200)

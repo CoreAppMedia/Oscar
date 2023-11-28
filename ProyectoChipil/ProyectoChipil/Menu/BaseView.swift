@@ -134,25 +134,33 @@ NavigationView{
                                 }
                                 .foregroundColor(.primary)
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                
-                                
                             }
-                                TabButton(title: "Bloqueos", image: "person")
-                                
+    
+                        
                             }//VStack de los botones
                             .padding()
                             .padding(.leading)
                             .padding(.top, 35)
                             
                             Divider()
-                            TabButton(title: "Anuncios", image:"square.and.arrow.up")
-                                .padding()
-                                .padding(.leading)
+                        NavigationLink(){
+                           Info()
+                        }label: {
+                            HStack(spacing: 14){
+                                
+                                Text("Haste Premium")
+                                Image(systemName: "star.circle.fill")
+                                    .resizable()
+                                    .renderingMode(.template)
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 22, height: 22)
+                            }
+                            .padding(.leading, 70)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(.primary)
+                        }
                             Divider()
                             VStack(alignment: .leading, spacing: 25){
-                                Button("Ajustes y privacidad"){
-                                    
-                                }
                                 
                                 Button("Creadores") {
                                      self.isModal = true
@@ -269,7 +277,8 @@ NavigationView{
                                 }
                                 Spacer()
                                 NavigationLink(){
-                                    Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
+                                    ChatBotView()
+                                        .navigationBarTitle("Chatbot")
                                     }label: {
                                     VStack{
                                         Image("Group 1")

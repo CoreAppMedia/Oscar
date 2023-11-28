@@ -66,6 +66,8 @@
 		AB2CFB3A2AE85D64006F7FC1 /* Credenciales.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */; };
 		AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */; };
 		AB34CCE92B15DC9700E7D46B /* HomeAnsiedad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34CCE82B15DC9700E7D46B /* HomeAnsiedad.swift */; };
+		AB34CCEC2B1635C600E7D46B /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34CCEB2B1635C600E7D46B /* Info.swift */; };
+		AB34CCEE2B163CE600E7D46B /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34CCED2B163CE600E7D46B /* ChatMessage.swift */; };
 		ABD2540B2AF0A138003D719D /* prueba-login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540A2AF0A138003D719D /* prueba-login.swift */; };
 		ABD2540D2AF0A199003D719D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540C2AF0A199003D719D /* LoginViewModel.swift */; };
 		ABD2540F2AF2B6DC003D719D /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540E2AF2B6DC003D719D /* LoadingScreen.swift */; };
@@ -104,6 +106,8 @@
 		AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credenciales.swift; sourceTree = "<group>"; };
 		AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Llamadas.swift; sourceTree = "<group>"; };
 		AB34CCE82B15DC9700E7D46B /* HomeAnsiedad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnsiedad.swift; sourceTree = "<group>"; };
+		AB34CCEB2B1635C600E7D46B /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		AB34CCED2B163CE600E7D46B /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		ABD254082AEF5351003D719D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ABD2540A2AF0A138003D719D /* prueba-login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "prueba-login.swift"; sourceTree = "<group>"; };
 		ABD2540C2AF0A199003D719D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -231,6 +235,14 @@
 			path = Botones;
 			sourceTree = "<group>";
 		};
+		AB34CCEA2B16330F00E7D46B /* CHATGPT */ = {
+			isa = PBXGroup;
+			children = (
+				AB34CCED2B163CE600E7D46B /* ChatMessage.swift */,
+			);
+			path = CHATGPT;
+			sourceTree = "<group>";
+		};
 		ABD254092AF0A114003D719D /* prueba de inicio-login */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +300,8 @@
 				EC2C11512AE301E20076B947 /* ProyectoChipilApp.swift */,
 				EC2C11A92AE3052F0076B947 /* DismissView.swift */,
 				EC2C11532AE301E20076B947 /* ContentView.swift */,
+				AB34CCEB2B1635C600E7D46B /* Info.swift */,
+				AB34CCEA2B16330F00E7D46B /* CHATGPT */,
 				ABD254092AF0A114003D719D /* prueba de inicio-login */,
 				ECFA3B372AE9B4C300009850 /* FireBase */,
 				AB1C8F4F2AE45CD700E0A49F /* Menu */,
@@ -489,10 +503,12 @@
 				EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */,
 				AB34CCE92B15DC9700E7D46B /* HomeAnsiedad.swift in Sources */,
 				EC0B1F5F2AE7012F006ED5D1 /* QuestionsViews.swift in Sources */,
+				AB34CCEE2B163CE600E7D46B /* ChatMessage.swift in Sources */,
 				AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */,
 				ABD254782AF49093003D719D /* ImagePicker.swift in Sources */,
 				ECA02DA12AF033CE007BAC30 /* Hospitales.swift in Sources */,
 				ABD2540B2AF0A138003D719D /* prueba-login.swift in Sources */,
+				AB34CCEC2B1635C600E7D46B /* Info.swift in Sources */,
 				EC2C11A82AE304BD0076B947 /* LoginEmailView.swift in Sources */,
 				ECC081D72B0EBB4200BE75C7 /* PasswordResetView.swift in Sources */,
 				EC2C119F2AE303BF0076B947 /* AuthenticationFirebaseDataSource.swift in Sources */,
@@ -647,6 +663,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,6 +695,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
