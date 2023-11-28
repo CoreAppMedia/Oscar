@@ -239,7 +239,7 @@ NavigationView{
                                
                                 
                                 Button(action: {
-                                    guard let phoneNumber = URL(string: "tel://5539829273") else { return }
+                                    guard let phoneNumber = URL(string: "tel://8009112000") else { return }
                                     UIApplication.shared.open(phoneNumber)
                                 }) {
                                     Image("emergencia")
@@ -258,7 +258,7 @@ NavigationView{
                                         .ignoresSafeArea(.container, edges: .vertical))
                             HStack{
                                 NavigationLink(){
-                                  //  JournalEntry()
+                                  Diario()
                                     }label: {
                                     VStack{
                                         Image("expediente")
@@ -278,7 +278,7 @@ NavigationView{
                                 Spacer()
                                 NavigationLink(){
                                     ChatBotView()
-                                        .navigationBarTitle("Chatbot")
+                                        .navigationBarTitle("ChatChipil")
                                     }label: {
                                     VStack{
                                         Image("Group 1")
@@ -322,7 +322,7 @@ NavigationView{
                                 ForEach(LinkViewModel.links){ link in
                                     VStack(alignment: .leading, spacing: 5){
                                         HStack {
-                                            Image(systemName: "person")
+                                            Image("mural2")
                                                 .resizable()
                                                 .frame(width: 100, height: 100) // Ajustamos la imagen
                                                 .clipShape(RoundedRectangle(cornerRadius: 10)) // Redondea las esquinas de la imagen

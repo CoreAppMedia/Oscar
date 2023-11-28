@@ -19,11 +19,13 @@ struct Diario: View {
                     Text("Pensamientos")
                         .font(.title)
                         .padding(.leading)
+                        .foregroundColor(.white)
                     Text("del Día")
                         .font(.title)
                         .padding(.leading)
+                        .foregroundColor(.white)
                 }
-                Spacer()
+               
                 Image("chipil chat")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -35,13 +37,16 @@ struct Diario: View {
             Text("Hoy, mientras el sol se despedía...")
                 .font(.body)
                 .padding(.leading)
+                .foregroundColor(.white)
 
             // TextField para agregar contenido
-            TextField("Agrega tu reflexión aquí", text: $nuevoContenido)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.vertical, 8)
-                .padding(.leading)
-                .padding(.trailing)
+            TextEditor(text: self.$nuevoContenido)
+                .cornerRadius(30)
+                .font(.title)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .foregroundColor(.black)
+                .padding()
 
             // Botón de actualización
             Button(action: {
@@ -60,8 +65,12 @@ struct Diario: View {
             if !contenidoActualizado.isEmpty {
                 Text("Contenido Actualizado:")
                     .font(.headline)
+                    .padding(.leading)
+                    .foregroundColor(.white)
                 Text(contenidoActualizado)
                     .font(.body)
+                    .foregroundColor(.white)
+                
             }
 
             Spacer()
