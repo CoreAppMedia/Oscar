@@ -68,6 +68,7 @@
 		AB34CCE92B15DC9700E7D46B /* HomeAnsiedad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34CCE82B15DC9700E7D46B /* HomeAnsiedad.swift */; };
 		AB34CCEC2B1635C600E7D46B /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34CCEB2B1635C600E7D46B /* Info.swift */; };
 		AB34CCEE2B163CE600E7D46B /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34CCED2B163CE600E7D46B /* ChatMessage.swift */; };
+		AB34CCF02B16463800E7D46B /* Diario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34CCEF2B16463800E7D46B /* Diario.swift */; };
 		ABD2540B2AF0A138003D719D /* prueba-login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540A2AF0A138003D719D /* prueba-login.swift */; };
 		ABD2540D2AF0A199003D719D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540C2AF0A199003D719D /* LoginViewModel.swift */; };
 		ABD2540F2AF2B6DC003D719D /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540E2AF2B6DC003D719D /* LoadingScreen.swift */; };
@@ -108,6 +109,7 @@
 		AB34CCE82B15DC9700E7D46B /* HomeAnsiedad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnsiedad.swift; sourceTree = "<group>"; };
 		AB34CCEB2B1635C600E7D46B /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		AB34CCED2B163CE600E7D46B /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		AB34CCEF2B16463800E7D46B /* Diario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diario.swift; sourceTree = "<group>"; };
 		ABD254082AEF5351003D719D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ABD2540A2AF0A138003D719D /* prueba-login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "prueba-login.swift"; sourceTree = "<group>"; };
 		ABD2540C2AF0A199003D719D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				AB34CCED2B163CE600E7D46B /* ChatMessage.swift */,
+				AB34CCEF2B16463800E7D46B /* Diario.swift */,
 			);
 			path = CHATGPT;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				EC2C11A32AE304020076B947 /* AuthenticationViewModel.swift in Sources */,
 				ECFA3B392AE9B4EE00009850 /* MuralDatasource.swift in Sources */,
 				ABD254112AF2B9E8003D719D /* HomePrueba.swift in Sources */,
+				AB34CCF02B16463800E7D46B /* Diario.swift in Sources */,
 				ECFA3B3F2AE9D0A800009850 /* Noticia.swift in Sources */,
 				ECFA3B3B2AE9B50600009850 /* MuralRepository.swift in Sources */,
 				EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */,

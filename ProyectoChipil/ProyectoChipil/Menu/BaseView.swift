@@ -258,7 +258,7 @@ NavigationView{
                                         .ignoresSafeArea(.container, edges: .vertical))
                             HStack{
                                 NavigationLink(){
-                                    Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
+                                  //  JournalEntry()
                                     }label: {
                                     VStack{
                                         Image("expediente")

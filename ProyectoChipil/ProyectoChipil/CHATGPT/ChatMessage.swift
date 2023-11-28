@@ -64,6 +64,8 @@ struct ChatBotView: View {
             response = "¡Hola! ¿Cómo estás?"
         case "adiós":
             response = "¡Hasta luego!"
+        case "estoy triste":
+            response = "Cuentame, que pasa?"
         default:
             response = "No entendí. ¿Podrías ser más específico?"
         }
