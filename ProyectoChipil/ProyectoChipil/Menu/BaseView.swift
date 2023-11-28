@@ -57,21 +57,7 @@ NavigationView{
                     Text(usuarioTexto)
                         .font(.title2.bold())
                     }
-                    HStack(spacing: 12){
-                        Button{
-                            }label: {
-                            Label(
-                                title: { Text("Seguidos") },
-                                icon: { Image(systemName: "42.circle")}
-                                )}//termina boton
-                        Button{
-                            }label: {
-                            Label(
-                                title: { Text("Seguidores") },
-                                icon: { Image(systemName: "18.circle")}
-                                )}//termina boton
-                        }// HStack donde esatn los botones de seguidores y seguidos
-                        .foregroundColor(.primary)
+         
                     }//VStack del contenido en el rectangulo lateral
                     .padding(.horizontal)
                     .padding(.leading)
