@@ -88,7 +88,12 @@ struct QuestionsViews: View {
         //Como nuestro fondo es obscuro, hay que forzar el Modo obscurom en la App
         .environment(\.colorScheme, .dark)
         //hacemos que al momento de finalizar el test nos muestre una medalla en toda la View
-        
+        .fullScreenCover(isPresented: $showScoreCard){
+            ScoreCardView(score: score / CGFloat(questions.count) * 100){
+                dismiss()
+                onFinish()
+            }
+        }
     }
     
     
@@ -139,7 +144,6 @@ struct QuestionsViews: View {
         }
         .padding(.horizontal,15)
     }
-    
     @ViewBuilder
     func OptionView(_ option: String, _ tint: Color)->some View{
         Text(option)
@@ -192,17 +196,7 @@ struct ScoreCardView: View{
                     Text(String(format: "%.0f", score) + "%")
                         .font(.title.bold())
                         .padding(.bottom,10)
-                    Text(String(format: "%.0f", score) + "%")
-                        .font(.title.bold())
-                        .padding(.bottom,10)
                     
-                    Text(String(format: "%.0f", score) + "%")
-                        .font(.title.bold())
-                        .padding(.bottom,10)
-                    
-                    Text(String(format: "%.0f", score) + "%")
-                        .font(.title.bold())
-                        .padding(.bottom,10)
                 }
                 .foregroundColor(.black)
                 .padding(.horizontal,15)

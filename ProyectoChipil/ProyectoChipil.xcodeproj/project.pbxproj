@@ -65,6 +65,7 @@
 		AB1C8FBD2AE6147000E0A49F /* PerfilUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */; };
 		AB2CFB3A2AE85D64006F7FC1 /* Credenciales.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */; };
 		AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */; };
+		AB34CCE92B15DC9700E7D46B /* HomeAnsiedad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB34CCE82B15DC9700E7D46B /* HomeAnsiedad.swift */; };
 		ABD2540B2AF0A138003D719D /* prueba-login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540A2AF0A138003D719D /* prueba-login.swift */; };
 		ABD2540D2AF0A199003D719D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540C2AF0A199003D719D /* LoginViewModel.swift */; };
 		ABD2540F2AF2B6DC003D719D /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2540E2AF2B6DC003D719D /* LoadingScreen.swift */; };
@@ -102,6 +103,7 @@
 		AB1C8FBC2AE6147000E0A49F /* PerfilUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilUsuario.swift; sourceTree = "<group>"; };
 		AB2CFB392AE85D64006F7FC1 /* Credenciales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credenciales.swift; sourceTree = "<group>"; };
 		AB2CFB3B2AE89974006F7FC1 /* Llamadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Llamadas.swift; sourceTree = "<group>"; };
+		AB34CCE82B15DC9700E7D46B /* HomeAnsiedad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnsiedad.swift; sourceTree = "<group>"; };
 		ABD254082AEF5351003D719D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ABD2540A2AF0A138003D719D /* prueba-login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "prueba-login.swift"; sourceTree = "<group>"; };
 		ABD2540C2AF0A199003D719D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				EC0B1F5A2AE7004A006ED5D1 /* EstructurasCuestionarios.swift */,
 				ECDCF0012AE70CB800723F61 /* CrearCuestionario.swift */,
 				EC0B1F5C2AE700D2006ED5D1 /* Home.swift */,
+				AB34CCE82B15DC9700E7D46B /* HomeAnsiedad.swift */,
 				EC0B1F5E2AE7012F006ED5D1 /* QuestionsViews.swift */,
 			);
 			path = Cuestionarios;
@@ -484,6 +487,7 @@
 				ECFA3B3F2AE9D0A800009850 /* Noticia.swift in Sources */,
 				ECFA3B3B2AE9B50600009850 /* MuralRepository.swift in Sources */,
 				EC0B1F5D2AE700D2006ED5D1 /* Home.swift in Sources */,
+				AB34CCE92B15DC9700E7D46B /* HomeAnsiedad.swift in Sources */,
 				EC0B1F5F2AE7012F006ED5D1 /* QuestionsViews.swift in Sources */,
 				AB2CFB3C2AE89974006F7FC1 /* Llamadas.swift in Sources */,
 				ABD254782AF49093003D719D /* ImagePicker.swift in Sources */,
