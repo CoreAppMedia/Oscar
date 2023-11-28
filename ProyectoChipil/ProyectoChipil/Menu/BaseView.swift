@@ -94,7 +94,7 @@ NavigationView{
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             NavigationLink(){
-                                Home(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
+                                HomeAnsiedad(authenticationViewModel: AuthenticationViewModel(), value: .constant(""))
                                 }label: {
                                 HStack(spacing: 14){
                                     Image(systemName: "person")
@@ -312,14 +312,21 @@ NavigationView{
                             List{
                                 ForEach(LinkViewModel.links){ link in
                                     VStack(alignment: .leading, spacing: 5){
+                                        HStack {
+                                            Image(systemName: "person")
+                                                .resizable()
+                                                .frame(width: 100, height: 100) // Ajustamos la imagen
+                                                .clipShape(RoundedRectangle(cornerRadius: 10)) // Redondea las esquinas de la imagen
+                                            
+                                            Text(link.titulo).font(.title).bold()
+                                        }
+                                        .padding()
+                                        .background(Color.white)
+                                        .cornerRadius(10)
+                                        .shadow(color: Color.gray.opacity(0.5), radius: 10, x: 0, y: 5) // Agrega una sombra solo en la parte inferior
+                                        .padding(.vertical, 10)
+                                    
                                         HStack{
-                                            Text("Titulo:")
-                                                .bold()
-                                                .lineLimit(4)
-                                            Text("\(link.titulo)")
-                                                .bold()
-                                                .foregroundColor(.black)
-                                                .font(.caption)
                                             Spacer()
                                             Button(action: {
                                                 LinkViewModel.updateIsFavorited(link: link)
@@ -332,6 +339,7 @@ NavigationView{
                                                     }
                                                 })
                                             }
+                                        
                                             HStack{
                                                 Text("Noticia: ")
                                                     .bold()
@@ -355,6 +363,7 @@ NavigationView{
                                         }//Vstack
                                         
                                     }//fin fel ForEach
+                            
                                     
                                 }//Fin de la lista
                                 .task {
