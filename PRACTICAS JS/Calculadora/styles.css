@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.calculator {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.input-field {
+  width: 100px;
+  padding: 8px;
+  margin: 5px;
+}
+
+.operation-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: #599bfe;
+  color: white;
+  cursor: pointer;
+}
+
+.operation-btn:hover {
+  background-color: #45a049;
+}
+
+.result {
+  font-weight: bold;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(9, 6, 6);
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel img {
+  width: 240px; /* Ancho deseado */
+  height: 280px; /* Alto deseado */
+}
+
+

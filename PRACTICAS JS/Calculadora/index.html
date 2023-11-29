@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Calculadora</h1>
+  <div class="calculator">
+    <input type="number" id="num1" class="input-field">
+    <input type="number" id="num2" class="input-field">
+    <br><br>
+    <button onclick="sumar()" class="operation-btn">Sumar</button>
+    <button onclick="restar()" class="operation-btn">Restar</button>
+    <button onclick="multiplicar()" class="operation-btn">Multiplicar</button>
+    <button onclick="dividir()" class="operation-btn">Dividir</button>
+    <br><br>
+    <p>Resultado: <span id="resultado" class="result"></span></p>
+  </div>
+<!-- Lista de tareas....................-->
+  <h1>Lista de Tareas</h1>
+  <div>
+    <input type="text" id="taskInput" placeholder="Escribe una tarea">
+    <button onclick="agregarTarea()">Agregar</button>
+  </div>
+  <ul id="taskList"></ul>
+<!-- carrucel de Imagenes....................-->
+  <h1>Galería Carrusel</h1>
+  <div class="carousel">
+    <div class="carousel-container">
+      <img src="tfrs1.png" alt="Imagen 1">
+      <img src="tfrs1.png" alt="Imagen 2">
+      <img src="tfrs1.png" alt="Imagen 3">
+      <!-- Agrega más imágenes aquí -->
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+<!-- Juegos de adivinanzas....................-->
+  <h1>Juego de Adivinanzas</h1>
+  <p>Estoy pensando en un número del 1 al 10. ¿Puedes adivinar cuál es?</p>
+  <input type="number" id="guess">
+  <button onclick="adivinarNumero()">Adivinar</button>
+  <p id="resultado1"></p>
+
+<script src="adivinanzas.js"></script>
+<script src="galeria-imagenes.js"></script>
+<script src="lista-tareas.js"></script>
+<script src="calculadora.js"></script>
+</body>
+</html>
