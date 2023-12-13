@@ -2,7 +2,7 @@
 #include <cctype>
 
 const int ARRAY_SIZE = 10;
-char arreglo[ARRAY_SIZE];
+char arreglo[ARRAY_SIZE]; 
 void leerArreglo() {
     int i;
     std::cout << "\n\nIngresa " << ARRAY_SIZE << " caracteres para el arreglo: ";
